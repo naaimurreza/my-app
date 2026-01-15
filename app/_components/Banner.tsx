@@ -19,7 +19,7 @@ export default function Banner() {
   return (
     <>
     <br/>
-    <div className="container">
+    <div className="container mt-10 mx-auto px-4 sm:px-6 lg:px-8">
       {/* <div className="flex flex-wrap items-center justify-center gap-8 px-8 py-6">
         <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
         <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
@@ -32,8 +32,12 @@ export default function Banner() {
         <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
         <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
       </div> */}
-    <p className='mt-10 text-3xl font-semibold ml-6'>Meet Our Specialists: </p>
-    <Carousel
+<div className='text-center max-w-3xl mx-auto mb-5'>
+              <h1 className='text-2xl sm:text-3xl md:text-4xl font-semibold px-4'>
+                Meet Our <span className='text-blue-600'>Specialists</span> 
+              </h1>
+            </div> 
+      <Carousel
       className='h-120 sm:h-200 md:h-120'
       plugins={[autoplayPlugin.current]}
       onMouseEnter={autoplayPlugin.current.stop}
@@ -59,6 +63,11 @@ Former Head of Psychotherapy;
 Former Academic Course Director MD (Psychiatry);
 
 Former Director, National Institute of Mental Health, Dhaka.</p>
+<a href="/muhitkamal"
+                className='inline-block mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'
+              >
+                Read more
+              </a>
             </div>
             <div>
               <Image src="/assets/kamal.png" alt="Brain and Life Hospital logo" height={600} width={460} className='bg-gray-300 rounded-full'/>
@@ -73,6 +82,11 @@ Former Director, National Institute of Mental Health, Dhaka.</p>
               <p className='mb-6'>Academic Qualification:
 MBBS: Rajshahi Medical College, University of Rajshahi, Bangladesh
 FCPS: Bangladesh College of Physicians and Surgeon</p>
+<a href="/golamrabbani"
+                className='inline-block mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'
+              >
+                Read more
+              </a>
             </div>
             <div>
               <Image src="/assets/rabbani.png" alt="Brain and Life Hospital logo" height={100} width={500}/>
@@ -87,6 +101,11 @@ FCPS: Bangladesh College of Physicians and Surgeon</p>
               <p className='mb-6'>Academic Qualification:
 MBBS: Rajshahi Medical College, University of Rajshahi, Bangladesh
 FCPS: Bangladesh College of Physicians and Surgeon</p>
+<a href="/mandal"
+                className='inline-block mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'
+              >
+                Read more
+              </a>
             </div>
             <div>
               <Image src="/assets/mondol.png" alt="Brain and Life Hospital logo" height={100} width={500} className='bg-gray-300 rounded-full'/>

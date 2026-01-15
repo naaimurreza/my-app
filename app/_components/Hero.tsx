@@ -71,7 +71,6 @@ export const Hero = () => {
               <img src="/assets/hospital.png" alt="Brain and Life Hospital logo" height={200} width={550} className='bg-gray-300'/>
             </div>
           </div>
-          <hr className='mt-8'/>
         </div>
   )
 }

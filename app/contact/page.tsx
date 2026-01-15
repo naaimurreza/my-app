@@ -31,11 +31,11 @@ export default function Home() {
               <div className="space-y-3 text-sm">
                 <div>
                   <p className="text-slate-500">24/7 Helpline</p>
-                  <p className="font-semibold text-slate-900">+880 1234‑567890</p>
+                  <p className="font-semibold text-slate-900">+880 58150414</p>
                 </div>
                 <div>
                   <p className="text-slate-500">Crisis Email</p>
-                  <p className="font-semibold text-slate-900">support@brainandlifehospital.com</p>
+                  <p className="font-semibold text-slate-900">brainandlifehospital@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function Home() {
               </h2>
               <p className="text-sm text-slate-600">
                 Brain And Life Hospital<br />
-                House 12, Road 5, Dhanmondi, Dhaka 1205, Bangladesh
+                Crescent Plaza, 145/1 Green Road, Dhaka-1205, Bangladesh
               </p>
               <p className="text-sm text-slate-600">
                 Visiting hours: <span className="font-semibold">9:00 AM – 8:00 PM</span><br />

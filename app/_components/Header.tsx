@@ -5,42 +5,22 @@ import Image from 'next/image'
 import {
   Dialog,
   DialogPanel,
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  Popover,
-  PopoverButton,
   PopoverGroup,
   PopoverPanel,
 } from '@headlessui/react'
 import {
-  ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-
-const products = [
-  { name: 'Chairman Message', description: 'Read what the chainman has to say', href: './chairman', icon: ChartPieIcon },
-  { name: 'About Us', description: 'Learn more about us', href: './about', icon: CursorArrowRaysIcon },
-  { name: 'Photo Gallery', description: 'Pictures cherishing our moments', href: './photos', icon: FingerPrintIcon },
-  { name: 'Video Gallery', description: 'Videos cherising our moments', href: './videos', icon: SquaresPlusIcon },
-  { name: 'Location & Contact', description: 'Find where we are located', href: './contact', icon: ArrowPathIcon },
-]
-
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-900">
+    <header className="bg-gray-800">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center p-6 lg:px-8 relative">
         <div className="flex align-items-center">
-          <a href="#" className="-m-1.5 p-1.5 container flex items-center gap-3">
+          <a href="./" className="-m-1.5 p-1.5 container flex items-center gap-3">
             <span className="sr-only">Brain and Life</span>
             <Image src="/assets/brainandlifelogo.png" alt="Brain and Life Logo" width={70} height={50} />
             <div className="flex flex-col">
@@ -66,6 +46,9 @@ export default function Header() {
           <a href="./" className="text-lg/6 font-semibold text-gray-100">
             Home
           </a>
+          <a href="./about" className="text-lg/6 font-semibold text-gray-100">
+            About Us
+          </a>
           <a href="/services" className="text-lg/6 font-semibold text-gray-100">
             Services
           </a>
@@ -85,7 +68,7 @@ export default function Header() {
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
-                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                src="/assetts/brainandlifelogo.png"
                 className="h-8 w-auto"
               />
             </a>
@@ -101,18 +84,17 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/10">
               <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
-                    About+
-                    <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
-                  </DisclosureButton>
-                  
-                </Disclosure>
                 <a
                   href="./"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Home
+                </a>
+                <a
+                  href="./about"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
+                >
+                  About
                 </a>
                 <a
                   href="./services"
