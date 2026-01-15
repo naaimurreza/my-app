@@ -25,11 +25,11 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 
 const products = [
-  { name: 'Chainman Message', description: 'Read what the chainman has to say', href: '#', icon: ChartPieIcon },
-  { name: 'About Us', description: 'Learn more about us', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Photo Gallery', description: 'Pictures cherishing our moments', href: '#', icon: FingerPrintIcon },
-  { name: 'Video Gallery', description: 'Videos cherising our moments', href: '#', icon: SquaresPlusIcon },
-  { name: 'Location & Contact', description: 'Find where we are located', href: '#', icon: ArrowPathIcon },
+  { name: 'Chairman Message', description: 'Read what the chainman has to say', href: './chairman', icon: ChartPieIcon },
+  { name: 'About Us', description: 'Learn more about us', href: './about', icon: CursorArrowRaysIcon },
+  { name: 'Photo Gallery', description: 'Pictures cherishing our moments', href: './photos', icon: FingerPrintIcon },
+  { name: 'Video Gallery', description: 'Videos cherising our moments', href: './videos', icon: SquaresPlusIcon },
+  { name: 'Location & Contact', description: 'Find where we are located', href: './contact', icon: ArrowPathIcon },
 ]
 
 
@@ -61,48 +61,18 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12 absolute left-1/2 -translate-x-1/2">
-          <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lgm/6 font-semibold text-gray-100">
-              About+
-              <ChevronDownIcon aria-hidden="true" className="size-5 flex-none text-gray-100" />
-            </PopoverButton>
+          
 
-            <PopoverPanel
-              transition
-              className="absolute left-1/2 z-10 mt-3 w-screen max-w-md -translate-x-1/2 overflow-hidden rounded-3xl bg-gray-800 outline-1 -outline-offset-1 outline-white/10 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                {products.map((item) => (
-                  <div
-                    key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:bg-white/5"
-                  >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg bg-gray-700/50 group-hover:bg-gray-700">
-                      <item.icon aria-hidden="true" className="size-6 text-gray-100 group-hover:text-white" />
-                    </div>
-                    <div className="flex-auto">
-                      <a href={item.href} className="block font-semibold text-white">
-                        {item.name}
-                        <span className="absolute inset-0" />
-                      </a>
-                      <p className="mt-1 text-gray-300">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </PopoverPanel>
-          </Popover>
-
-          <a href="#" className="text-lg/6 font-semibold text-gray-100">
+          <a href="./" className="text-lg/6 font-semibold text-gray-100">
             Home
           </a>
           <a href="/services" className="text-lg/6 font-semibold text-gray-100">
             Services
           </a>
-          <a href="#" className="text-lg/6 font-semibold text-gray-100">
+          <a href="/treatment" className="text-lg/6 font-semibold text-gray-100">
             Treatment
           </a>
-          <a href="contact" className="text-lg/6 font-semibold text-gray-100">
+          <a href="/contact" className="text-lg/6 font-semibold text-gray-100">
             Contact
           </a>
         </PopoverGroup>
@@ -139,25 +109,25 @@ export default function Header() {
                   
                 </Disclosure>
                 <a
-                  href="#"
+                  href="./"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Home
                 </a>
                 <a
-                  href="#"
+                  href="./services"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Services
                 </a>
                 <a
-                  href="#"
+                  href="./treatment"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Treatment
                 </a>
                 <a
-                  href="#"
+                  href="./contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
                 >
                   Contact

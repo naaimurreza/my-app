@@ -1,5 +1,8 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
+import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
   CarouselContent,
@@ -9,12 +12,15 @@ import {
 } from "@/components/ui/carousel"
 
 export default function Banner() {
+  const autoplayPlugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+
   return (
-    
     <>
     <br/>
     <div className="container">
-      <div className="flex flex-wrap items-center justify-center gap-8 px-8 py-6">
+      {/* <div className="flex flex-wrap items-center justify-center gap-8 px-8 py-6">
         <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
         <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
         <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
@@ -25,9 +31,14 @@ export default function Banner() {
         <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
         <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
         <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
-      </div>
+      </div> */}
     <p className='mt-10 text-3xl font-semibold ml-6'>Meet Our Specialists: </p>
-    <Carousel className='h-120 sm:h-200 md:h-120'>
+    <Carousel
+      className='h-120 sm:h-200 md:h-120'
+      plugins={[autoplayPlugin.current]}
+      onMouseEnter={autoplayPlugin.current.stop}
+      onMouseLeave={autoplayPlugin.current.reset}
+    >
   <CarouselContent>
     <CarouselItem><div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6 items-center'>

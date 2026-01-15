@@ -54,8 +54,18 @@ export const Hero = () => {
                 
               </a>
             </ul >
-              <button className='mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'>About</button>
-              <button className='px-6 py-3 ml-9 bg-blue-100 text-gray-900 rounded-md hover:bg-blue-700 hover:text-white transition'>Contact Us</button>
+              <a
+                href="/about"
+                className='inline-block mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'
+              >
+                About
+              </a>
+              <a
+                href="/contact"
+                className='inline-block px-6 py-3 ml-9 bg-blue-100 text-gray-900 rounded-md hover:bg-blue-700 hover:text-white transition'
+              >
+                Contact Us
+              </a>
             </div>
             <div>
               <img src="/assets/hospital.png" alt="Brain and Life Hospital logo" height={200} width={550} className='bg-gray-300'/>
