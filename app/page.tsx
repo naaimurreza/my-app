@@ -14,18 +14,28 @@ export const metadate: Metadata = {
   openGraph: {
     title: 'Brain And Life Hospital - Home',
     description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
-    url: 'https://www.brainandlifehospital.com',
-    siteName: 'Brain And Life Hospital',
     images: [
       {
-        url: 'https://www.brainandlifehospital.com/og-image.jpg',
+        url: '/og-image.jpg',
         width: 800,
         height: 600,
         alt: 'Brain And Life Hospital',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+  },
+  facebook: {
+    appId: '1234567890',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nosnippet: false,
+    }
   }
 }
 

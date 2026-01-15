@@ -1,6 +1,39 @@
 import React from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Metadata } from "next";
+
+export const metadate: Metadata = {
+  title: 'Brain And Life Hospital - Home',
+  description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
+  keywords: ['Mental Hospital, Mental Health', 'Psychiatric Care', 'Therapy', 'Counseling', 'Brain And Life Hospital', 'Mental Wellness', 'Behavioral Health', 'Psychologists', 'Psychiatrists', 'Supportive Care'],
+  openGraph: {
+    title: 'Brain And Life Hospital - Home',
+    description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Brain And Life Hospital',
+      },
+    ],
+  },
+  facebook: {
+    appId: '1234567890',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      nosnippet: false,
+    }
+  }
+}
 
 export default function Page() {
   return (
