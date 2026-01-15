@@ -8,7 +8,7 @@ export const Hero = () => {
 
             <div className='mx-auto'>
               <h5>- The best mental health solution</h5>
-              <h1 className='text-6xl font-semibold'>Brain And <span className='text-blue-600'>Life</span> Hospital</h1>
+              <h1 className='text-6xl font-semibold mb-5'>Brain And <span className='text-blue-600'>Life</span> Hospital</h1>
               <p className='pb-7'>Where Healing Begins with Understanding.
               At our mental health hospital, we provide compassionate, evidence-based care in a safe and supportive environment. Our dedicated team of professionals is committed to helping individuals restore balance, build resilience, and rediscover hope—because every mind deserves care, dignity, and a path toward a healthier life.</p>
               <ul className="flex gap-2 sm:mb-0 dark:text-gray-300">

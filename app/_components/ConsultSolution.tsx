@@ -2,7 +2,7 @@ import React from 'react'
 
 export const ConsultSolution = () => {
   return (
-    <section className='bg-gradient-to-r from-blue-50 via-blue-100/80 to-blue-50 mt-10'>
+    <section className='bg-slate-100 mt-10'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20'>
         <div className="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
           <div className="flex-1">

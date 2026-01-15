@@ -4,7 +4,7 @@ export const SolutionStep = () => {
   return (
     <div className='container mx-auto px-4 sm:px-6 lg:px-8 pt-80 lg:pt-20 md:pt-5 sm:pt-3'>
         <div className="w-full">
-            <div className='text-center max-w-3xl mx-auto'>
+            <div className='text-center max-w-3xl mx-auto mb-5'>
               <h2 className='text-xl sm:text-2xl font-medium mb-3'>- Fastest solution</h2>
               <h1 className='text-2xl sm:text-3xl md:text-4xl font-semibold px-4'>
                 <span className='text-blue-600'>4 Easy Steps</span> And Get Your Solution

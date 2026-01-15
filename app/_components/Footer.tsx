@@ -8,11 +8,21 @@ export const Footer = () => {
     </div>
         <footer className="bg-gray-900 text-white">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-center">
-          <div className="mr-60 mb-6 md:mb-0 flex flex-col items-center md:items-center">
-              <a target="_blank" href="https://www.facebook.com/share/1DWSRRzXA3/" className="flex items-center justify-center">
-                  <img src="./assets/brainandlifelogo.png" className="h-10 w-auto max-w-full me-3" alt="brain and Life logo" />
-              <span className="text-heading self-center text-2xl font-semibold whitespace-nowrap">Brain And Life Hospital©</span>
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+          <div className="mb-2 md:mb-0 flex flex-col items-center md:items-start">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/share/1DWSRRzXA3/"
+                className="mr-5 flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left"
+              >
+                  <img
+                    src="./assets/brainandlifelogo.png"
+                    className="h-10 sm:h-12 w-auto max-w-full"
+                    alt="brain and Life logo"
+                  />
+              <span className="text-heading text-lg sm:text-2xl font-semibold sm:whitespace-nowrap">
+                Brain And Life Hospital
+              </span>
               </a>
 
 
@@ -22,19 +32,19 @@ export const Footer = () => {
                   <h2 className="mb-6 text-sm font-semibold text-heading uppercase">Go to</h2>
                   <ul className="text-body font-medium">
                       <li className="mb-4">
-                          <a href="https://flowbite.com/" className="hover:underline">About</a>
+                          <a href="./about" className="hover:underline">About</a>
                       </li>
                       <li className='mb-4'>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Home</a>
+                          <a href="./" className="hover:underline">Home</a>
                       </li>
                       <li className='mb-4'>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Services</a>
+                          <a href="./services" className="hover:underline">Services</a>
                       </li>
                       <li className='mb-4'>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Treatment</a>
+                          <a href="./treatment" className="hover:underline">Treatment</a>
                       </li>
                       <li className='mb-4'>
-                          <a href="https://tailwindcss.com/" className="hover:underline">Contact Us</a>
+                          <a href="./contact" className="hover:underline">Contact Us</a>
                       </li>
                   </ul>
               </div>
@@ -42,16 +52,16 @@ export const Footer = () => {
                   <h2 className="mb-6 text-sm font-semibold text-heading uppercase">Location and Number</h2>
                   <ul className="text-body font-medium">
                       <li className="mb-4">
-                          <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Crescent Plaza, 145/1 Green Road, Dhaka-1205, Bangladesh.</a>
+                          <a href="https://maps.app.goo.gl/aSkRcbaHjqe2XHVz7" target='_blank' className="hover:underline ">Crescent Plaza, 145/1 Green Road, Dhaka-1205, Bangladesh.</a>
                       </li>
                       <li>
-                          <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">+88058150414</a>
+                          <a href="tel:+88058150414" className="hover:underline">+88058150414</a>
                       </li>
                       <li>
-                          <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">+88029130270</a>
+                          <a href="tel:+88029130270" className="hover:underline">+88029130270</a>
                       </li>
                       <li>
-                          <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">+88029130269</a>
+                          <a href="tel:+88029130269" className="hover:underline">+88029130269</a>
                       </li>
                   </ul>
               </div>
