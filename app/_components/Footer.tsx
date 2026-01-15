@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <>
     <div className='h-30 bg-blue-600 flex flex-col items-center justify-center gap-4 text-center'> 
-        <p className='text-4xl text-white'>We pickup patient from home and no attendance required.</p>
+        <p className='text-2xl md:text-4xl text-white'>We pickup patient from home and no attendance required.</p>
     </div>
         <footer className="bg-gray-800 text-white">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">

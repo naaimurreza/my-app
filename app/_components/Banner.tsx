@@ -19,19 +19,7 @@ export default function Banner() {
   return (
     <>
     <br/>
-    <div className="container mt-10 mx-auto px-4 sm:px-6 lg:px-8">
-      {/* <div className="flex flex-wrap items-center justify-center gap-8 px-8 py-6">
-        <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
-        <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
-        <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
-        <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
-        <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
-        <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
-        <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
-        <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
-        <Image src="/assets/lifeandlight.png" width={50} height={50} alt="Life and Light logo" />
-        <Image src="/assets/brainandlifelogo.png" width={50} height={50} alt="Brain and Life logo" />
-      </div> */}
+    <div className="container mt-10 mx-auto px-4 sm:px-6 lg:px-8 pb-10">
 <div className='text-center max-w-3xl mx-auto mb-5'>
               <h1 className='text-2xl sm:text-3xl md:text-4xl font-semibold px-4'>
                 Meet Our <span className='text-blue-600'>Specialists</span> 

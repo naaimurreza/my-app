@@ -31,7 +31,7 @@ export default function Header() {
               width={70}
               height={50}
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col mr-5">
               <p className="text-xl font-bold text-gray-100 whitespace-nowrap text-center">
                 Brain And Life Hospital
               </p>
