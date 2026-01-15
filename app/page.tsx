@@ -36,6 +36,9 @@ export const metadate: Metadata = {
       noimageindex: false,
       nosnippet: false,
     }
+  },
+  alternates: {
+    canonical: 'https://brainandlifehospital.com/',
   }
 }
 

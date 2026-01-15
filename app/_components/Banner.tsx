@@ -49,20 +49,11 @@ export default function Banner() {
 
             <div className='mx-auto'>
               <h1 className='text-6xl font-semibold mb-4'>Prof. Dr. Muhit <span className='text-blue-600'>Kamal</span></h1>
-              <p className='mb-6'>Speciality 
-MBBS, M.Phil. (Psyche), FCPS (Psychiatry) 
-
-Professor of Psychotherapy, 
-
-Senior -Chief Consultant (Psychiatry & Psychotherapy) 
-
-LABAID Cardiac Hospital.
-
-Former Head of Psychotherapy;
-
-Former Academic Course Director MD (Psychiatry);
-
-Former Director, National Institute of Mental Health, Dhaka.</p>
+              <p className='mb-6'> Prof. Dr. M A Mohit Kamal is a distinguished psychiatrist and
+                psychotherapist with extensive experience in mental health care.
+                As a Senior Chief Consultant at LABAID Cardiac Hospital, he
+                provides comprehensive psychiatric care and psychotherapy
+                services.</p>
 <a href="/muhitkamal"
                 className='inline-block mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'
               >
@@ -79,9 +70,12 @@ Former Director, National Institute of Mental Health, Dhaka.</p>
 
             <div className='mx-auto'>
               <h1 className='text-6xl font-semibold mb-4'>Prof. Dr. Golam <span className='text-blue-600'>Rabbani</span></h1>
-              <p className='mb-6'>Academic Qualification:
-MBBS: Rajshahi Medical College, University of Rajshahi, Bangladesh
-FCPS: Bangladesh College of Physicians and Surgeon</p>
+              <p className='mb-6'>Prof. Dr. Golam Rabbani is a distinguished psychiatrist and
+                mental health specialist with extensive experience in
+                psychiatric care and psychotherapy. As Chief Consultant at Brain
+                and Life Hospital, he provides comprehensive mental health
+                services with a patient-centered approach and evidence-based
+                treatments.</p>
 <a href="/golamrabbani"
                 className='inline-block mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'
               >
@@ -98,9 +92,12 @@ FCPS: Bangladesh College of Physicians and Surgeon</p>
 
             <div className='mx-auto'>
               <h1 className='text-6xl font-semibold mb-4'>Prof. Dr. Mahadeb Chandra <span className='text-blue-600'>Mandal</span></h1>
-              <p className='mb-6'>Academic Qualification:
-MBBS: Rajshahi Medical College, University of Rajshahi, Bangladesh
-FCPS: Bangladesh College of Physicians and Surgeon</p>
+              <p className='mb-6'>Prof. Dr. Mahadeb Chandra Mandal is a renowned psychiatrist and
+                mental health expert with extensive experience in clinical
+                psychiatry and psychotherapy. As Senior Consultant at Brain and
+                Life Hospital, he specializes in comprehensive mental health
+                care with a focus on evidence-based treatments and patient
+                recovery.</p>
 <a href="/mandal"
                 className='inline-block mt-5 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition'
               >
