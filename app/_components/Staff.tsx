@@ -1,88 +1,94 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Autoplay from "embla-carousel-autoplay"
+import React from "react";
+import Image from "next/image";
 
-import { Card, CardContent } from "@/components/ui/card"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-
-export function Staff() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  )
+export const Staff = () => {
+  const staff = [
+    {
+      image: "/assets/sujon.png",
+      name: "Dr. Shujon Howlader",
+      role: "Chief Psychiatrist",
+      description:
+        "Leading our medical team with expertise in complex mental health disorders.",
+    },
+    {
+      image: "/assets/main female doctor1.png",
+      name: "Dr. Sarah Johnson",
+      role: "Clinical Psychologist",
+      description:
+        "Specializing in cognitive behavioral therapy and trauma treatment.",
+    },
+    {
+      image: "/assets/main male doctor2.png",
+      name: "Dr. Michael Chen",
+      role: "Psychiatric Specialist",
+      description: "Expert in mood disorders and anxiety treatments.",
+    },
+    {
+      image: "/assets/main male doctor3.jpg",
+      name: "Dr. David Thompson",
+      role: "Mental Health Consultant",
+      description:
+        "Focused on integrative treatment approaches and medication management.",
+    },
+    {
+      image: "/assets/main male doctor4.jpg",
+      name: "Dr. Lisa Park",
+      role: "Behavioral Health Specialist",
+      description: "Dedicated to adolescent and family mental health care.",
+    },
+  ];
 
   return (
-    <section className="">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10 lg:gap-16">
-          <div className="flex-1 max-w-xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
-              Our care team
-            </p>
-            <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-slate-900">
-              Meet our <span className="text-blue-600">dedicated professionals</span>
-            </h2>
-            <p className="mt-4 text-sm md:text-base text-slate-600 leading-relaxed">
-              Behind every recovery story is a multidisciplinary team of psychiatrists,
-              psychologists, nurses, and support staff who listen deeply and care consistently.
-            </p>
-          </div>
+    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 mt-10 rounded-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Why Choose <span className="text-blue-600">Brain & Life</span>
+          </h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Experience excellence in mental health care with our modern approach
+            and dedicated professionals.
+          </p>
+        </div>
 
-          <div className="flex-1 w-full flex justify-center md:justify-end">
-            <Carousel
-              plugins={[plugin.current]}
-              className="w-full max-w-sm"
-              onMouseEnter={plugin.current.stop}
-              onMouseLeave={plugin.current.reset}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5  gap-8 lg:gap-12">
+          {staff.map((feature, index) => (
+            <div
+              key={index}
+              className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-slate-100"
             >
-              <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index}>
-                    <div className="p-2">
-                      <Card className="border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                        <CardContent className="flex flex-col items-center justify-center gap-3 p-6">
-                          <div className="relative">
-                            <div
-                              className="absolute -inset-2 rounded-full bg-blue-200/50 blur-md"
-                              aria-hidden="true"
-                            />
-                            <img
-                              src="/assets/sujon.png"
-                              alt="Shujon Howlader"
-                              className="relative w-28 h-28 md:w-32 md:h-32 rounded-full object-cover shadow-lg"
-                            />
-                          </div>
-                          <div className="text-center">
-                            <p className="text-lg font-semibold text-slate-900">
-                              Shujon Howlader
-                            </p>
-                            <p className="text-xs uppercase tracking-wide text-blue-600 mt-1">
-                              Staff
-                            </p>
-                            <p className="mt-3 text-xs text-slate-600 max-w-xs">
-                              Providing calm, patient‑centred support on every shift so that
-                              individuals feel safe, heard, and respected.
-                            </p>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
+              <div className="relative h-48 md:h-56 overflow-hidden">
+                <Image
+                  src={feature.image}
+                  alt={feature.name}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-blue-600 transition-colors">
+                  {feature.name}
+                </h3>
+                <p className="text-sm font-medium text-blue-600 mb-2">
+                  {feature.role}
+                </p>
+              </div>
+
+              {/* Decorative element */}
+              <div className="absolute top-3 right-3 w-8 h-8 bg-blue-600/20 rounded-full flex items-center justify-center group-hover:bg-blue-600/30 transition-colors">
+                <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs font-bold">
+                    {index + 1}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
-}
-
+  );
+};

@@ -61,8 +61,11 @@ export default function Page() {
 
   return (
     <main className="min-h-screen bg-slate-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 h-150 mb-15">
+        <img src="./assets/about.png" alt="about image" className="rounded-xl" />
+      </div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/50 to-slate-50">
+      <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
