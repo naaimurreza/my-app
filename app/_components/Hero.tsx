@@ -19,6 +19,7 @@ export const Hero = () => {
             <a
               href="https://www.facebook.com/share/1DWSRRzXA3/"
               target="_blank"
+              className="group transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +28,11 @@ export const Hero = () => {
                 width="40"
                 height="40"
                 viewBox="0 0 48 48"
+                className="transition-all duration-300"
               >
                 <path
-                  fill="#039be5"
+                  fill="#1f2937"
+                  className="group-hover:fill-[#039be5] transition-colors duration-300"
                   d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"
                 ></path>
                 <path
@@ -41,6 +44,7 @@ export const Hero = () => {
             <a
               href="https://youtube.com/@brainandlifehospital?si=c8_Ppxrgbkt2p_pS"
               target="_blank"
+              className="group transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,9 +53,11 @@ export const Hero = () => {
                 width="40"
                 height="40"
                 viewBox="0 0 48 48"
+                className="transition-all duration-300"
               >
                 <path
-                  fill="#FF3D00"
+                  fill="#1f2937"
+                  className="group-hover:fill-[#FF3D00] transition-colors duration-300"
                   d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"
                 ></path>
                 <path fill="#FFF" d="M20 31L20 17 32 24z"></path>
@@ -60,7 +66,7 @@ export const Hero = () => {
             <a
               href="https://www.tiktok.com/@brain.and.life.hos?_r=1&_t=ZS-92z1ZnEbHzp"
               target="_blank"
-              className="mt-2"
+              className="mt-2 group text-gray-700 hover:text-black transition-colors duration-300"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +93,7 @@ export const Hero = () => {
             Contact Us
           </a>
         </div>
-        <div className="relative mx-auto p-10">
+        <div className="relative mx-auto">
           <img
             src="/assets/banner2.png"
             alt="Brain and Life Hospital logo"

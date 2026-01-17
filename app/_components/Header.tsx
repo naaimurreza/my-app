@@ -53,11 +53,11 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12 absolute left-1/2 -translate-x-1/2">
-          <a href="./" className="text-lg/6 font-semibold text-gray-100">
+          <a href="./" className="text-lg/6 font-semibold text-gray-100 pl-5">
             Home
           </a>
           <a href="./about" className="text-lg/6 font-semibold text-gray-100">
-            About Us
+            About
           </a>
           <a href="/services" className="text-lg/6 font-semibold text-gray-100">
             Services
@@ -107,6 +107,7 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/10">
+            <img width={60} src="./assets/brainandlifelogo.png" alt="" />
               <div className="space-y-2 py-6">
                 <a
                   href="./"
