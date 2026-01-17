@@ -43,7 +43,7 @@ export default function Banner() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
                   <div className="mx-auto">
                     <h1 className="text-6xl font-semibold mb-4">
-                      Prof. Dr. Muhit{" "}
+                      Prof. Dr. Mohit{" "}
                       <span className="text-blue-600">Kamal</span>
                     </h1>
                     <p className="mb-6">
