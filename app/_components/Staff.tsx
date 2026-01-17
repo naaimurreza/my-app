@@ -13,16 +13,16 @@ export const Staff = () => {
         "Leading our medical team with expertise in complex mental health disorders.",
     },
     {
-      image: "/assets/main female doctor1.png",
-      name: "Faruk",
-      role: "Staff",
+      image: "/assets/manik.png",
+      name: "Mahmudul Hasan (Manik)",
+      role: "Digital Marketing",
       description:
         "Specializing in cognitive behavioral therapy and trauma treatment.",
     },
     {
       image: "/assets/main male doctor2.png",
-      name: "Dr. Michael Chen",
-      role: "Psychiatric Specialist",
+      name: "Omor Faruk",
+      role: "Staff",
       description: "Expert in mood disorders and anxiety treatments.",
     },
     {
@@ -31,6 +31,36 @@ export const Staff = () => {
       role: "Mental Health Consultant",
       description:
         "Focused on integrative treatment approaches and medication management.",
+    },
+    {
+      image: "/assets/main male doctor4.jpg",
+      name: "Dr. Lisa Park",
+      role: "Behavioral Health Specialist",
+      description: "Dedicated to adolescent and family mental health care.",
+    },
+    {
+      image: "/assets/main male doctor4.jpg",
+      name: "Dr. Lisa Park",
+      role: "Behavioral Health Specialist",
+      description: "Dedicated to adolescent and family mental health care.",
+    },
+    {
+      image: "/assets/main male doctor4.jpg",
+      name: "Dr. Lisa Park",
+      role: "Behavioral Health Specialist",
+      description: "Dedicated to adolescent and family mental health care.",
+    },
+    {
+      image: "/assets/main male doctor4.jpg",
+      name: "Dr. Lisa Park",
+      role: "Behavioral Health Specialist",
+      description: "Dedicated to adolescent and family mental health care.",
+    },
+    {
+      image: "/assets/main male doctor4.jpg",
+      name: "Dr. Lisa Park",
+      role: "Behavioral Health Specialist",
+      description: "Dedicated to adolescent and family mental health care.",
     },
     {
       image: "/assets/main male doctor4.jpg",

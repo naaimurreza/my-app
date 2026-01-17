@@ -27,6 +27,13 @@ export const ConsultSolution = () => {
                 — Md Fokrul Hossain, Managing Director, Brain And Life Hospital
               </p>
             </div>
+            <div>
+              <a href="/MD">
+                <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                  Read More
+                </button>
+              </a>
+            </div>
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <div className="relative">
