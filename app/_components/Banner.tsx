@@ -19,11 +19,17 @@ export default function Banner() {
   return (
     <>
       <br />
-      <div className="container mt-10 mx-auto px-4 sm:px-6 lg:px-8 h-220 md:h-150 lg:h-130">
-        <div className="text-center max-w-3xl mx-auto ">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold px-4">
-            Meet Our <span className="text-blue-600">Specialists</span>
+      <div className="container mt-10 mx-auto px-4 sm:px-6 lg:px-8 h-260 md:h-180 lg:h-190">
+        <div className="text-center max-w-3xl mx-auto mb-8 lg:mb-12">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-3">
+            Our Expert Team
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
+            Meet Our <span className="text-blue-600">Specialist Psychiatrists</span>
           </h1>
+          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Nationally recognized consultants in psychiatry and psychotherapy, dedicated to compassionate, evidence-based mental health care.
+          </p>
         </div>
         <Carousel
           className="h-120 sm:h-200 md:h-120"

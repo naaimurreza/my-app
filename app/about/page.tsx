@@ -61,9 +61,9 @@ export default function Page() {
 
   return (
     <main className="min-h-screen bg-slate-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10 h-150 mb-15">
-        <img src="./assets/about.png" alt="about image" className="rounded-xl" />
-      </div>
+      <div className='align-center flex justify-center mt-8'>
+          <img className='w-200' src="./assets/about.png" alt="Brain and life banner" />
+        </div>
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">

@@ -7,15 +7,15 @@ export const Staff = () => {
   const staff = [
     {
       image: "/assets/sujon.png",
-      name: "Dr. Shujon Howlader",
-      role: "Chief Psychiatrist",
+      name: "Shujon Howlader",
+      role: "Staff",
       description:
         "Leading our medical team with expertise in complex mental health disorders.",
     },
     {
       image: "/assets/main female doctor1.png",
-      name: "Dr. Sarah Johnson",
-      role: "Clinical Psychologist",
+      name: "Faruk",
+      role: "Staff",
       description:
         "Specializing in cognitive behavioral therapy and trauma treatment.",
     },

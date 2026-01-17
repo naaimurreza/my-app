@@ -82,24 +82,24 @@ export const Hero = () => {
           </a>
           <a
             href="/contact"
-            className="inline-block px-6 py-3 ml-9 bg-blue-100 text-gray-900 rounded-md hover:bg-blue-700 hover:text-white transition"
+            className="inline-block px-6 py-3 ml-3 bg-blue-100 text-gray-900 rounded-md hover:bg-blue-700 hover:text-white transition"
           >
             Contact Us
           </a>
         </div>
         <div className="relative mx-auto p-10">
           <img
-            src="/assets/hospital.png"
+            src="/assets/banner2.png"
             alt="Brain and Life Hospital logo"
-            height={200}
-            width={550}
+            height={50}
+            width={500}
             className="bg-gray-300"
           />
-          <img
+          {/* <img
             className="absolute bottom-0 right-0 w-55 object-cover sm:w-100 sm:h-95 md:w-90 md:h-90 lg:w-100 lg:h-100"
             src="/assets/md.png"
             alt="MD's image"
-          />
+          /> */}
         </div>
       </div>
     </div>

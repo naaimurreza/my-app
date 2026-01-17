@@ -36,7 +36,10 @@ export const metadate: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50">
-      <section className="container mx-auto px-4 py-16 lg:py-24">
+      <section className="container mx-auto px-4">
+        <div className='align-center flex justify-center mt-8 mb-12'>
+          <img className='w-200' src="./assets/banner.png" alt="Brain and life banner" />
+        </div>
         <div className="max-w-3xl mx-auto text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             Contact us
@@ -50,7 +53,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start mb-10">
           {/* Contact details / emergency info */}
           <div className="space-y-8 lg:col-span-1">
             <div className="rounded-2xl bg-white shadow-sm border border-slate-100 p-6">
