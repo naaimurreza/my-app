@@ -16,58 +16,23 @@ export const Staff = () => {
       image: "/assets/manik.png",
       name: "Mahmudul Hasan (Manik)",
       role: "Digital Marketing",
-      description:
-        "Specializing in cognitive behavioral therapy and trauma treatment.",
     },
     {
-      image: "/assets/main male doctor2.png",
-      name: "Omor Faruk",
+      image: "/assets/faruk.jpg",
+      name: "Omar Faruk",
       role: "Staff",
-      description: "Expert in mood disorders and anxiety treatments.",
     },
     {
-      image: "/assets/main male doctor3.jpg",
-      name: "Dr. David Thompson",
-      role: "Mental Health Consultant",
-      description:
-        "Focused on integrative treatment approaches and medication management.",
+      image: "/assets/ayesha.jpg",
+      name: "Ayesha Siddiqua",
+      role: "Accountant",
     },
     {
-      image: "/assets/main male doctor4.jpg",
+      image: "/assets/unknown.jpg",
       name: "Dr. Lisa Park",
       role: "Behavioral Health Specialist",
-      description: "Dedicated to adolescent and family mental health care.",
     },
-    {
-      image: "/assets/main male doctor4.jpg",
-      name: "Dr. Lisa Park",
-      role: "Behavioral Health Specialist",
-      description: "Dedicated to adolescent and family mental health care.",
-    },
-    {
-      image: "/assets/main male doctor4.jpg",
-      name: "Dr. Lisa Park",
-      role: "Behavioral Health Specialist",
-      description: "Dedicated to adolescent and family mental health care.",
-    },
-    {
-      image: "/assets/main male doctor4.jpg",
-      name: "Dr. Lisa Park",
-      role: "Behavioral Health Specialist",
-      description: "Dedicated to adolescent and family mental health care.",
-    },
-    {
-      image: "/assets/main male doctor4.jpg",
-      name: "Dr. Lisa Park",
-      role: "Behavioral Health Specialist",
-      description: "Dedicated to adolescent and family mental health care.",
-    },
-    {
-      image: "/assets/main male doctor4.jpg",
-      name: "Dr. Lisa Park",
-      role: "Behavioral Health Specialist",
-      description: "Dedicated to adolescent and family mental health care.",
-    },
+
   ];
 
   return (
@@ -105,15 +70,6 @@ export const Staff = () => {
                 <p className="text-sm font-medium text-blue-600 mb-2">
                   {feature.role}
                 </p>
-              </div>
-
-              {/* Decorative element */}
-              <div className="absolute top-3 right-3 w-8 h-8 bg-blue-600/20 rounded-full flex items-center justify-center group-hover:bg-blue-600/30 transition-colors">
-                <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">
-                    {index + 1}
-                  </span>
-                </div>
               </div>
             </div>
           ))}
