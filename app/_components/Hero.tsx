@@ -13,7 +13,7 @@ export const Hero = () => {
             Brain And <span className="text-blue-600">Life</span> Hospital
           </h1>
           <p className="pb-7">
-          We provide compassionate, evidence-based mental health care in a safe, supportive environment—helping individuals restore balance, build resilience, and rediscover hope.
+            We provide compassionate, evidence-based mental health care in a safe, supportive environment—helping individuals restore balance, build resilience, and rediscover hope.
           </p>
           <ul className="flex gap-2 sm:mb-0 dark:text-gray-300">
             <a
@@ -95,7 +95,7 @@ export const Hero = () => {
         </div>
         <div className="relative mx-auto">
           <img
-            src="/assets/banner2.png"
+            src="/assets/banner2.jpg"
             alt="Brain and Life Hospital logo"
             height={50}
             width={500}
