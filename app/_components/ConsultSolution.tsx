@@ -43,7 +43,7 @@ export const ConsultSolution = () => {
               />
               <img
                 className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-full border-4 border-white shadow-xl object-cover"
-                src="/assets/md.png"
+                src="/assets/md3.png"
                 width={500}
                 height={100}
                 alt="Managing Director"

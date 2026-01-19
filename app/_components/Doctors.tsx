@@ -19,39 +19,38 @@ export function Doctors() {
 
   const doctors = [
     {
-      name: "Dr. Sarah Johnson",
-      role: "Chief Psychiatrist",
-      description:
-        "Leading our medical team with over 20 years of experience in psychiatry, specializing in complex mental health disorders and treatment planning.",
-      image: "/assets/main female doctor1.png",
+      name: "Dr. Shoab Ahmed Talukdar (Kishor)",
+      role: "Medical Officer",
+      description: "MBBS, CMU",
+      image: "/assets/doctor1.png",
     },
     {
-      name: "Dr. Michael Chen",
+      name: "Dr. Michael",
       role: "Clinical Psychologist",
       description:
         "Expert in cognitive behavioral therapy and trauma treatment, helping patients develop coping strategies and achieve mental wellness.",
-      image: "/assets/main male doctor2.png",
+      image: "/assets/unknown.jpg",
     },
     {
       name: "Dr. Emily Rodriguez",
       role: "Psychiatric Specialist",
       description:
         "Specializing in mood disorders and anxiety treatments, providing comprehensive care with a focus on patient-centered recovery.",
-      image: "/assets/main female doctor.jpg",
+      image: "/assets/unknown.jpg",
     },
     {
       name: "Dr. David Thompson",
       role: "Mental Health Consultant",
       description:
         "Focused on integrative treatment approaches, combining medication management with therapeutic interventions for optimal patient outcomes.",
-      image: "/assets/main male doctor3.jpg",
+      image: "/assets/unknown.jpg",
     },
     {
       name: "Dr. Lisa Park",
       role: "Behavioral Health Specialist",
       description:
         "Dedicated to adolescent and family mental health, providing compassionate care and support for comprehensive healing journeys.",
-      image: "/assets/main male doctor4.jpg",
+      image: "/assets/unknown.jpg",
     },
   ];
 

@@ -4,7 +4,7 @@ import React from "react";
 
 export const SolutionStep = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-20 md:pt-5 sm:pt-3">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-30 md:pt-20 sm:pt-3">
       <div className="w-full">
         <div className="text-center max-w-3xl mx-auto mb-5">
           <h2 className="text-xl sm:text-2xl font-medium mb-3">
