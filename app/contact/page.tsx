@@ -114,7 +114,13 @@ export default function Home() {
                 <div className="space-y-3 text-sm">
                   <div>
                     <p className="text-slate-400">24/7 Helpline</p>
-                    <p className="font-semibold text-slate-50">+880 58150414</p>
+                    <a href="tel:+8801713031449">
+                      <p className="hover:underline font-semibold text-slate-50">+880 1713031449</p>
+                    </a>
+                    <a href="tel:+8801742544000">
+                      <p className="hover:underline font-semibold text-slate-50">+880 1742544000</p>
+                    </a>
+
                   </div>
                   <div>
                     <p className="text-slate-400">Crisis Email</p>
