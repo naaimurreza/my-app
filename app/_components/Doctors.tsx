@@ -31,11 +31,10 @@ export function Doctors() {
       image: "/assets/doctor2.png",
     },
     {
-      name: "Dr. Emily Rodriguez",
+      name: "Dr. Farzana Zabin",
       role: "Medical Officer",
-      description:
-        "Specializing in mood disorders and anxiety treatments, providing comprehensive care with a focus on patient-centered recovery.",
-      image: "/assets/unknown.jpg",
+      description: "MBBS",
+      image: "/assets/doctor3.jpg",
     },
   ];
 

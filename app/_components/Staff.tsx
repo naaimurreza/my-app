@@ -28,7 +28,7 @@ export const Staff = () => {
       role: "Administrative Officer",
     },
     {
-      image: "/assets/unknown.jpg",
+      image: "/assets/nijhum.jpg",
       name: "Nijhum",
       role: "Senior Staff Nurse",
     },
