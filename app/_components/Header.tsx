@@ -107,7 +107,7 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-white/10">
-            <img width={60} src="./assets/brainandlifelogo.png" alt="" />
+              <img width={60} src="./assets/brainandlifelogo.png" alt="" />
               <div className="space-y-2 py-6">
                 <a
                   href="./"

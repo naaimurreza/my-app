@@ -60,10 +60,10 @@ export default function Home() {
     <>
       <div className="container mx-auto p-6 lg:px-8">
         <Hero />
-        <Banner />
-        <SolutionStep />
-        <Doctors />
         <ConsultSolution />
+        <Banner />
+        <Doctors />
+        <SolutionStep />
         <Staff />
       </div>
     </>

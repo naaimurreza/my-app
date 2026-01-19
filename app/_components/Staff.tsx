@@ -8,7 +8,7 @@ export const Staff = () => {
     {
       image: "/assets/sujon.png",
       name: "Shujon Howlader",
-      role: "Staff",
+      role: "Office Employee",
       description:
         "Leading our medical team with expertise in complex mental health disorders.",
     },
@@ -20,7 +20,7 @@ export const Staff = () => {
     {
       image: "/assets/faruk.jpg",
       name: "Omar Faruk",
-      role: "Staff",
+      role: "Office Employee",
     },
     {
       image: "/assets/ayesha.png",
@@ -29,8 +29,8 @@ export const Staff = () => {
     },
     {
       image: "/assets/unknown.jpg",
-      name: "Dr. Lisa Park",
-      role: "Behavioral Health Specialist",
+      name: "Nijhum",
+      role: "Senior Staff Nurse",
     },
 
   ];
