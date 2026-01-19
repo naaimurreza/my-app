@@ -15,7 +15,7 @@ export const Staff = () => {
     {
       image: "/assets/manik.png",
       name: "Mahmudul Hasan (Manik)",
-      role: "Digital Marketing",
+      role: "Digital Marketing Officer",
     },
     {
       image: "/assets/faruk.jpg",
@@ -23,7 +23,7 @@ export const Staff = () => {
       role: "Staff",
     },
     {
-      image: "/assets/ayesha.jpg",
+      image: "/assets/ayesha.png",
       name: "Ayesha Siddiqua",
       role: "Administrative Officer",
     },
