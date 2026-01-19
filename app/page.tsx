@@ -62,8 +62,8 @@ export default function Home() {
         <Hero />
         <ConsultSolution />
         <Banner />
-        <Doctors />
         <SolutionStep />
+        <Doctors />
         <Staff />
       </div>
     </>
