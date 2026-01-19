@@ -25,31 +25,16 @@ export function Doctors() {
       image: "/assets/doctor1.png",
     },
     {
-      name: "Dr. Michael",
-      role: "Clinical Psychologist",
-      description:
-        "Expert in cognitive behavioral therapy and trauma treatment, helping patients develop coping strategies and achieve mental wellness.",
-      image: "/assets/unknown.jpg",
+      name: "Dr. Sanaul Huda Riad",
+      role: "Medical Officer",
+      description: "MBBS, RU",
+      image: "/assets/doctor2.png",
     },
     {
       name: "Dr. Emily Rodriguez",
-      role: "Psychiatric Specialist",
+      role: "Medical Officer",
       description:
         "Specializing in mood disorders and anxiety treatments, providing comprehensive care with a focus on patient-centered recovery.",
-      image: "/assets/unknown.jpg",
-    },
-    {
-      name: "Dr. David Thompson",
-      role: "Mental Health Consultant",
-      description:
-        "Focused on integrative treatment approaches, combining medication management with therapeutic interventions for optimal patient outcomes.",
-      image: "/assets/unknown.jpg",
-    },
-    {
-      name: "Dr. Lisa Park",
-      role: "Behavioral Health Specialist",
-      description:
-        "Dedicated to adolescent and family mental health, providing compassionate care and support for comprehensive healing journeys.",
       image: "/assets/unknown.jpg",
     },
   ];

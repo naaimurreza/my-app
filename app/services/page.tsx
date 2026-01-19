@@ -163,7 +163,7 @@ export default function Home() {
                   </div>
                   <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl shadow-sky-950/40 backdrop-blur">
                     <img
-                      src="/assets/service3.jpg"
+                      src="/assets/service5.jpg"
                       alt="One-on-one psychiatric consultation"
                       className="h-32 w-full object-cover sm:h-40 lg:h-44"
                     />
@@ -172,7 +172,7 @@ export default function Home() {
                 <div className="mt-8 space-y-4 lg:space-y-5">
                   <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl shadow-sky-950/40 backdrop-blur">
                     <img
-                      src="/assets/service2.jpg"
+                      src="/assets/service6.jpg"
                       alt="Supportive group therapy session"
                       className="h-40 w-full object-cover sm:h-52 lg:h-60"
                     />

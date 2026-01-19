@@ -190,7 +190,7 @@ export default function Home() {
               <div className="pointer-events-none absolute -left-8 bottom-0 h-32 w-32 rounded-full bg-emerald-400/25 blur-3xl" />
               <div className="overflow-hidden rounded-3xl border border-sky-100/20 bg-slate-900/60 shadow-[0_24px_80px_rgba(15,23,42,0.9)] backdrop-blur">
                 <img
-                  src="/assets/treatment.png"
+                  src="/assets/treatment.jpg"
                   alt="Personalized treatment at Brain and Life Hospital"
                   className="h-56 w-full object-cover sm:h-64 lg:h-72"
                 />
