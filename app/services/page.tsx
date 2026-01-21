@@ -1,36 +1,37 @@
 import React from 'react'
 import { Metadata } from 'next';
 
-export const metadate: Metadata = {
-  title: 'Brain And Life Hospital - Home',
-  description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
-  keywords: ['Mental Hospital, Mental Health', 'Psychiatric Care', 'Therapy', 'Counseling', 'Brain And Life Hospital', 'Mental Wellness', 'Behavioral Health', 'Psychologists', 'Psychiatrists', 'Supportive Care'],
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Comprehensive mental health services including psychiatric care, addiction treatment, 24/7 emergency support, psychotherapy, and rehabilitation programs. Expert care for depression, anxiety, schizophrenia, and substance abuse.',
+  keywords: [
+    'mental health services',
+    'psychiatric care',
+    'addiction treatment',
+    'drug rehabilitation',
+    'depression treatment',
+    'anxiety therapy',
+    'schizophrenia care',
+    '24/7 emergency psychiatric',
+    'psychotherapy services',
+    'substance abuse treatment',
+  ],
   openGraph: {
-    title: 'Brain And Life Hospital - Home',
-    description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
+    title: 'Services - Brain And Life Hospital',
+    description: 'Comprehensive mental health services including psychiatric care, addiction treatment, and 24/7 emergency support.',
+    url: 'https://brainandlifehospital.com/services',
     images: [
       {
         url: '/og-image.jpg',
-        width: 800,
-        height: 600,
-        alt: 'Brain And Life Hospital',
+        width: 1200,
+        height: 630,
+        alt: 'Brain And Life Hospital Services',
       },
     ],
   },
-  facebook: {
-    appId: '1234567890',
+  alternates: {
+    canonical: 'https://brainandlifehospital.com/services',
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      nosnippet: false,
-    }
-  }
 }
 
 export default function Home() {
@@ -85,15 +86,15 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-linear-to-b from-slate-50 to-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-linear-to-br from-slate-950 via-blue-900 to-slate-900 text-white">
+      <section className="relative overflow-hidden bg-linear-to-br from-black via-slate-950 to-black text-white">
         {/* Background accents */}
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-blue-500/20 blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-400/10 blur-3xl" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.18),transparent_55%)]" />
+          <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-400/5 blur-3xl" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_55%)]" />
         </div>
 
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-28 lg:pb-24">
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
             {/* Text content */}
             <div>

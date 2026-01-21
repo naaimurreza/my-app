@@ -1,36 +1,33 @@
 import React from "react";
 import { Metadata } from "next";
 
-export const metadate: Metadata = {
-  title: 'Brain And Life Hospital - Home',
-  description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
-  keywords: ['Mental Hospital, Mental Health', 'Psychiatric Care', 'Therapy', 'Counseling', 'Brain And Life Hospital', 'Mental Wellness', 'Behavioral Health', 'Psychologists', 'Psychiatrists', 'Supportive Care'],
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Brain And Life Hospital - a leading mental health and addiction treatment center in Bangladesh. Our mission, values, and commitment to compassionate, evidence-based care for mental wellness.',
+  keywords: [
+    'about mental health hospital',
+    'mental health mission',
+    'psychiatric care values',
+    'mental health team Bangladesh',
+    'hospital history',
+    'mental wellness commitment',
+  ],
   openGraph: {
-    title: 'Brain And Life Hospital - Home',
-    description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
+    title: 'About Us - Brain And Life Hospital',
+    description: 'Learn about our mission to provide compassionate, evidence-based mental health care in Bangladesh.',
+    url: 'https://brainandlifehospital.com/about',
     images: [
       {
         url: '/og-image.jpg',
-        width: 800,
-        height: 600,
-        alt: 'Brain And Life Hospital',
+        width: 1200,
+        height: 630,
+        alt: 'About Brain And Life Hospital',
       },
     ],
   },
-  facebook: {
-    appId: '1234567890',
+  alternates: {
+    canonical: 'https://brainandlifehospital.com/about',
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      nosnippet: false,
-    }
-  }
 }
 
 export default function Page() {
@@ -60,7 +57,7 @@ export default function Page() {
   ]
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-slate-950">
+    <main className="relative min-h-screen overflow-hidden bg-slate-950 pt-20">
       {/* Background accents similar to contact page */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.18),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(16,185,129,0.12),transparent_60%)]" />

@@ -1,36 +1,35 @@
 import React from "react";
 import { Metadata } from "next";
 
-export const metadate: Metadata = {
-  title: 'Brain And Life Hospital - Home',
-  description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
-  keywords: ['Mental Hospital, Mental Health', 'Psychiatric Care', 'Therapy', 'Counseling', 'Brain And Life Hospital', 'Mental Wellness', 'Behavioral Health', 'Psychologists', 'Psychiatrists', 'Supportive Care'],
+export const metadata: Metadata = {
+  title: 'Treatment',
+  description: 'Comprehensive mental health treatment programs including individual therapy, group counseling, medication management, addiction rehabilitation, and personalized care plans. Evidence-based treatments for depression, anxiety, schizophrenia, and substance abuse.',
+  keywords: [
+    'mental health treatment',
+    'psychiatric treatment',
+    'therapy programs',
+    'addiction rehabilitation',
+    'depression treatment',
+    'anxiety therapy',
+    'personalized treatment plans',
+    'mental health recovery',
+  ],
   openGraph: {
-    title: 'Brain And Life Hospital - Home',
-    description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
+    title: 'Treatment Programs - Brain And Life Hospital',
+    description: 'Comprehensive mental health treatment programs with personalized care plans and evidence-based therapies.',
+    url: 'https://brainandlifehospital.com/treatment',
     images: [
       {
         url: '/og-image.jpg',
-        width: 800,
-        height: 600,
-        alt: 'Brain And Life Hospital',
+        width: 1200,
+        height: 630,
+        alt: 'Mental Health Treatment Programs',
       },
     ],
   },
-  facebook: {
-    appId: '1234567890',
+  alternates: {
+    canonical: 'https://brainandlifehospital.com/treatment',
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      nosnippet: false,
-    }
-  }
 }
 
 export default function Home() {
@@ -149,7 +148,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-slate-950">
+    <main className="relative min-h-screen overflow-hidden bg-slate-950 pt-20">
       {/* Background accents to mirror contact page */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.18),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(16,185,129,0.12),transparent_60%)]" />

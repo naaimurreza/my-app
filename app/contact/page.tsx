@@ -1,41 +1,39 @@
 import React from 'react'
 import { Metadata } from 'next';
 
-export const metadate: Metadata = {
-  title: 'Brain And Life Hospital - Home',
-  description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
-  keywords: ['Mental Hospital, Mental Health', 'Psychiatric Care', 'Therapy', 'Counseling', 'Brain And Life Hospital', 'Mental Wellness', 'Behavioral Health', 'Psychologists', 'Psychiatrists', 'Supportive Care'],
+export const metadata: Metadata = {
+  title: 'Contact Us',
+  description: 'Contact Brain And Life Hospital for mental health support. 24/7 emergency helpline: +88058150414, +88029130270. Located at Crescent Plaza, 145/1 Green Road, Dhaka-1205. Confidential consultations available.',
+  keywords: [
+    'mental health contact',
+    'psychiatric emergency',
+    '24/7 helpline',
+    'mental health hospital Dhaka',
+    'psychiatrist appointment',
+    'emergency mental health',
+    'crisis hotline Bangladesh',
+  ],
   openGraph: {
-    title: 'Brain And Life Hospital - Home',
-    description: 'Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care. Our dedicated team of professionals is committed to providing compassionate, evidence-based treatment in a safe and supportive environment. Discover a path to healing and resilience with us.',
+    title: 'Contact Us - Brain And Life Hospital',
+    description: '24/7 emergency mental health support. Contact us for confidential consultations and emergency care.',
+    url: 'https://brainandlifehospital.com/contact',
     images: [
       {
         url: '/og-image.jpg',
-        width: 800,
-        height: 600,
-        alt: 'Brain And Life Hospital',
+        width: 1200,
+        height: 630,
+        alt: 'Contact Brain And Life Hospital',
       },
     ],
   },
-  facebook: {
-    appId: '1234567890',
+  alternates: {
+    canonical: 'https://brainandlifehospital.com/contact',
   },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      nosnippet: false,
-    }
-  }
 }
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-slate-950 pt-20">
       {/* Hero + content */}
       <section className="relative overflow-hidden">
         {/* Soft background gradient */}

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 import { Footer } from "./_components/Footer";
+import StructuredData from "./_components/StructuredData";
+import { defaultMetadata } from "./metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,13 +19,12 @@ const geistMono = Geist_Mono({
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
-export const metadata: Metadata = {
-  title: "Brain And Life Hospital",
-  description: "Mental health hospital providing comprehensive psychiatric care and support in Bangladesh.",
-};
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
@@ -31,10 +32,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" itemScope itemType="https://schema.org/Hospital">
+      <head>
+        <link rel="icon" href="/assets/brainandlifelogo.png" />
+        <link rel="apple-touch-icon" href="/assets/brainandlifelogo.png" />
+      </head>
       <body
         className={`${poppins.variable} antialiased`}
       >
+        <StructuredData pathname="/" />
         <Header/>
         {children}
         <Footer/>
