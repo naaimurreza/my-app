@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 const baseUrl = "https://brainandlifehospital.com";
 const siteName = "Brain And Life Hospital";
-const defaultDescription = "Comprehensive mental health care and addiction treatment in Bangladesh. Expert psychiatrists, 24/7 emergency support, and compassionate care for mental wellness.";
+const defaultDescription = "Brain And Life Hospital - Comprehensive mental health care and addiction treatment in Bangladesh. Expert psychiatrists, 24/7 emergency support, and compassionate care for mental wellness. Brain And Life provides world-class psychiatric services.";
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -12,6 +12,10 @@ export const defaultMetadata: Metadata = {
   },
   description: defaultDescription,
   keywords: [
+    "Brain And Life",
+    "Brain And Life Hospital",
+    "brain and life",
+    "brain and life hospital",
     "mental health hospital",
     "psychiatric care",
     "addiction treatment",

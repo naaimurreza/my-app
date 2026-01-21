@@ -8,10 +8,14 @@ import StaffSection from "./_components/StaffSection";
 import CallToActionSection from "./_components/CallToActionSection";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Brain And Life Hospital - Mental Health & Addiction Treatment Center",
   description:
-    "Welcome to Brain And Life Hospital, your trusted destination for comprehensive mental health care in Bangladesh. Expert psychiatrists, 24/7 emergency support, addiction treatment, and compassionate care for mental wellness.",
+    "Brain And Life Hospital - Your trusted destination for comprehensive mental health care in Bangladesh. Expert psychiatrists, 24/7 emergency support, addiction treatment, and compassionate care for mental wellness. Brain And Life provides world-class psychiatric services.",
   keywords: [
+    "Brain And Life",
+    "Brain And Life Hospital",
+    "brain and life",
+    "brain and life hospital",
     "mental health hospital Bangladesh",
     "psychiatric care Dhaka",
     "addiction treatment center",
@@ -23,6 +27,8 @@ export const metadata: Metadata = {
     "24/7 mental health support",
     "emergency psychiatric care",
     // Bengali keywords
+    "ব্রেইন অ্যান্ড লাইফ",
+    "ব্রেইন অ্যান্ড লাইফ হাসপাতাল",
     "মানসিক স্বাস্থ্য হাসপাতাল বাংলাদেশ",
     "মনোরোগবিদ্যা সেবা ঢাকা",
     "মাদকাসক্তি চিকিৎসা কেন্দ্র",
@@ -35,9 +41,9 @@ export const metadata: Metadata = {
     "জরুরি মনোরোগবিদ্যা যত্ন",
   ],
   openGraph: {
-    title: "Brain And Life Hospital - Mental Health & Addiction Treatment",
+    title: "Brain And Life Hospital - Mental Health & Addiction Treatment Center",
     description:
-      "Comprehensive mental health care and addiction treatment in Bangladesh. Expert psychiatrists, 24/7 emergency support, and compassionate care.",
+      "Brain And Life Hospital - Comprehensive mental health care and addiction treatment in Bangladesh. Expert psychiatrists, 24/7 emergency support, and compassionate care at Brain And Life.",
     url: "https://brainandlifehospital.com",
     siteName: "Brain And Life Hospital",
     images: [
@@ -55,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Brain And Life Hospital - Mental Health & Addiction Treatment",
     description:
-      "Comprehensive mental health care and addiction treatment in Bangladesh.",
+      "Brain And Life Hospital - Comprehensive mental health care and addiction treatment in Bangladesh.",
     images: ["/og-image.jpg"],
   },
   alternates: {
