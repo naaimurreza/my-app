@@ -8,6 +8,7 @@ export default function StructuredData({ pathname = "/" }: { pathname?: string }
     alternateName: "মানসিক রোগ ও মাদকাসক্তি চিকিৎসা কেন্দ্র",
     description:
       "Comprehensive mental health care and addiction treatment center in Bangladesh providing 24/7 emergency support, psychiatric care, and rehabilitation services.",
+    description_bn: "বাংলাদেশে ব্যাপক মানসিক স্বাস্থ্য সেবা এবং মাদকাসক্তি চিকিৎসা কেন্দ্র যা ২৪/৭ জরুরি সহায়তা, মনোরোগবিদ্যা সেবা এবং পুনর্বাসন সেবা প্রদান করে।",
     url: baseUrl,
     logo: `${baseUrl}/assets/brainandlifelogo.png`,
     image: `${baseUrl}/og-image.jpg`,
@@ -24,7 +25,7 @@ export default function StructuredData({ pathname = "/" }: { pathname?: string }
         telephone: "+88058150414",
         contactType: "Emergency",
         areaServed: "BD",
-        availableLanguage: ["Bengali", "English"],
+        availableLanguage: ["Bengali", "English", "bn", "en"],
       },
       {
         "@type": "ContactPoint",
@@ -62,8 +63,10 @@ export default function StructuredData({ pathname = "/" }: { pathname?: string }
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
     name: "Brain And Life Hospital",
+    alternateName: "মানসিক রোগ ও মাদকাসক্তি চিকিৎসা কেন্দ্র",
     description:
       "Mental health hospital providing comprehensive psychiatric care, addiction treatment, and 24/7 emergency support services.",
+    description_bn: "মানসিক স্বাস্থ্য হাসপাতাল যা ব্যাপক মনোরোগবিদ্যা সেবা, মাদকাসক্তি চিকিৎসা এবং ২৪/৭ জরুরি সহায়তা সেবা প্রদান করে।",
     url: baseUrl,
     address: {
       "@type": "PostalAddress",
@@ -74,6 +77,7 @@ export default function StructuredData({ pathname = "/" }: { pathname?: string }
     },
     telephone: "+88058150414",
     priceRange: "$$",
+    availableLanguage: ["Bengali", "English", "bn", "en"],
   };
 
   const breadcrumbSchema = {
@@ -88,14 +92,14 @@ export default function StructuredData({ pathname = "/" }: { pathname?: string }
       },
       ...(pathname !== "/"
         ? [
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: pathname.split("/")[1].charAt(0).toUpperCase() +
-                pathname.split("/")[1].slice(1),
-              item: `${baseUrl}${pathname}`,
-            },
-          ]
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: pathname.split("/")[1].charAt(0).toUpperCase() +
+              pathname.split("/")[1].slice(1),
+            item: `${baseUrl}${pathname}`,
+          },
+        ]
         : []),
     ],
   };

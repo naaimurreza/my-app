@@ -27,6 +27,22 @@ export const defaultMetadata: Metadata = {
     "counseling services",
     "24/7 mental health support",
     "emergency psychiatric care",
+    // Bengali keywords
+    "মানসিক স্বাস্থ্য হাসপাতাল",
+    "মনোরোগবিদ্যা সেবা",
+    "মাদকাসক্তি চিকিৎসা",
+    "মানসিক স্বাস্থ্য বাংলাদেশ",
+    "মনোরোগ বিশেষজ্ঞ ঢাকা",
+    "মানসিক সুস্থতা",
+    "বিষণ্নতা চিকিৎসা",
+    "উদ্বেগ চিকিৎসা",
+    "স্কিজোফ্রেনিয়া চিকিৎসা",
+    "মাদক পুনর্বাসন",
+    "মানসিক রোগ চিকিৎসা",
+    "সাইকোথেরাপি",
+    "কাউন্সেলিং সেবা",
+    "২৪/৭ মানসিক স্বাস্থ্য সহায়তা",
+    "জরুরি মনোরোগবিদ্যা যত্ন",
   ],
   authors: [{ name: siteName }],
   creator: siteName,
@@ -39,6 +55,7 @@ export const defaultMetadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
+    alternateLocale: ["bn_BD"],
     url: baseUrl,
     siteName: siteName,
     title: `${siteName} - Mental Health & Addiction Treatment Center`,
@@ -71,6 +88,11 @@ export const defaultMetadata: Metadata = {
   },
   alternates: {
     canonical: baseUrl,
+    languages: {
+      en: baseUrl,
+      "bn": baseUrl,
+      "x-default": baseUrl,
+    },
   },
   verification: {
     // Add your verification codes here when available

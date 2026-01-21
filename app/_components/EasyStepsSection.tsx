@@ -1,46 +1,43 @@
 "use client";
 
-const steps = [
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/2785/2785482.png",
-    title: "Share what you're going through",
-    description:
-      "Call us or send a message with a few details about your mood, thoughts, or behaviour so our team can understand how to best support you.",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/10691/10691802.png",
-    title: "Meet with a specialist",
-    description:
-      "You'll have a confidential consultation with one of our psychiatrists or psychologists to discuss your history, concerns, and goals.",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/16090/16090543.png",
-    title: "Get your treatment plan",
-    description:
-      "Together we create a personalized plan that can include therapy, medication, rehabilitation, or a combination of approaches that fit your life.",
-  },
-  {
-    icon: "https://cdn-icons-png.flaticon.com/512/9084/9084544.png",
-    title: "Start care with ongoing support",
-    description:
-      "Begin your treatment with regular follow‑ups, family guidance, and 24/7 support so you never feel alone in your recovery journey.",
-  },
-];
+import { useLanguage } from "../_contexts/LanguageContext";
 
 export default function EasyStepsSection() {
+  const { t } = useLanguage();
+
+  const steps = [
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/2785/2785482.png",
+      title: t("steps.step1.title"),
+      description: t("steps.step1.desc"),
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/10691/10691802.png",
+      title: t("steps.step2.title"),
+      description: t("steps.step2.desc"),
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/16090/16090543.png",
+      title: t("steps.step3.title"),
+      description: t("steps.step3.desc"),
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/9084/9084544.png",
+      title: t("steps.step4.title"),
+      description: t("steps.step4.desc"),
+    },
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-16 lg:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.12),transparent_55%)]" />
+    <section className="relative overflow-hidden bg-white py-12 lg:py-16">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.08),transparent_55%)]" />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="mb-3 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-200 ring-1 ring-white/10 backdrop-blur">
-            Fastest solution
+          <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
+            {t("steps.badge")}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            <span className="bg-linear-to-r from-sky-300 to-emerald-300 bg-clip-text text-transparent">
-              4 Easy Steps
-            </span>{" "}
-            And Get Your Solution
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            {t("steps.title")}
           </h2>
         </div>
 
@@ -48,23 +45,25 @@ export default function EasyStepsSection() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="group rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 shadow-xl shadow-slate-950/40 backdrop-blur hover:-translate-y-1 hover:border-sky-200/40 hover:shadow-[0_30px_80px_rgba(8,47,73,0.45)] transition-all duration-300"
+              className="group rounded-2xl border border-gray-200 bg-white p-6 lg:p-8 shadow-lg shadow-gray-200/50 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl transition-all duration-300"
             >
-              <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-xl bg-sky-500/10 border border-sky-500/20 group-hover:bg-sky-500/20 transition-colors">
+              <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-xl bg-sky-100 border border-sky-200 group-hover:bg-sky-200 transition-colors">
                 <img
                   src={step.icon}
                   alt={step.title}
                   className="w-10 h-10 object-contain"
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                 />
               </div>
-              <div className="text-3xl font-bold text-sky-300/30 mb-3 group-hover:text-sky-300/50 transition-colors">
+              <div className="text-3xl font-bold text-sky-200 mb-3 group-hover:text-sky-400 transition-colors">
                 {String(index + 1).padStart(2, "0")}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-sky-200 transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900">
                 {step.title}
               </h3>
-              <p className="text-blue-100/90 leading-relaxed">
+              <p className="text-gray-600">
                 {step.description}
               </p>
             </div>

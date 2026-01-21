@@ -22,6 +22,17 @@ export const metadata: Metadata = {
     "drug rehabilitation",
     "24/7 mental health support",
     "emergency psychiatric care",
+    // Bengali keywords
+    "মানসিক স্বাস্থ্য হাসপাতাল বাংলাদেশ",
+    "মনোরোগবিদ্যা সেবা ঢাকা",
+    "মাদকাসক্তি চিকিৎসা কেন্দ্র",
+    "মানসিক স্বাস্থ্য সেবা",
+    "মনোরোগ বিশেষজ্ঞ পরামর্শ",
+    "বিষণ্নতা চিকিৎসা",
+    "উদ্বেগ থেরাপি",
+    "মাদক পুনর্বাসন",
+    "২৪/৭ মানসিক স্বাস্থ্য সহায়তা",
+    "জরুরি মনোরোগবিদ্যা যত্ন",
   ],
   openGraph: {
     title: "Brain And Life Hospital - Mental Health & Addiction Treatment",
@@ -49,12 +60,17 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://brainandlifehospital.com",
+    languages: {
+      en: "https://brainandlifehospital.com",
+      bn: "https://brainandlifehospital.com",
+      "x-default": "https://brainandlifehospital.com",
+    },
   },
 };
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 pt-20">
+    <main className="min-h-screen bg-white pt-20">
       <HeroSection />
       <MDMessageSection />
       <SpecialistPsychiatristsSection />

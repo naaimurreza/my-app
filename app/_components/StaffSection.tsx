@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useLanguage } from "../_contexts/LanguageContext";
 
 const staff = [
   {
@@ -31,23 +32,21 @@ const staff = [
 ];
 
 export default function StaffSection() {
+  const { t } = useLanguage();
+
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-16 lg:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.14),transparent_55%)]" />
+    <section className="relative overflow-hidden bg-gray-50 py-12 lg:py-16">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.08),transparent_55%)]" />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <p className="mb-3 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-blue-200 ring-1 ring-white/10 backdrop-blur">
-            Our Team
+          <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
+            {t("staff.badge")}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Why Choose{" "}
-            <span className="bg-linear-to-r from-sky-300 to-emerald-300 bg-clip-text text-transparent">
-              Brain & Life
-            </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            {t("staff.title")}
           </h2>
-          <p className="text-lg text-blue-100/80 max-w-2xl mx-auto">
-            Experience excellence in mental health care with our modern approach
-            and dedicated professionals.
+          <p className="text-lg text-gray-700">
+            {t("staff.description")}
           </p>
         </div>
 
@@ -55,24 +54,26 @@ export default function StaffSection() {
           {staff.map((member, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden shadow-xl shadow-slate-950/40 backdrop-blur hover:-translate-y-1 hover:border-sky-200/40 transition-all duration-300"
+              className="group relative rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-lg shadow-gray-200/50 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative h-48 md:h-56 overflow-hidden bg-linear-to-br from-slate-900 to-slate-800">
+              <div className="relative h-48 md:h-56 overflow-hidden bg-gray-100">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <div className="p-4">
-                <h3 className="text-base font-bold text-white mb-1 group-hover:text-sky-200 transition-colors">
+                <h3 className="text-base font-bold text-gray-900">
                   {member.name}
                 </h3>
-                <p className="text-sm font-medium text-sky-300">
+                <p className="text-sm font-medium text-sky-600">
                   {member.role}
                 </p>
               </div>
