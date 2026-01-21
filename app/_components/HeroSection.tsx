@@ -5,7 +5,7 @@ import { useLanguage } from "../_contexts/LanguageContext";
 
 export default function HeroSection() {
   const { t } = useLanguage();
-  
+
   return (
     <section className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-emerald-50">
       <div className="pointer-events-none absolute inset-0">

@@ -178,7 +178,7 @@ export const Footer = () => {
                                 <span className="text-red-500">❤️</span>
                                 <span>by</span>
                                 <a
-                                    href="https://github.com/naaimurreza"
+                                    href="https://naaimur.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-500 hover:text-blue-600 transition-colors"
