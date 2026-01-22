@@ -1,101 +1,12 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Metadata } from "next";
-
-
-export const metadata: Metadata = {
-  title: "Prof. Dr. M A Mohit Kamal - Senior Chief Consultant Psychiatry | Brain And Life Hospital",
-  description:
-    "Meet Prof. Dr. M A Mohit Kamal, Senior Chief Consultant in Psychiatry & Psychotherapy at LABAID Cardiac Hospital. MBBS, M.Phil. (Psychiatry), FCPS qualified psychiatrist with extensive experience in mental health care, psychotherapy, and academic leadership. Former Director of National Institute of Mental Health, Dhaka.",
-  keywords: [
-    "Dr. Muhit Kamal",
-    "Dr. M A Mohit Kamal",
-    "Prof. Dr. Muhit Kamal",
-    "psychiatrist Bangladesh",
-    "psychiatrist Dhaka",
-    "senior chief consultant psychiatry",
-    "psychotherapy specialist",
-    "mental health specialist",
-    "psychiatric care",
-    "psychotherapy",
-    "M.Phil Psychiatry",
-    "FCPS psychiatrist",
-    "LABAID Cardiac Hospital psychiatrist",
-    "National Institute of Mental Health",
-    "academic leadership psychiatry",
-    "depression treatment",
-    "anxiety treatment",
-    "psychiatric consultation",
-    // Bengali keywords
-    "ড. মুহিত কামাল",
-    "ড. এম এ মহিত কামাল",
-    "প্রফেসর ড. মুহিত কামাল",
-    "মনোরোগ বিশেষজ্ঞ বাংলাদেশ",
-    "মনোরোগ বিশেষজ্ঞ ঢাকা",
-    "সিনিয়র চিফ কনসালটেন্ট মনোরোগবিদ্যা",
-    "সাইকোথেরাপি বিশেষজ্ঞ",
-    "মানসিক স্বাস্থ্য বিশেষজ্ঞ",
-    "মনোরোগবিদ্যা সেবা",
-    "সাইকোথেরাপি",
-    "এম.ফিল মনোরোগবিদ্যা",
-    "এফসিপিএস মনোরোগ বিশেষজ্ঞ",
-    "ল্যাবএইড কার্ডিয়াক হাসপাতাল মনোরোগ বিশেষজ্ঞ",
-    "জাতীয় মানসিক স্বাস্থ্য ইনস্টিটিউট",
-    "একাডেমিক নেতৃত্ব মনোরোগবিদ্যা",
-    "বিষণ্নতা চিকিৎসা",
-    "উদ্বেগ চিকিৎসা",
-    "মনোরোগ পরামর্শ",
-  ],
-  openGraph: {
-    title: "Prof. Dr. M A Mohit Kamal - Senior Chief Consultant Psychiatry | Brain And Life Hospital",
-    description:
-      "Meet Prof. Dr. M A Mohit Kamal, Senior Chief Consultant in Psychiatry & Psychotherapy. MBBS, M.Phil. (Psychiatry), FCPS qualified psychiatrist with extensive experience in mental health care and psychotherapy.",
-    url: "https://brainandlifehospital.com/muhitkamal",
-    siteName: "Brain And Life Hospital",
-    images: [
-      {
-        url: "/assets/kamal.png",
-        width: 1200,
-        height: 630,
-        alt: "Prof. Dr. M A Mohit Kamal - Senior Chief Consultant Psychiatry",
-      },
-    ],
-    locale: "en_US",
-    type: "profile",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Prof. Dr. M A Mohit Kamal - Senior Chief Consultant Psychiatry",
-    description:
-      "MBBS, M.Phil. (Psychiatry), FCPS qualified psychiatrist with extensive experience in mental health care and psychotherapy.",
-    images: ["/assets/kamal.png"],
-  },
-  alternates: {
-    canonical: "https://brainandlifehospital.com/muhitkamal",
-    languages: {
-      en: "https://brainandlifehospital.com/muhitkamal",
-      bn: "https://brainandlifehospital.com/muhitkamal",
-      "x-default": "https://brainandlifehospital.com/muhitkamal",
-    },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      nosnippet: false,
-    },
-  },
-  authors: [{ name: "Brain And Life Hospital" }],
-  creator: "Brain And Life Hospital",
-  publisher: "Brain And Life Hospital",
-}
+import { useLanguage } from "../_contexts/LanguageContext";
 
 export default function Page() {
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen bg-white pt-20">
       {/* Hero Section */}
@@ -109,7 +20,7 @@ export default function Page() {
                 <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 max-w-md mx-auto">
                   <Image
                     src="/assets/kamal.png"
-                    alt="Prof. Dr. M A Mohit Kamal"
+                    alt={`${t("specialists.mohit.name")} ${t("specialists.mohit.lastName")}`}
                     width={400}
                     height={480}
                     className="w-full h-auto object-cover"
@@ -119,37 +30,33 @@ export default function Page() {
               <div className="space-y-8 order-1 lg:order-2">
                 <div>
                   <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200 mb-4">
-                    Senior Chief Consultant
+                    {t("specialistDetail.seniorChiefConsultant")}
                   </p>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3">
-                    Prof. Dr. M A Mohit{" "}
+                    {t("specialists.mohit.name")}{" "}
                     <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
-                      Kamal
+                      {t("specialists.mohit.lastName")}
                     </span>
                   </h1>
                   <p className="text-xl text-sky-600 font-semibold">
-                    Senior Chief Consultant (Psychiatry & Psychotherapy)
+                    {t("specialistDetail.mohit.title")}
                   </p>
                 </div>
                 <div className="space-y-6">
                   <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-200/50">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      Qualifications
+                      {t("specialistDetail.qualifications")}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      MBBS<br />
-                      M.Phil. (Psychiatry)<br />
-                      FCPS (Psychiatry)
+                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      {t("specialistDetail.mohit.qualifications")}
                     </p>
                   </div>
                   <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-200/50">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      Current Position
+                      {t("specialistDetail.currentPosition")}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      Professor of Psychotherapy<br />
-                      Senior Chief Consultant (Psychiatry & Psychotherapy)<br />
-                      LABAID Cardiac Hospital
+                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      {t("specialistDetail.mohit.currentPosition")}
                     </p>
                   </div>
                 </div>
@@ -167,23 +74,15 @@ export default function Page() {
             <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50">
               <CardHeader>
                 <CardTitle className="text-3xl md:text-4xl font-semibold text-center text-gray-900">
-                  About Dr. M A Mohit Kamal
+                  {t("specialistDetail.mohit.aboutTitle")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6 p-6 lg:p-8">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Prof. Dr. M A Mohit Kamal is a distinguished psychiatrist and
-                  psychotherapist with extensive experience in mental health care.
-                  As a Senior Chief Consultant at LABAID Cardiac Hospital, he
-                  provides comprehensive psychiatric care and psychotherapy
-                  services.
+                  {t("specialistDetail.mohit.about1")}
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  With his advanced qualifications including MBBS, M.Phil. in
-                  Psychiatry, and FCPS in Psychiatry, Dr. Kamal brings a wealth of
-                  knowledge and expertise to his practice. His commitment to
-                  mental health extends beyond clinical practice to academic
-                  leadership and institutional development.
+                  {t("specialistDetail.mohit.about2")}
                 </p>
               </CardContent>
             </Card>
@@ -198,27 +97,26 @@ export default function Page() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200 mb-4">
-                Experience
+                {t("specialistDetail.experience")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Professional Experience
+                {t("specialistDetail.professionalExperience")}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50 hover:border-sky-300 transition-all">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-gray-900">Current Roles</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.currentRoles")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-sky-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Professor of Psychotherapy
+                      {t("specialistDetail.mohit.currentRole1")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-sky-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Senior Chief Consultant (Psychiatry & Psychotherapy) at
-                      LABAID Cardiac Hospital
+                      {t("specialistDetail.mohit.currentRole2")}
                     </li>
                   </ul>
                 </CardContent>
@@ -226,21 +124,21 @@ export default function Page() {
 
               <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50 hover:border-emerald-300 transition-all">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-gray-900">Previous Positions</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.previousPositions")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Former Head of Psychotherapy
+                      {t("specialistDetail.mohit.previousRole1")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Former Academic Course Director MD (Psychiatry)
+                      {t("specialistDetail.mohit.previousRole2")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Former Director, National Institute of Mental Health, Dhaka
+                      {t("specialistDetail.mohit.previousRole3")}
                     </li>
                   </ul>
                 </CardContent>
@@ -256,10 +154,10 @@ export default function Page() {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200 mb-4">
-              Expertise
+              {t("specialistDetail.expertise")}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-              Areas of Expertise
+              {t("specialistDetail.areasOfExpertise")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="border border-gray-200 bg-white shadow-lg shadow-gray-200/50 hover:shadow-xl hover:border-sky-300 transition-all duration-300 hover:-translate-y-1">
@@ -280,10 +178,10 @@ export default function Page() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Psychiatry
+                    {t("specialistDetail.mohit.expertise1")}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Comprehensive psychiatric diagnosis and treatment
+                    {t("specialistDetail.mohit.expertise1Desc")}
                   </p>
                 </CardContent>
               </Card>
@@ -306,10 +204,10 @@ export default function Page() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Psychotherapy
+                    {t("specialistDetail.mohit.expertise2")}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Evidence-based therapeutic interventions
+                    {t("specialistDetail.mohit.expertise2Desc")}
                   </p>
                 </CardContent>
               </Card>
@@ -332,10 +230,10 @@ export default function Page() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Academic Leadership
+                    {t("specialistDetail.mohit.expertise3")}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Medical education and training
+                    {t("specialistDetail.mohit.expertise3Desc")}
                   </p>
                 </CardContent>
               </Card>

@@ -12,28 +12,19 @@ import {
 
 const specialists = [
   {
-    name: "Prof. Dr. Mohit",
-    lastName: "Kamal",
-    description:
-      "Prof. Dr. M A Mohit Kamal is a distinguished psychiatrist and psychotherapist with extensive experience in mental health care. As a Senior Chief Consultant at LABAID Cardiac Hospital, he provides comprehensive psychiatric care and psychotherapy services.",
+    key: "mohit",
     image: "/assets/kamal.png",
     link: "/muhitkamal",
     imageSize: "max-w-md",
   },
   {
-    name: "Prof. Dr. Golam",
-    lastName: "Rabbani",
-    description:
-      "Prof. Dr. Golam Rabbani is a distinguished psychiatrist and mental health specialist with extensive experience in psychiatric care and psychotherapy. As Chief Consultant at Brain and Life Hospital, he provides comprehensive mental health services with a patient-centered approach and evidence-based treatments.",
+    key: "rabbani",
     image: "/assets/rabbani.png",
     link: "/golamrabbani",
     imageSize: "max-w-md",
   },
   {
-    name: "Prof. Dr. Mahadeb Chandra",
-    lastName: "Mandal",
-    description:
-      "Prof. Dr. Mahadeb Chandra Mandal is a renowned psychiatrist and mental health expert with extensive experience in clinical psychiatry and psychotherapy. As Senior Consultant at Brain and Life Hospital, he specializes in comprehensive mental health care with a focus on evidence-based treatments and patient recovery.",
+    key: "mandal",
     image: "/assets/mondol.png",
     link: "/mandal",
     imageSize: "max-w-md",
@@ -91,9 +82,9 @@ export default function SpecialistPsychiatristsSection() {
                           <div className="space-y-6">
                             <div>
                               <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] mb-4">
-                                {specialist.name}{" "}
+                                {t(`specialists.${specialist.key}.name`)}{" "}
                                 <span className="bg-linear-to-r from-sky-500 via-blue-500 to-emerald-500 bg-clip-text text-transparent">
-                                  {specialist.lastName}
+                                  {t(`specialists.${specialist.key}.lastName`)}
                                 </span>
                               </h3>
                               <div className="flex items-center gap-3 mt-4">
@@ -103,7 +94,7 @@ export default function SpecialistPsychiatristsSection() {
                               </div>
                             </div>
                             <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light">
-                              {specialist.description}
+                              {t(`specialists.${specialist.key}.description`)}
                             </p>
                             <a
                               href={specialist.link}
@@ -136,7 +127,7 @@ export default function SpecialistPsychiatristsSection() {
 
                           <Image
                             src={specialist.image}
-                            alt={`${specialist.name} ${specialist.lastName}`}
+                            alt={`${t(`specialists.${specialist.key}.name`)} ${t(`specialists.${specialist.key}.lastName`)}`}
                             width={500}
                             height={500}
                             className="w-full h-full object-cover relative z-10"

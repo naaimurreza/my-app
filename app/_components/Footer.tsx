@@ -13,7 +13,7 @@ export const Footer = () => {
             <div className='relative bg-linear-to-r from-sky-100 via-blue-50 to-emerald-100 border-y border-gray-200'>
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_60%)]" />
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
-                    <p className='text-xl md:text-3xl text-gray-800'>
+                    <p className='text-xl md:text-3xl text-gray-800 text-center'>
                         {t("footer.tagline")}
                     </p>
                 </div>

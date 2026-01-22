@@ -1,102 +1,12 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Prof. Dr. Mahadeb Chandra Mandal - Senior Consultant Psychiatry | Brain And Life Hospital",
-  description:
-    "Meet Prof. Dr. Mahadeb Chandra Mandal, Senior Consultant in Psychiatry & Mental Health at Brain And Life Hospital. MBBS, MD (Psychiatry), FCPS qualified psychiatrist with extensive experience in clinical psychiatry, cognitive behavioral therapy, and medical education. Former Consultant at National Institute of Mental Health and Associate Professor at BSMMU.",
-  keywords: [
-    "Dr. Mahadeb Chandra Mandal",
-    "Prof. Dr. Mahadeb Mandal",
-    "Dr. Mahadeb Mandal",
-    "psychiatrist Bangladesh",
-    "psychiatrist Dhaka",
-    "senior consultant psychiatry",
-    "mental health specialist",
-    "psychiatric care",
-    "cognitive behavioral therapy",
-    "adult psychiatry",
-    "MD Psychiatry",
-    "FCPS psychiatrist",
-    "Brain And Life Hospital psychiatrist",
-    "National Institute of Mental Health",
-    "BSMMU psychiatry",
-    "Dhaka Medical College Hospital",
-    "mood disorders treatment",
-    "anxiety treatment",
-    "psychiatric consultation",
-    // Bengali keywords
-    "ড. মহাদেব চন্দ্র মণ্ডল",
-    "প্রফেসর ড. মহাদেব চন্দ্র মণ্ডল",
-    "ড. মহাদেব মণ্ডল",
-    "মনোরোগ বিশেষজ্ঞ বাংলাদেশ",
-    "মনোরোগ বিশেষজ্ঞ ঢাকা",
-    "সিনিয়র কনসালটেন্ট মনোরোগবিদ্যা",
-    "মানসিক স্বাস্থ্য বিশেষজ্ঞ",
-    "মনোরোগবিদ্যা সেবা",
-    "কগনিটিভ বিহেভিওরাল থেরাপি",
-    "প্রাপ্তবয়স্ক মনোরোগবিদ্যা",
-    "এমডি মনোরোগবিদ্যা",
-    "এফসিপিএস মনোরোগ বিশেষজ্ঞ",
-    "ব্রেইন অ্যান্ড লাইফ হাসপাতাল মনোরোগ বিশেষজ্ঞ",
-    "জাতীয় মানসিক স্বাস্থ্য ইনস্টিটিউট",
-    "বিএসএমএমইউ মনোরোগবিদ্যা",
-    "ঢাকা মেডিকেল কলেজ হাসপাতাল",
-    "মুড ডিসঅর্ডার চিকিৎসা",
-    "উদ্বেগ চিকিৎসা",
-    "মনোরোগ পরামর্শ",
-  ],
-  openGraph: {
-    title: "Prof. Dr. Mahadeb Chandra Mandal - Senior Consultant Psychiatry | Brain And Life Hospital",
-    description:
-      "Meet Prof. Dr. Mahadeb Chandra Mandal, Senior Consultant in Psychiatry & Mental Health. MBBS, MD (Psychiatry), FCPS qualified psychiatrist with extensive experience in clinical psychiatry and cognitive behavioral therapy.",
-    url: "https://brainandlifehospital.com/mandal",
-    siteName: "Brain And Life Hospital",
-    images: [
-      {
-        url: "/assets/mondol.png",
-        width: 1200,
-        height: 630,
-        alt: "Prof. Dr. Mahadeb Chandra Mandal - Senior Consultant Psychiatry",
-      },
-    ],
-    locale: "en_US",
-    type: "profile",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Prof. Dr. Mahadeb Chandra Mandal - Senior Consultant Psychiatry",
-    description:
-      "MBBS, MD (Psychiatry), FCPS qualified psychiatrist with extensive experience in clinical psychiatry and cognitive behavioral therapy.",
-    images: ["/assets/mondol.png"],
-  },
-  alternates: {
-    canonical: "https://brainandlifehospital.com/mandal",
-    languages: {
-      en: "https://brainandlifehospital.com/mandal",
-      bn: "https://brainandlifehospital.com/mandal",
-      "x-default": "https://brainandlifehospital.com/mandal",
-    },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      nosnippet: false,
-    },
-  },
-  authors: [{ name: "Brain And Life Hospital" }],
-  creator: "Brain And Life Hospital",
-  publisher: "Brain And Life Hospital",
-}
+import { useLanguage } from "../_contexts/LanguageContext";
 
 export default function Page() {
+  const { t } = useLanguage();
   return (
     <main className="min-h-screen bg-white pt-20">
       {/* Hero Section */}
@@ -110,7 +20,7 @@ export default function Page() {
                 <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 max-w-md mx-auto">
                   <Image
                     src="/assets/mondol.png"
-                    alt="Prof. Dr. Mahadeb Chandra Mandal"
+                    alt={`${t("specialists.mandal.name")} ${t("specialists.mandal.lastName")}`}
                     width={400}
                     height={480}
                     className="w-full h-auto object-cover"
@@ -121,37 +31,33 @@ export default function Page() {
               <div className="space-y-8 order-1 lg:order-2">
                 <div>
                   <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200 mb-4">
-                    Senior Consultant
+                    {t("specialistDetail.seniorConsultant")}
                   </p>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3">
-                    Prof. Dr. Mahadeb Chandra{" "}
+                    {t("specialists.mandal.name")}{" "}
                     <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
-                      Mandal
+                      {t("specialists.mandal.lastName")}
                     </span>
                   </h1>
                   <p className="text-xl text-sky-600 font-semibold">
-                    Senior Consultant (Psychiatry & Mental Health)
+                    {t("specialistDetail.mandal.title")}
                   </p>
                 </div>
                 <div className="space-y-6">
                   <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-200/50">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      Qualifications
+                      {t("specialistDetail.qualifications")}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      MBBS<br />
-                      MD (Psychiatry)<br />
-                      FCPS (Psychiatry)
+                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      {t("specialistDetail.mandal.qualifications")}
                     </p>
                   </div>
                   <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-200/50">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      Current Position
+                      {t("specialistDetail.currentPosition")}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      Professor of Psychiatry<br />
-                      Senior Consultant (Psychiatry & Mental Health)<br />
-                      Brain and Life Hospital
+                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                      {t("specialistDetail.mandal.currentPosition")}
                     </p>
                   </div>
                 </div>
@@ -169,25 +75,15 @@ export default function Page() {
             <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50">
               <CardHeader>
                 <CardTitle className="text-3xl md:text-4xl font-semibold text-center text-gray-900">
-                  About Dr. Mahadeb Chandra Mandal
+                  {t("specialistDetail.mandal.aboutTitle")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6 p-6 lg:p-8">
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Prof. Dr. Mahadeb Chandra Mandal is a renowned psychiatrist and
-                  mental health expert with extensive experience in clinical
-                  psychiatry and psychotherapy. As Senior Consultant at Brain and
-                  Life Hospital, he specializes in comprehensive mental health
-                  care with a focus on evidence-based treatments and patient
-                  recovery.
+                  {t("specialistDetail.mandal.about1")}
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  With advanced qualifications including MBBS, MD in Psychiatry,
-                  and FCPS in Psychiatry, Dr. Mandal brings years of clinical
-                  experience in diagnosing and treating complex mental health
-                  conditions. His approach integrates modern psychiatric practices
-                  with compassionate care, ensuring optimal outcomes for patients
-                  with various mental health challenges.
+                  {t("specialistDetail.mandal.about2")}
                 </p>
               </CardContent>
             </Card>
@@ -202,30 +98,30 @@ export default function Page() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <p className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200 mb-4">
-                Experience
+                {t("specialistDetail.experience")}
               </p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Professional Experience
+                {t("specialistDetail.professionalExperience")}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50 hover:border-sky-300 transition-all">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-gray-900">Current Roles</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.currentRoles")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-sky-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Professor of Psychiatry at Brain and Life Hospital
+                      {t("specialistDetail.mandal.currentRole1")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-sky-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Senior Consultant (Psychiatry & Mental Health)
+                      {t("specialistDetail.mandal.currentRole2")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-sky-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Clinical Supervisor for Psychiatry Residents
+                      {t("specialistDetail.mandal.currentRole3")}
                     </li>
                   </ul>
                 </CardContent>
@@ -233,28 +129,25 @@ export default function Page() {
 
               <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50 hover:border-emerald-300 transition-all">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-gray-900">Previous Positions</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.previousPositions")}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Consultant Psychiatrist at National Institute of Mental
-                      Health
+                      {t("specialistDetail.mandal.previousRole1")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Associate Professor of Psychiatry at Bangabandhu Sheikh
-                      Mujib Medical University
+                      {t("specialistDetail.mandal.previousRole2")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Senior Psychiatrist at Dhaka Medical College Hospital
+                      {t("specialistDetail.mandal.previousRole3")}
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
-                      Medical Officer at Mental Health Department, Ministry of
-                      Health
+                      {t("specialistDetail.mandal.previousRole4")}
                     </li>
                   </ul>
                 </CardContent>
@@ -270,10 +163,10 @@ export default function Page() {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200 mb-4">
-              Expertise
+              {t("specialistDetail.expertise")}
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-              Areas of Expertise
+              {t("specialistDetail.areasOfExpertise")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="border border-gray-200 bg-white shadow-lg shadow-gray-200/50 hover:shadow-xl hover:border-sky-300 transition-all duration-300 hover:-translate-y-1">
@@ -294,10 +187,10 @@ export default function Page() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Adult Psychiatry
+                    {t("specialistDetail.mandal.expertise1")}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Treatment of mood disorders and anxiety conditions
+                    {t("specialistDetail.mandal.expertise1Desc")}
                   </p>
                 </CardContent>
               </Card>
@@ -320,11 +213,10 @@ export default function Page() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Cognitive Therapy
+                    {t("specialistDetail.mandal.expertise2")}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Cognitive behavioral therapy and mindfulness-based
-                    interventions
+                    {t("specialistDetail.mandal.expertise2Desc")}
                   </p>
                 </CardContent>
               </Card>
@@ -347,10 +239,10 @@ export default function Page() {
                     </svg>
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    Medical Education
+                    {t("specialistDetail.mandal.expertise3")}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    Training and supervision of psychiatry residents
+                    {t("specialistDetail.mandal.expertise3Desc")}
                   </p>
                 </CardContent>
               </Card>
