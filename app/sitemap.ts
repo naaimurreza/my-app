@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: baseUrl,
       lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
+      changeFrequency: 'daily' as const,
       priority: 1.0,
       alternates: {
         languages: {
@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
+      changeFrequency: 'daily' as const,
       priority: 0.9,
       alternates: {
         languages: {
@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/services`,
       lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
+      changeFrequency: 'daily' as const,
       priority: 0.9,
       alternates: {
         languages: {
