@@ -28,7 +28,7 @@ export default function Page() {
   ]
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-white pt-20">
+    <main className="relative min-h-screen overflow-hidden pt-20">
       {/* Background accents similar to contact page */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.18),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(16,185,129,0.12),transparent_60%)]" />
@@ -103,7 +103,7 @@ export default function Page() {
       </section>
 
       {/* Mission + values */}
-      <section className="relative overflow-hidden bg-gray-50 py-14 lg:py-20">
+      <section className="relative overflow-hidden py-14 lg:py-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(56,189,248,0.08),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -149,7 +149,7 @@ export default function Page() {
       </section>
 
       {/* Stats */}
-      <section className="relative overflow-hidden bg-white border-y border-gray-200">
+      <section className="relative overflow-hidden border-y border-gray-200">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.08),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -167,7 +167,7 @@ export default function Page() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-gray-50 py-14 lg:py-20">
+      <section className="relative overflow-hidden py-14 lg:py-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 p-8 md:p-10 text-gray-900 shadow-2xl shadow-gray-200/50 ring-1 ring-gray-200">

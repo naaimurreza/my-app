@@ -7,7 +7,7 @@ import { useLanguage } from '../_contexts/LanguageContext';
 export default function Home() {
   const { t } = useLanguage();
   return (
-    <main className="min-h-screen bg-white pt-20">
+    <main className="min-h-screen pt-20">
       {/* Hero + content */}
       <section className="relative overflow-hidden">
         {/* Soft background gradient */}

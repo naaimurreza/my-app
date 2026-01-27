@@ -33,6 +33,20 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/assets/brainandlifelogo.png" />
         <link rel="apple-touch-icon" href="/assets/brainandlifelogo.png" />
+        {/* Preload critical images for faster loading */}
+        <link
+          rel="preload"
+          href="/assets/brainandlifelogo.png"
+          as="image"
+          type="image/png"
+        />
+        <link
+          rel="preload"
+          href="/assets/banner2.jpg"
+          as="image"
+          type="image/jpeg"
+          fetchPriority="high"
+        />
       </head>
       <body
         className={`${poppins.variable} antialiased`}

@@ -120,7 +120,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-white pt-20">
+    <main className="relative min-h-screen overflow-hidden pt-20">
       {/* Background accents to mirror contact page */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.1),transparent_55%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(16,185,129,0.06),transparent_60%)]" />
@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* Treatment Process */}
-      <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -274,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* Evidence-Based Approaches */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -308,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* Specialized Programs */}
-      <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -373,7 +373,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 rounded-2xl shadow-2xl shadow-gray-200/50 p-8 lg:p-12 text-gray-900 text-center ring-1 ring-gray-200">

@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react'
+import Image from 'next/image';
 import { useLanguage } from '../_contexts/LanguageContext';
 
 export default function Home() {
@@ -84,7 +85,7 @@ export default function Home() {
   ]
 
   return (
-    <main className="min-h-screen bg-white pt-20">
+    <main className="min-h-screen pt-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-emerald-50">
         {/* Background accents */}
@@ -154,34 +155,50 @@ export default function Home() {
 
               <div className="relative grid grid-cols-2 gap-4 lg:gap-5">
                 <div className="space-y-4 lg:space-y-5">
-                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl shadow-gray-200/50">
-                    <img
+                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl shadow-gray-200/50 relative h-52 sm:h-64 lg:h-72">
+                    <Image
                       src="/assets/service.jpg"
                       alt="Calm, therapeutic mental health environment"
-                      className="h-52 w-full object-cover sm:h-64 lg:h-72"
+                      fill
+                      className="object-cover"
+                      loading="lazy"
+                      quality={85}
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 50vw"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-200/50">
-                    <img
+                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-200/50 relative h-32 sm:h-40 lg:h-44">
+                    <Image
                       src="/assets/service5.jpg"
                       alt="One-on-one psychiatric consultation"
-                      className="h-32 w-full object-cover sm:h-40 lg:h-44"
+                      fill
+                      className="object-cover"
+                      loading="lazy"
+                      quality={85}
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 50vw"
                     />
                   </div>
                 </div>
                 <div className="mt-8 space-y-4 lg:space-y-5">
-                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-200/50">
-                    <img
+                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-200/50 relative h-40 sm:h-52 lg:h-60">
+                    <Image
                       src="/assets/service6.jpg"
                       alt="Supportive group therapy session"
-                      className="h-40 w-full object-cover sm:h-52 lg:h-60"
+                      fill
+                      className="object-cover"
+                      loading="lazy"
+                      quality={85}
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 50vw"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-3xl border border-emerald-300 bg-emerald-50 shadow-[0_0_45px_rgba(16,185,129,0.15)]">
-                    <img
+                  <div className="overflow-hidden rounded-3xl border border-emerald-300 bg-emerald-50 shadow-[0_0_45px_rgba(16,185,129,0.15)] relative h-32 sm:h-40 lg:h-44">
+                    <Image
                       src="/assets/service4.jpg"
                       alt="Medical team monitoring patient wellbeing"
-                      className="h-32 w-full object-cover sm:h-40 lg:h-44"
+                      fill
+                      className="object-cover"
+                      loading="lazy"
+                      quality={85}
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 50vw"
                     />
                   </div>
                 </div>
@@ -202,7 +219,7 @@ export default function Home() {
       </section>
 
       {/* Services Grid */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.08),transparent_55%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.06),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -280,7 +297,7 @@ export default function Home() {
       </section>
 
       {/* 24/7 Services Highlight */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-linear-to-r from-sky-100 via-blue-50 to-emerald-100 rounded-2xl shadow-2xl shadow-gray-200/50 p-8 lg:p-12 text-gray-900 ring-1 ring-gray-200">
@@ -346,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 rounded-2xl border border-gray-200 p-8 lg:p-12 text-center shadow-2xl shadow-gray-200/50">

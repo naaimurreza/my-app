@@ -41,7 +41,7 @@ export default function DoctorsCarouselSection() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-white py-12 lg:py-16">
+    <section className="relative overflow-hidden py-12 lg:py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_60%)]" />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -82,8 +82,7 @@ export default function DoctorsCarouselSection() {
                               height={144}
                               className="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover shadow-lg border-4 border-gray-200"
                               loading="lazy"
-                              decoding="async"
-                              fetchPriority="low"
+                              quality={85}
                               sizes="(max-width: 768px) 128px, 144px"
                             />
                           </div>

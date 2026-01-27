@@ -6,9 +6,9 @@ import { useLanguage } from "../_contexts/LanguageContext";
 export default function Page() {
   const { t } = useLanguage();
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-slate-50">
+      <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Section */}
@@ -109,7 +109,7 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-white border-y border-slate-200">
+      <section className="border-y border-slate-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">

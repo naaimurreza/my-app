@@ -7,7 +7,7 @@ export default function MDMessageSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-gray-50 py-12 lg:py-16">
+    <section className="relative overflow-hidden py-12 lg:py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_60%)]" />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -60,8 +60,7 @@ export default function MDMessageSection() {
                   height={500}
                   className="relative w-full max-w-md h-auto rounded-full border-4 border-gray-200"
                   loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
+                  quality={85}
                   sizes="(max-width: 768px) 100vw, 500px"
                 />
               </div>

@@ -16,7 +16,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-lg border-b border-gray-200/50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md border-b border-gray-200/30 shadow-sm">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8 lg:py-4"
@@ -34,6 +34,8 @@ export default function Header() {
               height={45}
               className="h-auto"
               priority
+              fetchPriority="high"
+              quality={90}
               sizes="60px"
             />
             <div className="flex flex-col">
@@ -113,7 +115,7 @@ export default function Header() {
         className="lg:hidden"
       >
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white backdrop-blur-md p-6 sm:max-w-sm border-l border-gray-200 shadow-xl">
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white/40 backdrop-blur-md p-6 sm:max-w-sm border-l border-gray-200/50 shadow-xl">
           <div className="flex items-center justify-between mb-8">
             <a href="./" className="flex items-center gap-2">
               <span className="sr-only">Brain and Life</span>
@@ -124,6 +126,8 @@ export default function Header() {
                 height={40}
                 className="h-auto"
                 priority
+                fetchPriority="high"
+                quality={90}
                 sizes="50px"
               />
               <div className="flex flex-col">

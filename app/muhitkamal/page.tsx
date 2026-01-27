@@ -8,9 +8,9 @@ import { useLanguage } from "../_contexts/LanguageContext";
 export default function Page() {
   const { t } = useLanguage();
   return (
-    <main className="min-h-screen bg-white pt-20">
+    <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-emerald-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.05),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -67,7 +67,7 @@ export default function Page() {
       </section>
 
       {/* About Section */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -91,7 +91,7 @@ export default function Page() {
       </section>
 
       {/* Experience Section */}
-      <section className="relative overflow-hidden bg-white py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
@@ -149,7 +149,7 @@ export default function Page() {
       </section>
 
       {/* Specialties Section */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

@@ -6,7 +6,7 @@ export default function CallToActionSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-white py-12 lg:py-16">
+    <section className="relative overflow-hidden py-12 lg:py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.08),transparent_55%)]" />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 rounded-2xl border border-gray-200 p-8 lg:p-12 text-center shadow-2xl shadow-gray-200/50">

@@ -7,7 +7,7 @@ export default function HeroSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-emerald-50">
+    <section className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-sky-200/30 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-200/20 blur-3xl" />
@@ -133,7 +133,9 @@ export default function HeroSection() {
                 height={400}
                 className="w-full h-auto object-cover"
                 priority
-                sizes="(max-width: 1024px) 100vw, 600px"
+                fetchPriority="high"
+                quality={90}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 600px"
               />
             </div>
             <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white">

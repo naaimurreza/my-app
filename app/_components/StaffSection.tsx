@@ -25,7 +25,7 @@ const staff = [
     role: "Administrative Officer",
   },
   {
-    image: "/assets/nijhum.jpg",
+    image: "/assets/nijhum.png",
     name: "Nijhum",
     role: "Senior Staff Nurse",
   },
@@ -35,7 +35,7 @@ export default function StaffSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-gray-50 py-12 lg:py-16">
+    <section className="relative overflow-hidden py-12 lg:py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.08),transparent_55%)]" />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -63,8 +63,7 @@ export default function StaffSection() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
+                  quality={85}
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

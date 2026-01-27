@@ -1,15 +1,165 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function AnimatedGradientBackground() {
-  return (
-    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-      {/* Base white background layer */}
-      <div className="absolute inset-0 bg-white" />
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const [scrollY, setScrollY] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
-      {/* Subtle animated overlay for depth - very minimal */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.01),transparent_50%)] animate-gradient-overlay" />
+  useEffect(() => {
+    setIsClient(true);
+    // Set initial mouse position to center
+    if (typeof window !== "undefined") {
+      setMousePosition({
+        x: 50,
+        y: 50,
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: (e.clientX / window.innerWidth) * 100,
+        y: (e.clientY / window.innerHeight) * 100,
+      });
+    };
+
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isClient]);
+
+  // Calculate parallax offsets based on scroll
+  const parallaxOffset1 = scrollY * 0.1;
+  const parallaxOffset2 = scrollY * 0.15;
+  const parallaxOffset3 = scrollY * 0.2;
+
+  return (
+    <div
+      ref={containerRef}
+      className="fixed inset-0 -z-[1] overflow-hidden pointer-events-none"
+      style={{ zIndex: -1 }}
+    >
+      {/* Base subtle background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/60 via-sky-50/50 to-purple-50/40" />
+
+      {/* Animated gradient blobs that follow cursor */}
+      <div
+        className="absolute w-[800px] h-[800px] rounded-full blur-3xl transition-all duration-700 ease-out"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(16, 185, 129, 0.6), rgba(59, 130, 246, 0.5), transparent 70%)",
+          left: `${mousePosition.x}%`,
+          top: `${mousePosition.y}%`,
+          transform: `translate(-50%, -50%) translateY(${-parallaxOffset1}px)`,
+          willChange: "transform, opacity",
+          opacity: 0.7,
+        }}
+      />
+
+      <div
+        className="absolute w-[700px] h-[700px] rounded-full blur-3xl transition-all duration-1000 ease-out"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(139, 92, 246, 0.55), rgba(236, 72, 153, 0.45), transparent 70%)",
+          left: `${100 - mousePosition.x}%`,
+          top: `${100 - mousePosition.y}%`,
+          transform: `translate(-50%, -50%) translateY(${-parallaxOffset2}px)`,
+          willChange: "transform, opacity",
+          opacity: 0.6,
+        }}
+      />
+
+      {/* Floating animated blobs */}
+      <div
+        className="absolute w-[600px] h-[600px] rounded-full blur-3xl animate-float-blob-1"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(59, 130, 246, 0.5), rgba(16, 185, 129, 0.4), transparent 70%)",
+          left: "20%",
+          top: "30%",
+          transform: `translateY(${-parallaxOffset3}px)`,
+          opacity: 0.5,
+        }}
+      />
+
+      <div
+        className="absolute w-[650px] h-[650px] rounded-full blur-3xl animate-float-blob-2"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(236, 72, 153, 0.5), rgba(139, 92, 246, 0.4), transparent 70%)",
+          right: "15%",
+          bottom: "25%",
+          transform: `translateY(${-parallaxOffset1}px)`,
+          opacity: 0.5,
+        }}
+      />
+
+      {/* Additional floating blob */}
+      <div
+        className="absolute w-[500px] h-[500px] rounded-full blur-3xl animate-float-blob-1"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(16, 185, 129, 0.4), rgba(59, 130, 246, 0.3), transparent 70%)",
+          left: "60%",
+          top: "70%",
+          transform: `translateY(${-parallaxOffset2}px)`,
+          opacity: 0.4,
+          animationDuration: "28s",
+        }}
+      />
+
+      {/* Particle effect layer */}
+      <div className="absolute inset-0">
+        {Array.from({ length: 30 }).map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-3 h-3 rounded-full blur-sm animate-particle"
+            style={{
+              background: `radial-gradient(circle, rgba(16, 185, 129, ${0.3 + (i % 3) * 0.1}), transparent)`,
+              left: `${(i * 7) % 100}%`,
+              top: `${(i * 11) % 100}%`,
+              animationDelay: `${i * 0.3}s`,
+              animationDuration: `${15 + (i % 5) * 2}s`,
+              transform: `translateY(${-parallaxOffset2 * (0.5 + i * 0.1)}px)`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Scroll-reactive gradient overlay */}
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-100/40 to-transparent transition-opacity duration-300"
+        style={{
+          opacity: Math.min(scrollY / 500, 0.5),
+        }}
+      />
+
+      {/* Cursor trail effect */}
+      <div
+        className="absolute w-40 h-40 rounded-full blur-2xl transition-all duration-300 ease-out"
+        style={{
+          background: "radial-gradient(circle, rgba(16, 185, 129, 0.6), transparent)",
+          left: `${mousePosition.x}%`,
+          top: `${mousePosition.y}%`,
+          transform: "translate(-50%, -50%)",
+          willChange: "transform",
+          opacity: 0.3,
+        }}
+      />
     </div>
   );
 }

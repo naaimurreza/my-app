@@ -10,7 +10,7 @@ export const Footer = () => {
     return (
         <>
             {/* Top Banner */}
-            <div className='relative bg-linear-to-r from-sky-100 via-blue-50 to-emerald-100 border-y border-gray-200'>
+            <div className='relative bg-linear-to-r from-sky-100/40 via-blue-50/40 to-emerald-100/40 backdrop-blur-sm border-y border-gray-200/30'>
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_60%)]" />
                 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
                     <p className='text-xl md:text-3xl text-gray-800 text-center'>
@@ -20,7 +20,7 @@ export const Footer = () => {
             </div>
 
             {/* Footer */}
-            <footer className="relative bg-gray-50">
+            <footer className="relative bg-gray-50/30 backdrop-blur-md">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.03),transparent_55%)]" />
                 <div className="relative mx-auto w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
@@ -37,6 +37,7 @@ export const Footer = () => {
                                     height={50}
                                     alt="Brain and Life Hospital logo"
                                     loading="lazy"
+                                    quality={85}
                                     sizes="70px"
                                 />
                                 <div className="text-center md:text-left">

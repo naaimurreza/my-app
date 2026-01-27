@@ -38,7 +38,7 @@ export default function SpecialistPsychiatristsSection() {
   );
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-sky-50/30 py-12 lg:py-16">
+    <section className="relative overflow-hidden py-12 lg:py-16">
       {/* Modern background effects */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-sky-200/20 rounded-full blur-3xl"></div>
@@ -139,8 +139,7 @@ export default function SpecialistPsychiatristsSection() {
                                   : { objectPosition: "center center" }
                             }
                             loading="lazy"
-                            decoding="async"
-                            fetchPriority="low"
+                            quality={85}
                             sizes="(max-width: 1024px) 100vw, 500px"
                           />
                         </div>
