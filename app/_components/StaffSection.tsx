@@ -54,7 +54,7 @@ export default function StaffSection() {
           {staff.map((member, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-lg shadow-gray-200/50 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl transition-all duration-300"
+              className="group relative rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md overflow-hidden shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-48 md:h-56 overflow-hidden bg-gray-100">
                 <Image

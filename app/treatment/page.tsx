@@ -121,9 +121,6 @@ export default function Home() {
 
   return (
     <main className="relative min-h-screen overflow-hidden pt-20">
-      {/* Background accents to mirror contact page */}
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.1),transparent_55%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(16,185,129,0.06),transparent_60%)]" />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -158,14 +155,14 @@ export default function Home() {
             <div className="relative">
               <div className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 rounded-full bg-sky-200/30 blur-3xl" />
               <div className="pointer-events-none absolute -left-8 bottom-0 h-32 w-32 rounded-full bg-emerald-200/25 blur-3xl" />
-              <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.1)]">
+              <div className="overflow-hidden rounded-3xl border border-white/30 bg-white/20 backdrop-blur-sm shadow-[0_24px_80px_rgba(0,0,0,0.1)]">
                 <img
                   src="/assets/treatment.jpg"
                   alt="Personalized treatment at Brain and Life Hospital"
                   className="h-56 w-full object-cover sm:h-64 lg:h-72"
                 />
               </div>
-              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-xs text-gray-700 ring-1 ring-gray-200 shadow-lg">
+              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                   ✓
                 </span>
@@ -180,8 +177,7 @@ export default function Home() {
       </section>
 
       {/* Treatment Modalities */}
-      <section className="relative overflow-hidden bg-gray-50 py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_60%)]" />
+      <section className="relative overflow-hidden py-16 lg:py-24">
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="mb-3 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200">
@@ -199,7 +195,7 @@ export default function Home() {
             {treatmentModalities.map((treatment, index) => (
               <div
                 key={index}
-                className="group rounded-2xl border border-gray-200 bg-white p-6 lg:p-8 shadow-lg shadow-gray-200/50 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl transition-all duration-300"
+                className="group rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
               >
                 <div className="text-5xl mb-4">{treatment.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors">
@@ -232,7 +228,6 @@ export default function Home() {
 
       {/* Treatment Process */}
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.08),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
@@ -251,7 +246,7 @@ export default function Home() {
               {treatmentProcess.map((step, index) => (
                 <div
                   key={index}
-                  className="flex flex-col md:flex-row gap-6 rounded-xl border border-gray-200 bg-white p-6 lg:p-8 shadow-lg shadow-gray-200/50"
+                  className="flex flex-col md:flex-row gap-6 rounded-xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30"
                 >
                   <div className="shrink-0">
                     <div className="w-16 h-16 rounded-full bg-linear-to-br from-sky-500 to-emerald-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-sky-500/30">
@@ -275,7 +270,6 @@ export default function Home() {
 
       {/* Evidence-Based Approaches */}
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -290,12 +284,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-white p-8 lg:p-10 shadow-xl shadow-gray-200/50">
+            <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-8 lg:p-10 shadow-xl shadow-gray-200/30">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {evidenceBasedApproaches.map((approach, index) => (
                   <div
                     key={index}
-                    className="flex items-center p-4 rounded-lg bg-gray-50 ring-1 ring-gray-200 hover:ring-sky-300 transition-colors"
+                    className="flex items-center p-4 rounded-lg bg-white/20 backdrop-blur-sm ring-1 ring-white/30 hover:ring-white/50 transition-colors"
                   >
                     <div className="w-2 h-2 rounded-full bg-sky-500 mr-3 shrink-0"></div>
                     <span className="text-gray-900 font-medium">{approach}</span>
@@ -309,7 +303,6 @@ export default function Home() {
 
       {/* Specialized Programs */}
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
@@ -321,7 +314,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
-            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-lg shadow-gray-200/50 hover:-translate-y-0.5 transition">
+            <div className="rounded-xl border border-white/30 bg-white/30 backdrop-blur-md p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-0.5 transition">
               <div className="text-4xl mb-4">🏥</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {t("treatment.inpatient")}
@@ -345,7 +338,7 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="rounded-xl border border-gray-200 bg-white p-8 shadow-lg shadow-gray-200/50 hover:-translate-y-0.5 transition">
+            <div className="rounded-xl border border-white/30 bg-white/30 backdrop-blur-md p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-0.5 transition">
               <div className="text-4xl mb-4">🏠</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {t("treatment.outpatient")}
@@ -374,9 +367,8 @@ export default function Home() {
 
       {/* Call to Action */}
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 rounded-2xl shadow-2xl shadow-gray-200/50 p-8 lg:p-12 text-gray-900 text-center ring-1 ring-gray-200">
+          <div className="rounded-2xl shadow-2xl shadow-gray-200/50 p-8 lg:p-12 text-gray-900 text-center ring-1 ring-gray-200">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 {t("treatment.beginJourney")}

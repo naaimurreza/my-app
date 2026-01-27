@@ -18,7 +18,7 @@ export default function MDMessageSection() {
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
               {t("md.title")}
             </h2>
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 lg:p-8 shadow-lg shadow-gray-200/50">
+            <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
                   <svg

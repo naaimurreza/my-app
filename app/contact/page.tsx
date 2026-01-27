@@ -60,7 +60,7 @@ export default function Home() {
             <div className="relative mt-6 lg:mt-0">
               <div className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 rounded-full bg-sky-200/30 blur-3xl" />
               <div className="pointer-events-none absolute -left-8 bottom-0 h-32 w-32 rounded-full bg-emerald-200/25 blur-3xl" />
-              <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.1)]">
+              <div className="overflow-hidden rounded-3xl border border-white/30 bg-white/20 backdrop-blur-sm shadow-[0_24px_80px_rgba(0,0,0,0.1)]">
                 <Image
                   src="/assets/banner.png"
                   alt="Brain and Life Hospital contact and support"
@@ -73,7 +73,7 @@ export default function Home() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 800px"
                 />
               </div>
-              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-xs text-gray-700 ring-1 ring-gray-200 shadow-lg">
+              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                   ✓
                 </span>
@@ -92,7 +92,7 @@ export default function Home() {
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
             {/* Contact details / emergency info */}
             <div className="space-y-8 lg:col-span-1">
-              <div className="rounded-2xl bg-white shadow-xl shadow-gray-200/50 border border-gray-200 p-6">
+              <div className="rounded-2xl bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 border border-white/30 p-6">
                 <h2 className="text-lg font-semibold text-gray-900 mb-4">
                   {t("contact.emergencySupport")}
                 </h2>
@@ -117,7 +117,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-white shadow-xl shadow-gray-200/50 border border-gray-200 p-6 space-y-4">
+              <div className="rounded-2xl bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 border border-white/30 p-6 space-y-4">
                 <h2 className="text-lg font-semibold text-gray-900">
                   {t("contact.hospitalLocation")}
                 </h2>
@@ -134,7 +134,7 @@ export default function Home() {
 
             {/* Contact form */}
             <div className="lg:col-span-2">
-              <div className="rounded-2xl bg-white shadow-xl shadow-gray-200/50 border border-gray-200 p-6 md:p-8">
+              <div className="rounded-2xl bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 border border-white/30 p-6 md:p-8">
                 <h2 className="text-lg font-semibold text-gray-900 mb-2">
                   {t("contact.sendMessage")}
                 </h2>

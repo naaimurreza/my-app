@@ -87,14 +87,7 @@ export default function Home() {
   return (
     <main className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-linear-to-br from-sky-50 via-white to-emerald-50">
-        {/* Background accents */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-sky-200/30 blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-200/20 blur-3xl" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.05),transparent_55%)]" />
-        </div>
-
+      <section className="relative overflow-hidden">
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-28 lg:pb-24">
           <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
             {/* Text content */}
@@ -155,7 +148,7 @@ export default function Home() {
 
               <div className="relative grid grid-cols-2 gap-4 lg:gap-5">
                 <div className="space-y-4 lg:space-y-5">
-                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl shadow-gray-200/50 relative h-52 sm:h-64 lg:h-72">
+                  <div className="overflow-hidden rounded-3xl border border-white/30 bg-white/20 backdrop-blur-sm shadow-2xl shadow-gray-200/30 relative h-52 sm:h-64 lg:h-72">
                     <Image
                       src="/assets/service.jpg"
                       alt="Calm, therapeutic mental health environment"
@@ -166,7 +159,7 @@ export default function Home() {
                       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 50vw"
                     />
                   </div>
-                  <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-xl shadow-gray-200/50 relative h-32 sm:h-40 lg:h-44">
+                  <div className="overflow-hidden rounded-3xl border border-white/30 bg-white/20 backdrop-blur-sm shadow-xl shadow-gray-200/30 relative h-32 sm:h-40 lg:h-44">
                     <Image
                       src="/assets/service5.jpg"
                       alt="One-on-one psychiatric consultation"
@@ -204,7 +197,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-3 rounded-2xl bg-white px-4 py-3 text-xs text-gray-700 ring-1 ring-gray-200 shadow-lg">
+              <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                   ✓
                 </span>
@@ -220,8 +213,6 @@ export default function Home() {
 
       {/* Services Grid */}
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.08),transparent_55%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.06),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="mb-3 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200">
@@ -239,7 +230,7 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group rounded-2xl border border-gray-200 bg-white p-6 lg:p-8 shadow-lg shadow-gray-200/50 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl transition-all duration-300"
+                className="group rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
               >
                 <div className="mb-4 text-5xl drop-shadow">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors">
@@ -263,8 +254,7 @@ export default function Home() {
       </section>
 
       {/* Conditions We Treat */}
-      <section className="relative overflow-hidden bg-white">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_60%)]" />
+      <section className="relative overflow-hidden">
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -279,12 +269,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 lg:p-10 shadow-xl shadow-gray-200/50">
+            <div className="rounded-2xl border border-white/30 bg-white/20 backdrop-blur-md p-8 lg:p-10 shadow-xl shadow-gray-200/30">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {conditions.map((condition, index) => (
                   <div
                     key={index}
-                    className="flex items-center p-4 rounded-lg bg-white ring-1 ring-gray-200 hover:ring-sky-300 transition-colors"
+                    className="flex items-center p-4 rounded-lg bg-white/30 backdrop-blur-sm ring-1 ring-white/30 hover:ring-white/50 transition-colors"
                   >
                     <div className="mr-3 h-2 w-2 rounded-full bg-sky-500"></div>
                     <span className="text-gray-900 font-medium">{condition}</span>
@@ -298,9 +288,8 @@ export default function Home() {
 
       {/* 24/7 Services Highlight */}
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-linear-to-r from-sky-100 via-blue-50 to-emerald-100 rounded-2xl shadow-2xl shadow-gray-200/50 p-8 lg:p-12 text-gray-900 ring-1 ring-gray-200">
+          <div className="rounded-2xl shadow-2xl shadow-gray-200/50 p-8 lg:p-12 text-gray-900 ring-1 ring-gray-200">
             <div className="max-w-3xl mx-auto text-center">
               <div className="text-6xl mb-6">🕐</div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -310,15 +299,15 @@ export default function Home() {
                 {t("services.emergencyDesc")}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-                <div className="rounded-xl bg-white p-6 ring-1 ring-gray-200 shadow-sm">
+                <div className="rounded-xl bg-white/30 backdrop-blur-md p-6 ring-1 ring-white/30 shadow-sm">
                   <div className="text-2xl font-bold mb-2 text-gray-900">24/7</div>
                   <div className="text-gray-700">{t("services.crisisHotline")}</div>
                 </div>
-                <div className="rounded-xl bg-white p-6 ring-1 ring-gray-200 shadow-sm">
+                <div className="rounded-xl bg-white/30 backdrop-blur-md p-6 ring-1 ring-white/30 shadow-sm">
                   <div className="text-2xl font-bold mb-2 text-gray-900">{t("services.immediate") || "Immediate"}</div>
                   <div className="text-gray-700">{t("services.immediateResponse")}</div>
                 </div>
-                <div className="rounded-xl bg-white p-6 ring-1 ring-gray-200 shadow-sm">
+                <div className="rounded-xl bg-white/30 backdrop-blur-md p-6 ring-1 ring-white/30 shadow-sm">
                   <div className="text-2xl font-bold mb-2 text-gray-900">{t("services.expert") || "Expert"}</div>
                   <div className="text-gray-700">{t("services.expertTeam")}</div>
                 </div>
@@ -329,8 +318,7 @@ export default function Home() {
       </section>
 
       {/* Our Team */}
-      <section className="relative overflow-hidden bg-white">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.08),transparent_55%)]" />
+      <section className="relative overflow-hidden">
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -364,9 +352,8 @@ export default function Home() {
 
       {/* Call to Action */}
       <section className="relative overflow-hidden py-16 lg:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 rounded-2xl border border-gray-200 p-8 lg:p-12 text-center shadow-2xl shadow-gray-200/50">
+          <div className="rounded-2xl border border-gray-200 p-8 lg:p-12 text-center shadow-2xl shadow-gray-200/50">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t("cta.title")}
             </h2>

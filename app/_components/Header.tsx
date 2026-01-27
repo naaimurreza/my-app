@@ -96,7 +96,7 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href="https://www.google.com/maps/place/BRAIN+AND+LIFE+HOSPITAL/@23.7530079,90.3853329,17z/data=!3m1!4b1!4m6!3m5!1s0x3755b8a492bd6b6b:0x4a64940b5bd018b3!8m2!3d23.753003!4d90.3879078!16s%2Fg%2F11byflh016?coh=277535&entry=tts&g_ep=EgoyMDI2MDExMS4wIPu8ASoKLDEwMDc5MjA3M0gBUAM%3D&skid=25f21306-4bdd-4a07-b733-d090c9bf79a8"
-            className="px-4 py-2 text-xs text-slate-400 hover:text-sky-300 transition-colors max-w-[200px] text-right"
+            className="px-4 py-2 text-xs text-slate-700 hover:text-sky-600 transition-colors max-w-[200px] text-right"
           >
             Crescent Plaza, 145/1 Green Road, Dhaka-1205
           </a>

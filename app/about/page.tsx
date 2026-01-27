@@ -81,14 +81,14 @@ export default function Page() {
             <div className="relative">
               <div className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 rounded-full bg-sky-200/30 blur-3xl" />
               <div className="pointer-events-none absolute -left-8 bottom-0 h-32 w-32 rounded-full bg-emerald-200/25 blur-3xl" />
-              <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-[0_24px_80px_rgba(0,0,0,0.1)]">
+              <div className="overflow-hidden rounded-3xl border border-white/30 bg-white/20 backdrop-blur-sm shadow-[0_24px_80px_rgba(0,0,0,0.1)]">
                 <img
                   src="/assets/about.png"
                   alt="Brain and Life Hospital team and facility"
                   className="h-56 w-full object-cover sm:h-64 lg:h-72"
                 />
               </div>
-              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white px-4 py-3 text-xs text-gray-700 ring-1 ring-gray-200 shadow-lg">
+              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
                 <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                   ✓
                 </span>
@@ -115,7 +115,7 @@ export default function Page() {
                 {t("about.missionDesc")}
               </p>
 
-              <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-xl shadow-gray-200/50">
+              <div className="mt-8 rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-xl shadow-gray-200/30">
                 <p className="text-sm font-semibold text-gray-900 mb-2">
                   {t("about.expect")}
                 </p>
@@ -137,7 +137,7 @@ export default function Page() {
               {values.map((v, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl shadow-gray-200/50 hover:-translate-y-0.5 hover:border-sky-300 transition"
+                  className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-xl shadow-gray-200/30 hover:-translate-y-0.5 hover:border-white/50 transition"
                 >
                   <p className="text-sm font-semibold text-sky-600 mb-2">{v.title}</p>
                   <p className="text-sm text-gray-700 leading-relaxed">{v.description}</p>
@@ -156,7 +156,7 @@ export default function Page() {
             {stats.map((s) => (
               <div
                 key={s.value}
-                className="rounded-2xl border border-gray-200 bg-white p-6 text-center shadow-xl shadow-gray-200/50"
+                className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 text-center shadow-xl shadow-gray-200/30"
               >
                 <p className="text-xl md:text-2xl font-semibold text-gray-900">{s.label}</p>
                 <p className="mt-1 text-sm text-gray-700">{s.value}</p>

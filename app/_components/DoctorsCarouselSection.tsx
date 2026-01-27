@@ -68,7 +68,7 @@ export default function DoctorsCarouselSection() {
                 {doctors.map((doctor, index) => (
                   <CarouselItem key={index}>
                     <div className="p-2">
-                      <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50 hover:border-sky-300 transition-all">
+                      <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 hover:border-white/50 transition-all">
                         <CardContent className="flex flex-col items-center justify-center gap-4 p-8">
                           <div className="relative">
                             <div

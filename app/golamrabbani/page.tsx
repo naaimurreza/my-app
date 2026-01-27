@@ -17,7 +17,7 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative order-2 lg:order-1">
                 <div className="absolute -inset-6 bg-linear-to-br from-sky-200/30 via-blue-200/20 to-emerald-200/30 rounded-full blur-3xl"></div>
-                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-200 max-w-md mx-auto">
+                <div className="relative bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-white/30 max-w-md mx-auto">
                   <Image
                     src="/assets/rabbani.png"
                     alt={`${t("specialists.rabbani.name")} ${t("specialists.rabbani.lastName")}`}
@@ -44,7 +44,7 @@ export default function Page() {
                   </p>
                 </div>
                 <div className="space-y-6">
-                  <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-200/50">
+                  <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-lg shadow-gray-200/30">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
                       {t("specialistDetail.qualifications")}
                     </h3>
@@ -52,7 +52,7 @@ export default function Page() {
                       {t("specialistDetail.rabbani.qualifications")}
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-200/50">
+                  <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-lg shadow-gray-200/30">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
                       {t("specialistDetail.currentPosition")}
                     </h3>
@@ -72,7 +72,7 @@ export default function Page() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50">
+            <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30">
               <CardHeader>
                 <CardTitle className="text-3xl md:text-4xl font-semibold text-center text-gray-900">
                   {t("specialistDetail.rabbani.aboutTitle")}
@@ -105,7 +105,7 @@ export default function Page() {
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50 hover:border-sky-300 transition-all">
+              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 hover:border-white/50 transition-all">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.currentRoles")}</CardTitle>
                 </CardHeader>
@@ -127,7 +127,7 @@ export default function Page() {
                 </CardContent>
               </Card>
 
-              <Card className="border border-gray-200 bg-white shadow-xl shadow-gray-200/50 hover:border-emerald-300 transition-all">
+              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 hover:border-white/50 transition-all">
                 <CardHeader>
                   <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.previousPositions")}</CardTitle>
                 </CardHeader>
@@ -169,7 +169,7 @@ export default function Page() {
               {t("specialistDetail.areasOfExpertise")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="border border-gray-200 bg-white shadow-lg shadow-gray-200/50 hover:shadow-xl hover:border-sky-300 transition-all duration-300 hover:-translate-y-1">
+              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-lg shadow-gray-200/30 hover:shadow-xl hover:border-white/50 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg
@@ -221,7 +221,7 @@ export default function Page() {
                 </CardContent>
               </Card>
 
-              <Card className="border border-gray-200 bg-white shadow-lg shadow-gray-200/50 hover:shadow-xl hover:border-sky-300 transition-all duration-300 hover:-translate-y-1">
+              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-lg shadow-gray-200/30 hover:shadow-xl hover:border-white/50 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
                   <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg

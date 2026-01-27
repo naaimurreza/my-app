@@ -13,7 +13,7 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Section */}
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white p-4 max-w-md mx-auto">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/30 backdrop-blur-md p-4 max-w-md mx-auto border border-white/30">
                 <Image
                   src="/assets/md2.png"
                   alt={t("mdPage.heroBadge")}
@@ -61,7 +61,7 @@ export default function Page() {
             </div>
 
             {/* Treatment Approach */}
-            <div className="mb-12 rounded-2xl bg-white border border-slate-200 shadow-sm p-8">
+            <div className="mb-12 rounded-2xl bg-white/30 backdrop-blur-md border border-white/30 shadow-sm p-8">
               <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">
                 {t("mdPage.section2Title")}
               </h2>

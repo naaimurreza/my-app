@@ -45,7 +45,7 @@ export default function EasyStepsSection() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="group rounded-2xl border border-gray-200 bg-white p-6 lg:p-8 shadow-lg shadow-gray-200/50 hover:-translate-y-1 hover:border-sky-300 hover:shadow-xl transition-all duration-300"
+              className="group rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
             >
               <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-xl bg-sky-100 border border-sky-200 group-hover:bg-sky-200 transition-colors">
                 <img
