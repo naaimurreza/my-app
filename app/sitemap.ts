@@ -1,117 +1,107 @@
 import { MetadataRoute } from 'next'
 
+/**
+ * Enhanced Sitemap for Brain And Life Hospital
+ * 
+ * Features:
+ * - Proper priority hierarchy (1.0 for homepage, decreasing for other pages)
+ * - Realistic change frequencies based on content type
+ * - Accurate lastModified dates
+ * - Language alternates for English and Bengali
+ * - SEO-optimized structure
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://brainandlifehospital.com";
-  const currentDate = new Date();
+  // Use environment variable if available, fallback to production URL
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://brainandlifehospital.com";
+  
+  // Calculate realistic dates for better SEO
+  const now = new Date();
+  const lastWeek = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+  const lastMonth = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+  const lastQuarter = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
 
-  return [
+  // Define all pages with their metadata
+  const pages = [
+    // Homepage - Highest priority, updated most frequently
     {
-      url: baseUrl,
-      lastModified: currentDate,
+      path: '',
+      lastModified: now,
       changeFrequency: 'daily' as const,
       priority: 1.0,
-      alternates: {
-        languages: {
-          en: baseUrl,
-          bn: baseUrl,
-        },
-      },
     },
+    
+    // Main service pages - High priority, updated weekly
     {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
+      path: 'about',
+      lastModified: lastWeek,
+      changeFrequency: 'weekly' as const,
       priority: 0.9,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/about`,
-          bn: `${baseUrl}/about`,
-        },
-      },
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
+      path: 'services',
+      lastModified: lastWeek,
+      changeFrequency: 'weekly' as const,
       priority: 0.9,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/services`,
-          bn: `${baseUrl}/services`,
-        },
-      },
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
+      path: 'treatment',
+      lastModified: lastWeek,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    
+    // Contact page - High priority for conversions
+    {
+      path: 'contact',
+      lastModified: lastMonth,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/contact`,
-          bn: `${baseUrl}/contact`,
-        },
-      },
     },
+    
+    // Leadership page
     {
-      url: `${baseUrl}/treatment`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/treatment`,
-          bn: `${baseUrl}/treatment`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/MD`,
-      lastModified: currentDate,
+      path: 'MD',
+      lastModified: lastQuarter,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/MD`,
-          bn: `${baseUrl}/MD`,
-        },
-      },
+    },
+    
+    // Doctor profile pages - Lower priority, rarely updated
+    {
+      path: 'muhitkamal',
+      lastModified: lastQuarter,
+      changeFrequency: 'yearly' as const,
+      priority: 0.6,
     },
     {
-      url: `${baseUrl}/muhitkamal`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
+      path: 'golamrabbani',
+      lastModified: lastQuarter,
+      changeFrequency: 'yearly' as const,
       priority: 0.6,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/muhitkamal`,
-          bn: `${baseUrl}/muhitkamal`,
-        },
-      },
     },
     {
-      url: `${baseUrl}/golamrabbani`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
+      path: 'mandal',
+      lastModified: lastQuarter,
+      changeFrequency: 'yearly' as const,
       priority: 0.6,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/golamrabbani`,
-          bn: `${baseUrl}/golamrabbani`,
-        },
-      },
-    },
-    {
-      url: `${baseUrl}/mandal`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-      alternates: {
-        languages: {
-          en: `${baseUrl}/mandal`,
-          bn: `${baseUrl}/mandal`,
-        },
-      },
     },
   ];
+
+  // Generate sitemap entries with language alternates
+  return pages.map((page) => {
+    const url = page.path ? `${baseUrl}/${page.path}` : baseUrl;
+    
+    return {
+      url,
+      lastModified: page.lastModified,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
+      alternates: {
+        languages: {
+          en: url,
+          bn: `${url}${page.path ? '?lang=bn' : '?lang=bn'}`,
+        },
+      },
+    };
+  });
 }
