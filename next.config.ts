@@ -1,6 +1,42 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
+  // Explicitly set the root directory to prevent module resolution issues
+  webpack: (config, { isServer }) => {
+    // Ensure webpack resolves modules from the correct directory
+    const projectRoot = path.resolve(__dirname);
+    
+    // Set resolve modules to prioritize project's node_modules
+    if (!config.resolve) {
+      config.resolve = {};
+    }
+    config.resolve.modules = [
+      path.resolve(projectRoot, 'node_modules'),
+      ...(Array.isArray(config.resolve.modules) ? config.resolve.modules : []),
+      'node_modules',
+    ];
+    
+    // Set resolveLoader to ensure loaders are found correctly
+    if (!config.resolveLoader) {
+      config.resolveLoader = {};
+    }
+    config.resolveLoader.modules = [
+      path.resolve(projectRoot, 'node_modules'),
+      ...(Array.isArray(config.resolveLoader.modules) ? config.resolveLoader.modules : []),
+      'node_modules',
+    ];
+    
+    // Explicitly resolve tailwindcss
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      tailwindcss: path.resolve(projectRoot, 'node_modules/tailwindcss'),
+    };
+    
+    return config;
+  },
+  // Add empty turbopack config to silence warning (using webpack for module resolution)
+  turbopack: {},
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

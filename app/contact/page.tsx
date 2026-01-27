@@ -1,11 +1,24 @@
 "use client";
 
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import { useLanguage } from '../_contexts/LanguageContext';
 
 export default function Home() {
   const { t } = useLanguage();
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    reason: '',
+    message: '',
+    consent: false,
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
   return (
     <main className="min-h-screen pt-20">
       {/* Hero + content */}
@@ -129,14 +142,81 @@ export default function Home() {
                   {t("contact.messageDesc")}
                 </p>
 
-                <form className="space-y-5">
+                <form 
+                  className="space-y-5"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    setIsSubmitting(true);
+                    setSubmitStatus({ type: null, message: '' });
+
+                    try {
+                      const response = await fetch('/api/contact', {
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData),
+                      });
+
+                      const data = await response.json();
+
+                      if (response.ok) {
+                        setSubmitStatus({
+                          type: 'success',
+                          message: data.message || 'Your message has been sent successfully!',
+                        });
+                        // Reset form
+                        setFormData({
+                          name: '',
+                          phone: '',
+                          email: '',
+                          reason: '',
+                          message: '',
+                          consent: false,
+                        });
+                        // Clear success message after 5 seconds
+                        setTimeout(() => {
+                          setSubmitStatus({ type: null, message: '' });
+                        }, 5000);
+                      } else {
+                        setSubmitStatus({
+                          type: 'error',
+                          message: data.error || 'Failed to send message. Please try again.',
+                        });
+                      }
+                    } catch (error) {
+                      setSubmitStatus({
+                        type: 'error',
+                        message: 'An error occurred. Please try again later.',
+                      });
+                    } finally {
+                      setIsSubmitting(false);
+                    }
+                  }}
+                >
+                  {/* Success/Error Messages */}
+                  {submitStatus.type && (
+                    <div
+                      className={`rounded-lg p-4 ${
+                        submitStatus.type === 'success'
+                          ? 'bg-emerald-50 border border-emerald-200 text-emerald-800'
+                          : 'bg-red-50 border border-red-200 text-red-800'
+                      }`}
+                    >
+                      <p className="text-sm font-medium">{submitStatus.message}</p>
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="block text-sm font-medium text-gray-900">
-                        {t("contact.fullName")}
+                        {t("contact.fullName")} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder={t("contact.namePlaceholder")}
                         className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                       />
@@ -147,6 +227,8 @@ export default function Home() {
                       </label>
                       <input
                         type="tel"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder={t("contact.phonePlaceholder")}
                         className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                       />
@@ -156,10 +238,13 @@ export default function Home() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="block text-sm font-medium text-gray-900">
-                        {t("contact.email")}
+                        {t("contact.email")} <span className="text-red-500">*</span>
                       </label>
                       <input
                         type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder={t("contact.emailPlaceholder")}
                         className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                       />
@@ -169,26 +254,30 @@ export default function Home() {
                         {t("contact.reason")}
                       </label>
                       <select
+                        value={formData.reason}
+                        onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
                         className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
-                        defaultValue=""
                       >
-                        <option value="" disabled>
+                        <option value="">
                           {t("contact.selectOption")}
                         </option>
-                        <option>{t("contact.appointment")}</option>
-                        <option>{t("contact.inpatient")}</option>
-                        <option>{t("contact.emergencyFollowup")}</option>
-                        <option>{t("contact.generalEnquiry")}</option>
+                        <option value={t("contact.appointment")}>{t("contact.appointment")}</option>
+                        <option value={t("contact.inpatient")}>{t("contact.inpatient")}</option>
+                        <option value={t("contact.emergencyFollowup")}>{t("contact.emergencyFollowup")}</option>
+                        <option value={t("contact.generalEnquiry")}>{t("contact.generalEnquiry")}</option>
                       </select>
                     </div>
                   </div>
 
                   <div className="space-y-1.5">
                     <label className="block text-sm font-medium text-gray-900">
-                      {t("contact.howCanWeHelp")}
+                      {t("contact.howCanWeHelp")} <span className="text-red-500">*</span>
                     </label>
                     <textarea
+                      required
                       rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder={t("contact.messagePlaceholder")}
                       className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                     />
@@ -199,17 +288,31 @@ export default function Home() {
                       <input
                         id="consent"
                         type="checkbox"
+                        required
+                        checked={formData.consent}
+                        onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
                         className="mt-1 h-4 w-4 rounded border-gray-300 bg-white text-sky-500 focus:ring-sky-500"
                       />
                       <label htmlFor="consent" className="text-xs text-gray-600">
-                        {t("contact.consent")}
+                        {t("contact.consent")} <span className="text-red-500">*</span>
                       </label>
                     </div>
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-2.5 text-sm font-medium text-white shadow-sm shadow-sky-500/40 transition hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-white"
+                      disabled={isSubmitting}
+                      className="inline-flex items-center justify-center rounded-full bg-sky-500 px-6 py-2.5 text-sm font-medium text-white shadow-sm shadow-sky-500/40 transition hover:bg-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-white disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      {t("contact.submit")}
+                      {isSubmitting ? (
+                        <>
+                          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending...
+                        </>
+                      ) : (
+                        t("contact.submit")
+                      )}
                     </button>
                   </div>
                 </form>

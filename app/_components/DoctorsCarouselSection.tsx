@@ -13,29 +13,29 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const doctors = [
-  {
-    name: "Dr. Shoab Ahmed Talukdar (Kishor)",
-    role: "Medical Officer",
-    description: "MBBS, CMU",
-    image: "/assets/doctor1.png",
-  },
-  {
-    name: "Dr. Sanaul Huda Riad",
-    role: "Medical Officer",
-    description: "MBBS, RU",
-    image: "/assets/doctor2.png",
-  },
-  {
-    name: "Dr. Farzana Zabin",
-    role: "Medical Officer",
-    description: "MBBS",
-    image: "/assets/doctor3.jpg",
-  },
-];
-
 export default function DoctorsCarouselSection() {
   const { t } = useLanguage();
+  
+  const doctors = [
+    {
+      nameKey: "doctors.doctor1.name",
+      roleKey: "doctors.doctor1.role",
+      descriptionKey: "doctors.doctor1.description",
+      image: "/assets/doctor1.png",
+    },
+    {
+      nameKey: "doctors.doctor2.name",
+      roleKey: "doctors.doctor2.role",
+      descriptionKey: "doctors.doctor2.description",
+      image: "/assets/doctor2.png",
+    },
+    {
+      nameKey: "doctors.doctor3.name",
+      roleKey: "doctors.doctor3.role",
+      descriptionKey: "doctors.doctor3.description",
+      image: "/assets/doctor3.jpg",
+    },
+  ];
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: true })
   );
@@ -77,7 +77,7 @@ export default function DoctorsCarouselSection() {
                             />
                             <Image
                               src={doctor.image}
-                              alt={doctor.name}
+                              alt={t(doctor.nameKey)}
                               width={144}
                               height={144}
                               className="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover shadow-lg border-4 border-gray-200"
@@ -88,13 +88,13 @@ export default function DoctorsCarouselSection() {
                           </div>
                           <div className="text-center space-y-2">
                             <h3 className="text-lg font-semibold text-gray-900">
-                              {doctor.name}
+                              {t(doctor.nameKey)}
                             </h3>
                             <p className="text-xs uppercase tracking-wide text-sky-600">
-                              {doctor.role}
+                              {t(doctor.roleKey)}
                             </p>
                             <p className="mt-2 text-sm text-gray-600">
-                              {doctor.description}
+                              {t(doctor.descriptionKey)}
                             </p>
                           </div>
                         </CardContent>

@@ -6,28 +6,28 @@ import { useLanguage } from "../_contexts/LanguageContext";
 const staff = [
   {
     image: "/assets/sujon.png",
-    name: "Shujon Howlader",
-    role: "Office Employee",
+    nameKey: "staff.member1.name",
+    roleKey: "staff.member1.role",
   },
   {
     image: "/assets/manik.png",
-    name: "Mahmudul Hasan (Manik)",
-    role: "Digital Marketing Officer",
+    nameKey: "staff.member2.name",
+    roleKey: "staff.member2.role",
   },
   {
     image: "/assets/faruk.jpg",
-    name: "Omar Faruk",
-    role: "Office Employee",
+    nameKey: "staff.member3.name",
+    roleKey: "staff.member3.role",
   },
   {
     image: "/assets/ayesha.png",
-    name: "Ayesha Siddiqua",
-    role: "Administrative Officer",
+    nameKey: "staff.member4.name",
+    roleKey: "staff.member4.role",
   },
   {
     image: "/assets/nijhum.png",
-    name: "Nijhum",
-    role: "Senior Staff Nurse",
+    nameKey: "staff.member5.name",
+    roleKey: "staff.member5.role",
   },
 ];
 
@@ -59,7 +59,7 @@ export default function StaffSection() {
               <div className="relative h-48 md:h-56 overflow-hidden bg-gray-100">
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={t(member.nameKey)}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
@@ -70,10 +70,10 @@ export default function StaffSection() {
               </div>
               <div className="p-4">
                 <h3 className="text-base font-bold text-gray-900">
-                  {member.name}
+                  {t(member.nameKey)}
                 </h3>
                 <p className="text-sm font-medium text-sky-600">
-                  {member.role}
+                  {t(member.roleKey)}
                 </p>
               </div>
             </div>
