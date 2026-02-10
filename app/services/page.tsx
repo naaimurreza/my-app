@@ -253,6 +253,147 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Transformation Process Section */}
+      <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-gray-50/50 to-white">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-12 lg:mb-16">
+              <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
+                {t("services.transformation.badge")}
+              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                {t("services.transformation.title")}{" "}
+                <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
+                  {t("services.transformation.titleHighlight")}
+                </span>
+              </h2>
+              <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                {t("services.transformation.description")}
+              </p>
+            </div>
+
+            {/* Image and Process Steps */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Image Section */}
+              <div className="relative order-2 lg:order-1">
+                <div className="sticky top-24">
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-gray-900/20 border-4 border-white/50 h-[600px] lg:h-[700px]">
+                    <div className="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-emerald-500/10 to-transparent pointer-events-none z-10" />
+                    <Image
+                      src="/assets/transformation-process.png"
+                      alt="Transformation journey: Initial consultation, therapeutic hair cutting, shaving preparation, renewal and peace, and our dedicated team"
+                      width={800}
+                      height={1200}
+                      className="w-full h-full object-cover object-top"
+                      quality={90}
+                      priority
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-6 z-20">
+                      <p className="text-white text-sm font-medium leading-relaxed">
+                        {t("services.transformation.step4.description")}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Process Steps */}
+              <div className="order-1 lg:order-2 space-y-6">
+                {[
+                  {
+                    step: "01",
+                    title: t("services.transformation.step1.title"),
+                    description: t("services.transformation.step1.description"),
+                    icon: "💬",
+                    imageAlt: "Initial consultation between healthcare professional and patient with long matted hair",
+                  },
+                  {
+                    step: "02",
+                    title: t("services.transformation.step2.title"),
+                    description: t("services.transformation.step2.description"),
+                    icon: "✂️",
+                    imageAlt: "Therapeutic hair cutting process with professional team support",
+                  },
+                  {
+                    step: "03",
+                    title: t("services.transformation.step3.title"),
+                    description: t("services.transformation.step3.description"),
+                    icon: "✨",
+                    imageAlt: "Careful shaving preparation with shaving cream application",
+                  },
+                  {
+                    step: "04",
+                    title: t("services.transformation.step4.title"),
+                    description: t("services.transformation.step4.description"),
+                    icon: "🕊️",
+                    imageAlt: "Post-transformation showing renewal and inner peace",
+                  },
+                  {
+                    step: "05",
+                    title: t("services.transformation.step5.title"),
+                    description: t("services.transformation.step5.description"),
+                    icon: "🤝",
+                    imageAlt: "Our dedicated team of healthcare professionals",
+                  },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="group relative rounded-2xl border border-white/50 bg-white/60 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-4">
+                      {/* Step Number & Icon */}
+                      <div className="shrink-0">
+                        <div className="relative">
+                          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-500 to-emerald-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-sky-500/30 group-hover:scale-110 transition-transform">
+                            {item.step}
+                          </div>
+                          <div className="absolute -top-1 -right-1 text-2xl opacity-80">
+                            {item.icon}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-1 pt-1">
+                        <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-2 group-hover:text-sky-600 transition-colors">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-700 leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Decorative line */}
+                    {index < 4 && (
+                      <div className="absolute left-8 top-full w-0.5 h-6 bg-gradient-to-b from-sky-300 to-emerald-300 mt-2" />
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="mt-12 lg:mt-16 text-center">
+              <div className="inline-flex items-center gap-3 rounded-2xl bg-white/80 backdrop-blur-md px-6 py-4 shadow-lg shadow-gray-200/30 border border-white/50">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-sky-500 to-emerald-400 flex items-center justify-center text-white text-xl shadow-lg shadow-sky-500/30">
+                  ✓
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-gray-900">
+                    {t("services.confidentialCare")}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {t("services.confidentialDesc")}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Conditions We Treat */}
       <section className="relative overflow-hidden">
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
