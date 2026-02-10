@@ -7,116 +7,116 @@ export default function Home() {
   const { t } = useLanguage();
   const treatmentModalities = [
     {
-      title: "Individual Therapy",
-      description: "One-on-one sessions with licensed therapists tailored to your specific needs and goals.",
+      title: t("treatment.modality.individual.title"),
+      description: t("treatment.modality.individual.description"),
       icon: "👤",
       benefits: [
-        "Personalized treatment plans",
-        "Confidential environment",
-        "Flexible scheduling",
-        "Focused attention"
+        t("treatment.modality.individual.benefit1"),
+        t("treatment.modality.individual.benefit2"),
+        t("treatment.modality.individual.benefit3"),
+        t("treatment.modality.individual.benefit4")
       ],
-      duration: "45-60 minutes per session"
+      duration: t("treatment.modality.individual.duration")
     },
     {
-      title: "Group Therapy",
-      description: "Therapeutic sessions in a supportive group setting to share experiences and learn from others.",
+      title: t("treatment.modality.group.title"),
+      description: t("treatment.modality.group.description"),
       icon: "👥",
       benefits: [
-        "Peer support and connection",
-        "Shared experiences",
-        "Social skills development",
-        "Reduced isolation"
+        t("treatment.modality.group.benefit1"),
+        t("treatment.modality.group.benefit2"),
+        t("treatment.modality.group.benefit3"),
+        t("treatment.modality.group.benefit4")
       ],
-      duration: "60-90 minutes per session"
+      duration: t("treatment.modality.group.duration")
     },
     {
-      title: "Family Therapy",
-      description: "Involves family members in the treatment process to improve communication and relationships.",
+      title: t("treatment.modality.family.title"),
+      description: t("treatment.modality.family.description"),
       icon: "👨‍👩‍👧‍👦",
       benefits: [
-        "Improved family dynamics",
-        "Better communication",
-        "Understanding and support",
-        "Healing together"
+        t("treatment.modality.family.benefit1"),
+        t("treatment.modality.family.benefit2"),
+        t("treatment.modality.family.benefit3"),
+        t("treatment.modality.family.benefit4")
       ],
-      duration: "60-90 minutes per session"
+      duration: t("treatment.modality.family.duration")
     },
     {
-      title: "Medication Management",
-      description: "Careful monitoring and adjustment of psychiatric medications by expert psychiatrists.",
+      title: t("treatment.modality.medication.title"),
+      description: t("treatment.modality.medication.description"),
       icon: "💊",
       benefits: [
-        "Expert medical supervision",
-        "Regular monitoring",
-        "Dosage optimization",
-        "Side effect management"
+        t("treatment.modality.medication.benefit1"),
+        t("treatment.modality.medication.benefit2"),
+        t("treatment.modality.medication.benefit3"),
+        t("treatment.modality.medication.benefit4")
       ],
-      duration: "Ongoing with regular check-ins"
+      duration: t("treatment.modality.medication.duration")
     },
     {
-      title: "Cognitive Behavioral Therapy (CBT)",
-      description: "Evidence-based therapy focusing on changing negative thought patterns and behaviors.",
+      title: t("treatment.modality.cbt.title"),
+      description: t("treatment.modality.cbt.description"),
       icon: "🧠",
       benefits: [
-        "Proven effectiveness",
-        "Practical coping skills",
-        "Long-term results",
-        "Self-empowerment"
+        t("treatment.modality.cbt.benefit1"),
+        t("treatment.modality.cbt.benefit2"),
+        t("treatment.modality.cbt.benefit3"),
+        t("treatment.modality.cbt.benefit4")
       ],
-      duration: "12-20 sessions typically"
+      duration: t("treatment.modality.cbt.duration")
     },
     {
-      title: "Rehabilitation Programs",
-      description: "Comprehensive programs for substance use disorders and mental health recovery.",
+      title: t("treatment.modality.rehab.title"),
+      description: t("treatment.modality.rehab.description"),
       icon: "🔄",
       benefits: [
-        "Structured recovery plan",
-        "Life skills training",
-        "Relapse prevention",
-        "Aftercare support"
+        t("treatment.modality.rehab.benefit1"),
+        t("treatment.modality.rehab.benefit2"),
+        t("treatment.modality.rehab.benefit3"),
+        t("treatment.modality.rehab.benefit4")
       ],
-      duration: "30-90 days intensive program"
+      duration: t("treatment.modality.rehab.duration")
     }
   ];
 
   const treatmentProcess = [
     {
       step: "01",
-      title: "Initial Assessment",
-      description: "Comprehensive evaluation including medical history, psychological assessment, and needs analysis."
+      title: t("treatment.process.step1.title"),
+      description: t("treatment.process.step1.description")
     },
     {
       step: "02",
-      title: "Treatment Planning",
-      description: "Customized treatment plan developed by our multidisciplinary team based on your unique situation."
+      title: t("treatment.process.step2.title"),
+      description: t("treatment.process.step2.description")
     },
     {
       step: "03",
-      title: "Treatment Implementation",
-      description: "Begin your personalized treatment program with regular sessions and continuous monitoring."
+      title: t("treatment.process.step3.title"),
+      description: t("treatment.process.step3.description")
     },
     {
       step: "04",
-      title: "Progress Monitoring",
-      description: "Regular assessments to track progress and adjust treatment as needed for optimal outcomes."
+      title: t("treatment.process.step4.title"),
+      description: t("treatment.process.step4.description")
     },
     {
       step: "05",
-      title: "Aftercare & Support",
-      description: "Ongoing support and resources to maintain progress and prevent relapse after treatment completion."
+      title: t("treatment.process.step5.title"),
+      description: t("treatment.process.step5.description")
     }
   ];
 
   const evidenceBasedApproaches = [
-    "Cognitive Behavioral Therapy (CBT)",
-    "Dialectical Behavior Therapy (DBT)",
-    "Interpersonal Therapy (IPT)",
-    "Psychodynamic Therapy",
-    "Mindfulness-Based Interventions",
-    "Motivational Interviewing",
-    "Trauma-Informed Care",
-    "Solution-Focused Brief Therapy"
+    t("treatment.evidence.cbt"),
+    t("treatment.evidence.dbt"),
+    t("treatment.evidence.ipt"),
+    t("treatment.evidence.psychodynamic"),
+    t("treatment.evidence.mindfulness"),
+    t("treatment.evidence.motivational"),
+    t("treatment.evidence.trauma"),
+    t("treatment.evidence.solution")
   ];
 
   return (
@@ -205,7 +205,7 @@ export default function Home() {
                   {treatment.description}
                 </p>
                 <div className="mb-4">
-                  <p className="text-xs font-medium text-sky-600 mb-3">KEY BENEFITS:</p>
+                  <p className="text-xs font-medium text-sky-600 mb-3">{t("treatment.keyBenefits")}</p>
                   <ul className="space-y-2">
                     {treatment.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-start text-sm text-gray-700">
@@ -217,7 +217,7 @@ export default function Home() {
                 </div>
                 <div className="pt-4 border-t border-gray-200">
                   <p className="text-xs text-gray-600">
-                    <span className="font-medium text-gray-900">Duration:</span> {treatment.duration}
+                    <span className="font-medium text-gray-900">{t("treatment.duration")}</span> {treatment.duration}
                   </p>
                 </div>
               </div>

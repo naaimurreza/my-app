@@ -47,6 +47,13 @@ export default function RootLayout({
           type="image/jpeg"
           fetchPriority="high"
         />
+        {/* DNS prefetch for external resources */}
+        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://www.facebook.com" />
+        <link rel="dns-prefetch" href="https://youtube.com" />
+        {/* Preconnect to improve performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
         className={`${poppins.variable} antialiased`}

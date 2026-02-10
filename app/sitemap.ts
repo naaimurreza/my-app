@@ -50,6 +50,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     
+    // Articles page - High priority for content
+    {
+      path: 'articles',
+      lastModified: lastWeek,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    
+    // Individual articles - Medium-high priority
+    {
+      path: 'articles/understanding-mental-health',
+      lastModified: lastWeek,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    
     // Contact page - High priority for conversions
     {
       path: 'contact',

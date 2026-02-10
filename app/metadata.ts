@@ -103,4 +103,12 @@ export const defaultMetadata: Metadata = {
     // google: "your-google-verification-code",
     // yandex: "your-yandex-verification-code",
   },
+  category: "Healthcare",
+  classification: "Mental Health Hospital",
+  other: {
+    "geo.region": "BD-DH",
+    "geo.placename": "Dhaka",
+    "geo.position": "23.753003;90.3879078",
+    "ICBM": "23.753003, 90.3879078",
+  },
 };

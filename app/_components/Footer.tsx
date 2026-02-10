@@ -79,6 +79,11 @@ export const Footer = () => {
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="./articles" className="text-gray-600">
+                                        {t("nav.articles")}
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="./contact" className="text-gray-600">
                                         {t("nav.contact")}
                                     </a>

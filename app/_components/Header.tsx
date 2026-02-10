@@ -86,6 +86,12 @@ export default function Header() {
             {t("nav.treatment")}
           </a>
           <a
+            href="/articles"
+            className="px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:text-sky-600 hover:bg-gray-50 transition-all duration-200"
+          >
+            {t("nav.articles")}
+          </a>
+          <a
             href="/contact"
             className="px-4 py-2 text-sm font-medium text-gray-700 rounded-lg hover:text-sky-600 hover:bg-gray-50 transition-all duration-200"
           >
@@ -172,6 +178,12 @@ export default function Header() {
               className="block rounded-lg px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-sky-600 transition-colors"
             >
               {t("nav.treatment")}
+            </a>
+            <a
+              href="./articles"
+              className="block rounded-lg px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-sky-600 transition-colors"
+            >
+              {t("nav.articles")}
             </a>
             <a
               href="./contact"
