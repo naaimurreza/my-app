@@ -6,13 +6,31 @@ import { useLanguage } from "../_contexts/LanguageContext";
 export default function ArticlesPage() {
   const { t } = useLanguage();
 
-  // Demo article data - language-aware
+  // Article data - language-aware
+  const formatDate = (date: Date) => {
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
   const articles = [
     {
       slug: "understanding-mental-health",
       title: t("article.understandingMentalHealth.title") || "Understanding Mental Health: A Comprehensive Guide",
       excerpt: t("article.understandingMentalHealth.excerpt") || "Mental health is an essential part of our overall well-being. Learn about the importance of mental health, common conditions, and how to seek help when needed.",
-      date: "February 10, 2026",
+      date: formatDate(new Date("2026-02-10")),
+      dateValue: "2026-02-10",
+      author: "Brain And Life Hospital",
+      category: t("articles.category.mentalHealth") || "Mental Health",
+    },
+    {
+      slug: "understanding-schizophrenia",
+      title: t("article.schizophrenia.title") || "Understanding Schizophrenia: Symptoms, Treatment, and Support",
+      excerpt: t("article.schizophrenia.excerpt") || "Schizophrenia is a chronic mental health condition that affects more than 1 in 300 people worldwide. Learn about its symptoms, treatment options, and how early intervention can help manage this condition effectively.",
+      date: formatDate(new Date()),
+      dateValue: new Date().toISOString().split('T')[0],
       author: "Brain And Life Hospital",
       category: t("articles.category.mentalHealth") || "Mental Health",
     },

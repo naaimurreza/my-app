@@ -11,12 +11,22 @@ export default function ArticlePage() {
   const baseUrl = "https://brainandlifehospital.com";
 
   // Article data - language-aware, in a real app, this would come from a CMS or database
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
   const getArticle = (articleSlug: string) => {
     if (articleSlug === "understanding-mental-health") {
       return {
         title: t("article.understandingMentalHealth.title"),
         excerpt: t("article.understandingMentalHealth.excerpt"),
-        date: "February 10, 2026",
+        date: formatDate("2026-02-10"),
+        dateValue: "2026-02-10",
         author: "Brain And Life Hospital",
         category: t("articles.category.mentalHealth"),
         content: [
@@ -31,20 +41,52 @@ export default function ArticlePage() {
         ]
       };
     }
+    if (articleSlug === "understanding-schizophrenia") {
+      const today = new Date();
+      const todayString = today.toISOString().split('T')[0];
+      return {
+        title: t("article.schizophrenia.title"),
+        excerpt: t("article.schizophrenia.excerpt"),
+        date: formatDate(todayString),
+        dateValue: todayString,
+        author: "Brain And Life Hospital",
+        category: t("articles.category.mentalHealth"),
+        content: [
+          t("article.schizophrenia.content1"),
+          t("article.schizophrenia.content2"),
+          t("article.schizophrenia.content3"),
+          t("article.schizophrenia.content4"),
+          t("article.schizophrenia.content5"),
+          t("article.schizophrenia.content6"),
+          t("article.schizophrenia.content7"),
+          t("article.schizophrenia.content8"),
+          t("article.schizophrenia.content9"),
+        ]
+      };
+    }
     return null;
   };
 
   const article = getArticle(slug);
 
   // Article schema for SEO
+  const getPublishedDate = (articleSlug: string) => {
+    if (articleSlug === "understanding-mental-health") return "2026-02-10T00:00:00+00:00";
+    if (articleSlug === "understanding-schizophrenia") {
+      const today = new Date();
+      return today.toISOString();
+    }
+    return "2026-02-10T00:00:00+00:00";
+  };
+
   const articleSchema = article ? {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.title,
     description: article.excerpt,
     image: `${baseUrl}/og-image.jpg`,
-    datePublished: "2026-02-10T00:00:00+00:00",
-    dateModified: "2026-02-10T00:00:00+00:00",
+    datePublished: getPublishedDate(slug),
+    dateModified: getPublishedDate(slug),
     author: {
       "@type": "Organization",
       name: article.author,
@@ -138,7 +180,7 @@ export default function ArticlePage() {
                 <span className="font-medium">{t("articles.by")} <span itemProp="name">{article.author}</span></span>
               </div>
               <div className="flex items-center gap-2">
-                <time dateTime="2026-02-10" itemProp="datePublished">{article.date}</time>
+                <time dateTime={article.dateValue || (slug === "understanding-mental-health" ? "2026-02-10" : new Date().toISOString().split('T')[0])} itemProp="datePublished">{article.date}</time>
               </div>
             </div>
           </div>
@@ -151,14 +193,40 @@ export default function ArticlePage() {
           <div className="max-w-4xl mx-auto">
             <article className="prose prose-lg prose-slate max-w-none" itemScope itemType="https://schema.org/Article">
               <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-8 md:p-12 shadow-xl shadow-gray-200/30" itemProp="articleBody">
-                {article.content.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-gray-700 leading-relaxed mb-6 text-base md:text-lg"
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+                {article.content.map((paragraph, index) => {
+                  // Format note section with special styling
+                  if (paragraph.includes("Note:") || paragraph.includes("দ্রষ্টব্য:")) {
+                    return (
+                      <div key={index} className="mb-6 p-4 rounded-lg bg-amber-50/80 border border-amber-200/50">
+                        <p className="text-gray-800 leading-relaxed text-base md:text-lg font-medium">
+                          {paragraph}
+                        </p>
+                      </div>
+                    );
+                  }
+                  
+                  // Format treatment section with emphasis
+                  if (paragraph.startsWith("Treatment:") || paragraph.startsWith("চিকিৎসা:")) {
+                    return (
+                      <div key={index} className="mb-6 p-4 rounded-lg bg-sky-50/80 border border-sky-200/50">
+                        <p className="text-gray-800 leading-relaxed text-base md:text-lg">
+                          <span className="font-semibold text-sky-900">{paragraph.split(":")[0]}:</span>
+                          {paragraph.split(":").slice(1).join(":")}
+                        </p>
+                      </div>
+                    );
+                  }
+                  
+                  // Regular paragraph formatting
+                  return (
+                    <p
+                      key={index}
+                      className="text-gray-700 leading-relaxed mb-6 text-base md:text-lg"
+                    >
+                      {paragraph}
+                    </p>
+                  );
+                })}
               </div>
             </article>
           </div>

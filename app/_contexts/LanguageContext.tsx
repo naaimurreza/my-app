@@ -189,6 +189,8 @@ const translations: Record<Language, Record<string, string>> = {
     "staff.member4.role": "Administrative Officer",
     "staff.member5.name": "Nijhum",
     "staff.member5.role": "Senior Staff Nurse",
+    "staff.member6.name": "Taimoor",
+    "staff.member6.role": "Research Associate",
 
     // CTA
     "cta.title": "Ready to Take the First Step?",
@@ -515,6 +517,19 @@ const translations: Record<Language, Record<string, string>> = {
     "article.understandingMentalHealth.content6": "Treatment for mental health conditions typically involves a combination of therapy, medication (when appropriate), lifestyle changes, and support from family and friends. At Brain And Life Hospital, we offer comprehensive, personalized treatment plans tailored to each individual's unique needs.",
     "article.understandingMentalHealth.content7": "Remember, seeking help for mental health concerns is a sign of strength, not weakness. Taking care of your mental health is just as important as taking care of your physical health, and professional support can make a significant difference in your quality of life.",
     "article.understandingMentalHealth.content8": "If you or someone you know is struggling with mental health issues, don't hesitate to reach out. Our compassionate team at Brain And Life Hospital is here to provide the support and care you need on your journey to wellness.",
+    
+    // Schizophrenia Article
+    "article.schizophrenia.title": "Understanding Schizophrenia: Symptoms, Treatment, and Support",
+    "article.schizophrenia.excerpt": "Schizophrenia is a chronic mental health condition that affects more than 1 in 300 people worldwide. Learn about its symptoms, treatment options, and how early intervention can help manage this condition effectively.",
+    "article.schizophrenia.content1": "Schizophrenia is a chronic mental health condition. The patients of schizophrenia often show symptoms such as:",
+    "article.schizophrenia.content2": "Hallucination: Hearing or seeing things that do not exist in reality. People around the patient cannot see/hear those things. Like seeing demons, being possessed by Pori/Jinn, Nishir Dak. These are some recognized symptoms of schizophrenia.",
+    "article.schizophrenia.content3": "Delusions: Unusual beliefs that do not have any logical ground. Such as, their life is in danger, their family is trying to harm them.",
+    "article.schizophrenia.content4": "Muddled Thoughts & Speech: Because of the Hallucination and/or Delusions, the patient may find it difficult to think or speak in an organized manner.",
+    "article.schizophrenia.content5": "Apathy: Feeling lost, disconnected from emotions, distant from relatives and friends, not wanting to go out or maintain social relationships, losing interest in self-care or even day to day activity.",
+    "article.schizophrenia.content6": "Note: Schizophrenia and Multiple Personality Disorder are different conditions. Patients of Schizophrenia do not have split personality. Also Schizophrenia does not usually cause someone to be violent.",
+    "article.schizophrenia.content7": "If you or any of your loved ones are experiencing symptoms of Schizophrenia, consult a specialist as soon as possible. The earlier the issue is addressed, the better it will be. There is a lot of stigma around mental health issues and its treatment in our country. More than 1 out of 300 people in this world suffers from Schizophrenia. The treatment of this condition is fully safe and the symptoms can be mitigated with guidance from a professional.",
+    "article.schizophrenia.content8": "There is no single foolproof test to determine Schizophrenia. It is usually diagnosed after being assessed by an expert of the field.",
+    "article.schizophrenia.content9": "Treatment: Schizophrenia can be cured with proper care and a combination of medicine and therapy tailored specifically for each individual. At Brain and Life Hospital, we have a dedicated team to help and monitor our patients 24x7 with Doctors available all the time. If you want to book an appointment with the nationally renowned expert psychiatrists, contact us.",
   },
   bn: {
     // Navigation
@@ -692,6 +707,8 @@ const translations: Record<Language, Record<string, string>> = {
     "staff.member4.role": "প্রশাসনিক অফিসার",
     "staff.member5.name": "নিঝুম",
     "staff.member5.role": "সিনিয়র স্টাফ নার্স",
+    "staff.member6.name": "তৈমুর",
+    "staff.member6.role": "গবেষণা সহযোগী",
 
     // CTA
     "cta.title": "প্রথম পদক্ষেপ নিতে প্রস্তুত?",
@@ -1018,6 +1035,19 @@ const translations: Record<Language, Record<string, string>> = {
     "article.understandingMentalHealth.content6": "মানসিক স্বাস্থ্য অবস্থার চিকিৎসা সাধারণত থেরাপি, ওষুধ (যখন উপযুক্ত), জীবনযাত্রার পরিবর্তন এবং পরিবার এবং বন্ধুদের কাছ থেকে সহায়তার সংমিশ্রণ জড়িত। ব্রেইন অ্যান্ড লাইফ হাসপাতালে, আমরা প্রতিটি ব্যক্তির অনন্য প্রয়োজনের জন্য তৈরি করা ব্যাপক, ব্যক্তিগতকৃত চিকিৎসা পরিকল্পনা অফার করি।",
     "article.understandingMentalHealth.content7": "মনে রাখবেন, মানসিক স্বাস্থ্য উদ্বেগের জন্য সাহায্য চাওয়া দুর্বলতার নয়, শক্তির লক্ষণ। আপনার মানসিক স্বাস্থ্যের যত্ন নেওয়া আপনার শারীরিক স্বাস্থ্যের যত্ন নেওয়ার মতোই গুরুত্বপূর্ণ, এবং পেশাদার সহায়তা আপনার জীবনের মানে উল্লেখযোগ্য পার্থক্য আনতে পারে।",
     "article.understandingMentalHealth.content8": "আপনি বা কেউ যদি মানসিক স্বাস্থ্য সমস্যায় লড়াই করছেন, তাহলে দ্বিধা করবেন না। ব্রেইন অ্যান্ড লাইফ হাসপাতালে আমাদের সহানুভূতিশীল দল সুস্থতার যাত্রায় আপনার প্রয়োজনীয় সহায়তা এবং যত্ন প্রদানের জন্য এখানে রয়েছে।",
+    
+    // Schizophrenia Article
+    "article.schizophrenia.title": "স্কিজোফ্রেনিয়া বোঝা: লক্ষণ, চিকিৎসা এবং সহায়তা",
+    "article.schizophrenia.excerpt": "স্কিজোফ্রেনিয়া একটি দীর্ঘস্থায়ী মানসিক স্বাস্থ্য অবস্থা যা বিশ্বব্যাপী ৩০০ জনের মধ্যে ১ জনেরও বেশি মানুষকে প্রভাবিত করে। এর লক্ষণ, চিকিৎসার বিকল্প এবং প্রাথমিক হস্তক্ষেপ কীভাবে এই অবস্থা কার্যকরভাবে পরিচালনা করতে সাহায্য করতে পারে তা জানুন।",
+    "article.schizophrenia.content1": "স্কিজোফ্রেনিয়া একটি দীর্ঘস্থায়ী মানসিক স্বাস্থ্য অবস্থা। স্কিজোফ্রেনিয়ার রোগীরা প্রায়শই নিম্নলিখিত লক্ষণগুলি দেখায়:",
+    "article.schizophrenia.content2": "হ্যালুসিনেশন: বাস্তবে যা বিদ্যমান নেই এমন জিনিস শোনা বা দেখা। রোগীর চারপাশের লোকেরা সেই জিনিসগুলি দেখতে/শুনতে পারে না। যেমন ভূত দেখা, পরী/জিন দ্বারা আক্রান্ত হওয়া, নিশির ডাক। এগুলি স্কিজোফ্রেনিয়ার কিছু স্বীকৃত লক্ষণ।",
+    "article.schizophrenia.content3": "ভ্রান্ত ধারণা: এমন অস্বাভাবিক বিশ্বাস যার কোন যৌক্তিক ভিত্তি নেই। যেমন, তাদের জীবন বিপন্ন, তাদের পরিবার তাদের ক্ষতি করার চেষ্টা করছে।",
+    "article.schizophrenia.content4": "বিভ্রান্ত চিন্তা এবং বক্তৃতা: হ্যালুসিনেশন এবং/অথবা ভ্রান্ত ধারণার কারণে, রোগীকে সংগঠিতভাবে চিন্তা করা বা কথা বলা কঠিন হতে পারে।",
+    "article.schizophrenia.content5": "উদাসীনতা: হারিয়ে যাওয়ার অনুভূতি, আবেগ থেকে বিচ্ছিন্ন, আত্মীয় এবং বন্ধুদের থেকে দূরে, বাইরে যেতে না চাওয়া বা সামাজিক সম্পর্ক বজায় রাখতে না চাওয়া, স্ব-যত্ন বা এমনকি দৈনন্দিন কার্যক্রমে আগ্রহ হারানো।",
+    "article.schizophrenia.content6": "দ্রষ্টব্য: স্কিজোফ্রেনিয়া এবং মাল্টিপল পার্সোনালিটি ডিসঅর্ডার বিভিন্ন অবস্থা। স্কিজোফ্রেনিয়ার রোগীদের বিভক্ত ব্যক্তিত্ব নেই। এছাড়াও স্কিজোফ্রেনিয়া সাধারণত কাউকে সহিংস করে তোলে না।",
+    "article.schizophrenia.content7": "আপনি বা আপনার প্রিয়জনের মধ্যে কেউ যদি স্কিজোফ্রেনিয়ার লক্ষণ অনুভব করেন, যত তাড়াতাড়ি সম্ভব একজন বিশেষজ্ঞের সাথে পরামর্শ করুন। যত আগে সমস্যাটি সমাধান করা হবে, ততই ভাল হবে। আমাদের দেশে মানসিক স্বাস্থ্য সমস্যা এবং এর চিকিৎসা সম্পর্কে অনেক কলঙ্ক রয়েছে। বিশ্বে ৩০০ জনের মধ্যে ১ জনেরও বেশি মানুষ স্কিজোফ্রেনিয়ায় ভোগে। এই অবস্থার চিকিৎসা সম্পূর্ণ নিরাপদ এবং একজন পেশাদারের নির্দেশনার সাথে লক্ষণগুলি প্রশমিত করা যেতে পারে।",
+    "article.schizophrenia.content8": "স্কিজোফ্রেনিয়া নির্ধারণ করার জন্য কোন একক নিশ্চিত পরীক্ষা নেই। এটি সাধারণত এই ক্ষেত্রের একজন বিশেষজ্ঞ দ্বারা মূল্যায়নের পরে নির্ণয় করা হয়।",
+    "article.schizophrenia.content9": "চিকিৎসা: স্কিজোফ্রেনিয়া সঠিক যত্ন এবং প্রতিটি ব্যক্তির জন্য বিশেষভাবে তৈরি করা ওষুধ এবং থেরাপির সংমিশ্রণ দিয়ে নিরাময় করা যেতে পারে। ব্রেইন অ্যান্ড লাইফ হাসপাতালে, আমাদের একটি নিবেদিত দল রয়েছে যা ২৪x৭ আমাদের রোগীদের সাহায্য এবং পর্যবেক্ষণ করতে, সব সময় ডাক্তার উপলব্ধ। আপনি যদি জাতীয়ভাবে খ্যাতিমান বিশেষজ্ঞ মনোরোগ বিশেষজ্ঞদের সাথে অ্যাপয়েন্টমেন্ট বুক করতে চান, আমাদের সাথে যোগাযোগ করুন।",
   },
 };
 

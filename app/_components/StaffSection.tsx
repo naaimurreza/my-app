@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { useLanguage } from "../_contexts/LanguageContext";
 
@@ -29,10 +30,18 @@ const staff = [
     nameKey: "staff.member5.name",
     roleKey: "staff.member5.role",
   },
+  {
+    image: "/assets/Taimoor .jpg",
+    nameKey: "staff.member6.name",
+    roleKey: "staff.member6.role",
+  },
 ];
 
 export default function StaffSection() {
   const { t } = useLanguage();
+
+  // Duplicate staff array for seamless infinite loop
+  const duplicatedStaff = [...staff, ...staff, ...staff];
 
   return (
     <section className="relative overflow-hidden py-12 lg:py-16">
@@ -50,35 +59,60 @@ export default function StaffSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
-          {staff.map((member, index) => (
+        {/* Continuous Scrolling Carousel */}
+        <div className="relative overflow-hidden">
+          {/* Scrolling Track */}
+          <div className="overflow-hidden">
             <div
-              key={index}
-              className="group relative rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md overflow-hidden shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
+              className="flex gap-6 lg:gap-8"
+              style={{
+                animation: "scroll 30s linear infinite",
+                width: "fit-content",
+              }}
             >
-              <div className="relative h-48 md:h-56 overflow-hidden bg-gray-100">
-                <Image
-                  src={member.image}
-                  alt={t(member.nameKey)}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
-                  quality={85}
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              <div className="p-4">
-                <h3 className="text-base font-bold text-gray-900">
-                  {t(member.nameKey)}
-                </h3>
-                <p className="text-sm font-medium text-sky-600">
-                  {t(member.roleKey)}
-                </p>
-              </div>
+              {duplicatedStaff.map((member, index) => (
+                  <div
+                  key={`${member.nameKey}-${index}`}
+                  className="shrink-0 w-[280px] sm:w-[300px] lg:w-[320px]"
+                >
+                  <div className="group relative rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md overflow-hidden shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300">
+                    <div className="relative h-48 md:h-56 overflow-hidden bg-gray-100">
+                      <Image
+                        src={member.image}
+                        alt={t(member.nameKey)}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        loading="lazy"
+                        quality={85}
+                        sizes="(max-width: 640px) 280px, (max-width: 1024px) 300px, 320px"
+                      />
+                      <div className="absolute inset-0 bg-linear-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-base font-bold text-gray-900">
+                        {t(member.nameKey)}
+                      </h3>
+                      <p className="text-sm font-medium text-sky-600">
+                        {t(member.roleKey)}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
+
+        <style jsx>{`
+          @keyframes scroll {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(calc(-100% / 3));
+            }
+          }
+        `}</style>
       </div>
     </section>
   );
