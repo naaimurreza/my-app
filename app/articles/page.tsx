@@ -32,7 +32,7 @@ export default function ArticlesPage() {
         excerpt: t("article.schizophrenia.excerpt") || "Schizophrenia is a chronic mental health condition that affects more than 1 in 300 people worldwide. Learn about its symptoms, treatment options, and how early intervention can help manage this condition effectively.",
         date: formatDate(new Date("2026-02-10")),
         dateValue: "2026-01-28",
-        author: "Brain And Life Hospital",
+        author: "Taimoor, Brain And Life Hospital",
         category: t("articles.category.mentalHealth") || "Mental Health",
       },
       {
