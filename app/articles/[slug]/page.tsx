@@ -105,6 +105,28 @@ export default function ArticlePage() {
         ]
       };
     }
+    if (articleSlug === "exam-stress-student-anxiety") {
+      return {
+        title: t("article.examStress.title"),
+        excerpt: t("article.examStress.excerpt"),
+        date: formatDate("2026-02-15"),
+        dateValue: "2026-02-15",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.mentalHealth"),
+        content: [
+          t("article.examStress.content1"),
+          t("article.examStress.content2"),
+          t("article.examStress.content3"),
+          t("article.examStress.content4"),
+          t("article.examStress.content5"),
+          t("article.examStress.content6"),
+          t("article.examStress.content7"),
+          t("article.examStress.content8"),
+          t("article.examStress.content9"),
+          t("article.examStress.content10"),
+        ]
+      };
+    }
     return null;
   };
 
@@ -116,6 +138,7 @@ export default function ArticlePage() {
     if (articleSlug === "understanding-schizophrenia") return "2026-01-28T00:00:00+00:00";
     if (articleSlug === "drug-addiction") return "2026-02-05T00:00:00+00:00";
     if (articleSlug === "early-signs-of-depression") return "2026-02-10T00:00:00+00:00";
+    if (articleSlug === "exam-stress-student-anxiety") return "2026-02-15T00:00:00+00:00";
     return "2026-01-15T00:00:00+00:00";
   };
 
@@ -132,6 +155,9 @@ export default function ArticlePage() {
     }
     if (articleSlug === "early-signs-of-depression") {
       return "depression signs, early depression symptoms, depression warning signs, depression symptoms, depression fatigue, depression sleep problems, loss of interest depression, depression concentration, depression appetite changes, depression irritability, depression treatment, depression help, depression therapy, depression medication, depression support, depression treatment Bangladesh, depression doctor Dhaka, mental health depression, depression care Bangladesh";
+    }
+    if (articleSlug === "exam-stress-student-anxiety") {
+      return "exam stress, student anxiety, test anxiety, exam anxiety, study stress, academic stress, exam preparation, stress management, anxiety management, student mental health, exam coping strategies, test anxiety tips, study tips, exam performance, academic performance, stress relief, anxiety relief, student counseling, exam stress Bangladesh, student anxiety Bangladesh, mental health students";
     }
     return "mental health, psychiatric care, mental wellness, Bangladesh";
   };

@@ -83,6 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    {
+      path: 'articles/exam-stress-student-anxiety',
+      lastModified: new Date('2026-02-15'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
     
     // Contact page - High priority for conversions
     {

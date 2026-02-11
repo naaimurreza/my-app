@@ -53,6 +53,15 @@ export default function ArticlesPage() {
         author: "Brain And Life Hospital",
         category: t("articles.category.mentalHealth") || "Mental Health",
       },
+      {
+        slug: "exam-stress-student-anxiety",
+        title: t("article.examStress.title") || "Exam Stress and Student Anxiety: Practical Coping Tips",
+        excerpt: t("article.examStress.excerpt") || "Exam stress and anxiety affect millions of students worldwide. Learn practical strategies to manage test anxiety, improve focus, and maintain mental well-being during exam periods. Discover evidence-based coping techniques that can help you perform better and feel more confident.",
+        date: formatDate(new Date("2026-02-15")),
+        dateValue: "2026-02-15",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.mentalHealth") || "Mental Health",
+      },
     ];
     
     // Sort by dateValue (latest first) - descending order
