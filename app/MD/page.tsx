@@ -13,7 +13,7 @@ export default function Page() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image Section */}
             <div className="order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/30 backdrop-blur-md p-4 max-w-md mx-auto border border-white/30">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-4 max-w-md mx-auto border border-white/30 dark:border-gray-700/30">
                 <Image
                   src="/assets/md2.png"
                   alt={t("mdPage.heroBadge")}
@@ -27,7 +27,7 @@ export default function Page() {
 
             {/* Content Section */}
             <div className="order-1 lg:order-2">
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-4">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 mb-4">
                 {t("mdPage.heroBadge")}
               </p>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 dark:text-white leading-tight mb-6">
@@ -77,10 +77,10 @@ export default function Page() {
 
             {/* Hospital Stay & Recovery */}
             <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white mb-6">
                 {t("mdPage.section3Title")}
               </h2>
-              <div className="space-y-4 text-slate-700 leading-relaxed">
+              <div className="space-y-4 text-slate-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   {t("mdPage.section3Para1")}
                 </p>
@@ -95,11 +95,11 @@ export default function Page() {
               <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white mb-6">
                 {t("mdPage.section4Title")}
               </h2>
-              <div className="space-y-4 text-slate-700 leading-relaxed">
+              <div className="space-y-4 text-slate-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   {t("mdPage.section4Para1")}
                 </p>
-                <p className="font-medium text-slate-900">
+                <p className="font-medium text-slate-900 dark:text-white">
                   {t("mdPage.section4Para2")}
                 </p>
               </div>
@@ -109,25 +109,25 @@ export default function Page() {
       </section>
 
       {/* CTA Section */}
-      <section className="border-y border-slate-200">
+      <section className="border-y border-slate-200 dark:border-gray-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white mb-4">
               {t("mdPage.ctaTitle")}
             </h2>
-            <p className="text-slate-600 mb-8">
+            <p className="text-slate-600 dark:text-gray-300 mb-8">
               {t("mdPage.ctaDescription")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-blue-600 px-8 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-full bg-blue-600 dark:bg-blue-500 px-8 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 {t("mdPage.contactUs")}
               </a>
               <a
                 href="/services"
-                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-medium text-slate-900 shadow-sm ring-1 ring-slate-200 transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-full bg-white dark:bg-gray-700 px-8 py-3 text-sm font-medium text-slate-900 dark:text-white shadow-sm ring-1 ring-slate-200 dark:ring-gray-600 transition hover:bg-slate-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 {t("mdPage.viewServices")}
               </a>

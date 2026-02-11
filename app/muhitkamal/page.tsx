@@ -17,7 +17,7 @@ export default function Page() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative order-2 lg:order-1">
                 <div className="absolute -inset-6 bg-linear-to-br from-sky-200/30 via-blue-200/20 to-emerald-200/30 rounded-full blur-3xl"></div>
-                <div className="relative bg-white/30 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-white/30 max-w-md mx-auto">
+                <div className="relative bg-white/30 dark:bg-gray-800/30 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-white/30 dark:border-gray-700/30 max-w-md mx-auto">
                   <Image
                     src="/assets/kamal.png"
                     alt={`${t("specialists.mohit.name")} ${t("specialists.mohit.lastName")}`}
@@ -29,33 +29,33 @@ export default function Page() {
               </div>
               <div className="space-y-8 order-1 lg:order-2">
                 <div>
-                  <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200 mb-4">
+                  <p className="inline-flex items-center rounded-full bg-sky-100 dark:bg-sky-900/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 dark:text-sky-300 ring-1 ring-sky-200 dark:ring-sky-800 mb-4">
                     {t("specialistDetail.seniorChiefConsultant")}
                   </p>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-3">
                     {t("specialists.mohit.name")}{" "}
                     <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
                       {t("specialists.mohit.lastName")}
                     </span>
                   </h1>
-                  <p className="text-xl text-sky-600 font-semibold">
+                  <p className="text-xl text-sky-600 dark:text-sky-400 font-semibold">
                     {t("specialistDetail.mohit.title")}
                   </p>
                 </div>
                 <div className="space-y-6">
-                  <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-lg shadow-gray-200/30">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  <div className="rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                       {t("specialistDetail.qualifications")}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
                       {t("specialistDetail.mohit.qualifications")}
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-lg shadow-gray-200/30">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  <div className="rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                       {t("specialistDetail.currentPosition")}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
                       {t("specialistDetail.mohit.currentPosition")}
                     </p>
                   </div>
@@ -71,17 +71,17 @@ export default function Page() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30">
+            <Card className="border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30">
               <CardHeader>
-                <CardTitle className="text-3xl md:text-4xl font-semibold text-center text-gray-900">
+                <CardTitle className="text-3xl md:text-4xl font-semibold text-center text-gray-900 dark:text-white">
                   {t("specialistDetail.mohit.aboutTitle")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6 p-6 lg:p-8">
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {t("specialistDetail.mohit.about1")}
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   {t("specialistDetail.mohit.about2")}
                 </p>
               </CardContent>
@@ -96,20 +96,20 @@ export default function Page() {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <p className="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200 mb-4">
+              <p className="inline-flex items-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300 ring-1 ring-emerald-200 dark:ring-emerald-800 mb-4">
                 {t("specialistDetail.experience")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 {t("specialistDetail.professionalExperience")}
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 hover:border-white/50 transition-all">
+              <Card className="border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30 hover:border-white/50 dark:hover:border-gray-600/50 transition-all">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.currentRoles")}</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">{t("specialistDetail.currentRoles")}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-sky-500 rounded-full mt-2 mr-3 shrink-0"></span>
                       {t("specialistDetail.mohit.currentRole1")}
@@ -122,12 +122,12 @@ export default function Page() {
                 </CardContent>
               </Card>
 
-              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 hover:border-white/50 transition-all">
+              <Card className="border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30 hover:border-white/50 dark:hover:border-gray-600/50 transition-all">
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-gray-900">{t("specialistDetail.previousPositions")}</CardTitle>
+                  <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">{t("specialistDetail.previousPositions")}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 shrink-0"></span>
                       {t("specialistDetail.mohit.previousRole1")}
@@ -153,18 +153,18 @@ export default function Page() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.05),transparent_60%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200 mb-4">
+            <p className="inline-flex items-center rounded-full bg-sky-100 dark:bg-sky-900/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 dark:text-sky-300 ring-1 ring-sky-200 dark:ring-sky-800 mb-4">
               {t("specialistDetail.expertise")}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12">
               {t("specialistDetail.areasOfExpertise")}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-lg shadow-gray-200/30 hover:shadow-xl hover:border-white/50 transition-all duration-300 hover:-translate-y-1">
+              <Card className="border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30 hover:shadow-xl hover:border-white/50 dark:hover:border-gray-600/50 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <div className="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-14 h-14 bg-sky-100 dark:bg-sky-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg
-                      className="w-7 h-7 text-sky-600"
+                      className="w-7 h-7 text-sky-600 dark:text-sky-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -177,20 +177,20 @@ export default function Page() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {t("specialistDetail.mohit.expertise1")}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {t("specialistDetail.mohit.expertise1Desc")}
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border border-gray-200 bg-white shadow-lg shadow-gray-200/50 hover:shadow-xl hover:border-emerald-300 transition-all duration-300 hover:-translate-y-1">
+              <Card className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg shadow-gray-200/50 dark:shadow-gray-900/50 hover:shadow-xl hover:border-emerald-300 dark:hover:border-emerald-600 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg
-                      className="w-7 h-7 text-emerald-600"
+                      className="w-7 h-7 text-emerald-600 dark:text-emerald-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -203,20 +203,20 @@ export default function Page() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {t("specialistDetail.mohit.expertise2")}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {t("specialistDetail.mohit.expertise2Desc")}
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-lg shadow-gray-200/30 hover:shadow-xl hover:border-white/50 transition-all duration-300 hover:-translate-y-1">
+              <Card className="border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30 hover:shadow-xl hover:border-white/50 dark:hover:border-gray-600/50 transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-6">
-                  <div className="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-14 h-14 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg
-                      className="w-7 h-7 text-blue-600"
+                      className="w-7 h-7 text-blue-600 dark:text-blue-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -229,10 +229,10 @@ export default function Page() {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {t("specialistDetail.mohit.expertise3")}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {t("specialistDetail.mohit.expertise3Desc")}
                   </p>
                 </CardContent>
