@@ -131,7 +131,7 @@ export default function ArticlePage() {
       return "drug addiction, substance abuse, addiction treatment, drug rehabilitation, addiction recovery, detoxification, addiction therapy, drug addiction treatment Bangladesh";
     }
     if (articleSlug === "early-signs-of-depression") {
-      return "depression signs, early depression symptoms, depression warning signs, depression symptoms, depression treatment, depression help, mental health Bangladesh";
+      return "depression signs, early depression symptoms, depression warning signs, depression symptoms, depression fatigue, depression sleep problems, loss of interest depression, depression concentration, depression appetite changes, depression irritability, depression treatment, depression help, depression therapy, depression medication, depression support, depression treatment Bangladesh, depression doctor Dhaka, mental health depression, depression care Bangladesh";
     }
     return "mental health, psychiatric care, mental wellness, Bangladesh";
   };

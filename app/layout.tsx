@@ -33,6 +33,20 @@ export default function RootLayout({
   return (
     <html lang="en" itemScope itemType="https://schema.org/Hospital">
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'light') {
+                  document.documentElement.classList.remove('dark');
+                } else {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
         <link rel="icon" href="/assets/brainandlifelogo.png" />
         <link rel="apple-touch-icon" href="/assets/brainandlifelogo.png" />
         {/* Preload critical images for faster loading */}
