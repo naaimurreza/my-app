@@ -140,12 +140,12 @@ export default function Home() {
                 {t("treatment.description")}
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700 dark:text-gray-300">
-                <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 ring-1 ring-sky-300">
+              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700 dark:text-gray-900">
+                <div className="flex items-center gap-2 rounded-full bg-gray-100 dark:bg-white px-3 py-1.5 ring-1 ring-sky-300">
                   <span className="text-base">🕐</span>
                   <span className="font-medium">{t("treatment.multidisciplinary")}</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 ring-1 ring-emerald-300">
+                <div className="flex items-center gap-2 rounded-full bg-gray-100 dark:bg-white px-3 py-1.5 ring-1 ring-emerald-300">
                   <span className="text-base">🔐</span>
                   <span className="font-medium">{t("treatment.traumaCare")}</span>
                 </div>
@@ -162,13 +162,13 @@ export default function Home() {
                   className="h-56 w-full object-cover sm:h-64 lg:h-72"
                 />
               </div>
-              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 dark:bg-gray-800/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 dark:text-gray-300 ring-1 ring-white/30 dark:ring-gray-700/30 shadow-lg">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
+              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 dark:bg-white/90 backdrop-blur-md px-4 py-3 text-xs text-gray-700 dark:text-gray-900 ring-1 ring-white/30 dark:ring-gray-300/30 shadow-lg">
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-200 text-emerald-600 dark:text-emerald-800">
                   ✓
                 </span>
                 <div className="space-y-0.5">
-                  <p className="font-medium text-gray-900 dark:text-white">{t("treatment.traumaCare")}</p>
-                  <p className="text-[11px] text-gray-600 dark:text-gray-400">{t("treatment.traumaDesc")}</p>
+                  <p className="font-medium text-gray-900 dark:text-gray-900">{t("treatment.traumaCare")}</p>
+                  <p className="text-[11px] text-gray-600 dark:text-gray-700">{t("treatment.traumaDesc")}</p>
                 </div>
               </div>
             </div>
