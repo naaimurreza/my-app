@@ -14,6 +14,7 @@ const staff = [
     image: "/assets/manik.png",
     nameKey: "staff.member2.name",
     roleKey: "staff.member2.role",
+    link: "https://www.facebook.com/mahmudul.9900",
   },
   {
     image: "/assets/faruk.jpg",
@@ -70,11 +71,8 @@ export default function StaffSection() {
                 width: "fit-content",
               }}
             >
-              {duplicatedStaff.map((member, index) => (
-                  <div
-                  key={`${member.nameKey}-${index}`}
-                  className="shrink-0 w-[280px] sm:w-[300px] lg:w-[320px]"
-                >
+              {duplicatedStaff.map((member, index) => {
+                const CardContent = (
                   <div className="group relative rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md overflow-hidden shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300">
                     <div className="relative h-48 md:h-56 overflow-hidden bg-gray-100">
                       <Image
@@ -97,8 +95,28 @@ export default function StaffSection() {
                       </p>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+
+                return (
+                  <div
+                    key={`${member.nameKey}-${index}`}
+                    className="shrink-0 w-[280px] sm:w-[300px] lg:w-[320px]"
+                  >
+                    {member.link ? (
+                      <a
+                        href={member.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block cursor-pointer"
+                      >
+                        {CardContent}
+                      </a>
+                    ) : (
+                      CardContent
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

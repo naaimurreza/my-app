@@ -42,13 +42,11 @@ export default function ArticlePage() {
       };
     }
     if (articleSlug === "understanding-schizophrenia") {
-      const today = new Date();
-      const todayString = today.toISOString().split('T')[0];
       return {
         title: t("article.schizophrenia.title"),
         excerpt: t("article.schizophrenia.excerpt"),
-        date: formatDate(todayString),
-        dateValue: todayString,
+        date: formatDate("2026-02-11"),
+        dateValue: "2026-02-11",
         author: "Brain And Life Hospital",
         category: t("articles.category.mentalHealth"),
         content: [
@@ -64,6 +62,27 @@ export default function ArticlePage() {
         ]
       };
     }
+    if (articleSlug === "drug-addiction") {
+      return {
+        title: t("article.drugAddiction.title"),
+        excerpt: t("article.drugAddiction.excerpt"),
+        date: formatDate("2026-02-12"),
+        dateValue: "2026-02-12",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.addiction"),
+        content: [
+          t("article.drugAddiction.content1"),
+          t("article.drugAddiction.content2"),
+          t("article.drugAddiction.content3"),
+          t("article.drugAddiction.content4"),
+          t("article.drugAddiction.content5"),
+          t("article.drugAddiction.content6"),
+          t("article.drugAddiction.content7"),
+          t("article.drugAddiction.content8"),
+          t("article.drugAddiction.content9"),
+        ]
+      };
+    }
     return null;
   };
 
@@ -72,11 +91,23 @@ export default function ArticlePage() {
   // Article schema for SEO
   const getPublishedDate = (articleSlug: string) => {
     if (articleSlug === "understanding-mental-health") return "2026-02-10T00:00:00+00:00";
-    if (articleSlug === "understanding-schizophrenia") {
-      const today = new Date();
-      return today.toISOString();
-    }
+    if (articleSlug === "understanding-schizophrenia") return "2026-02-11T00:00:00+00:00";
+    if (articleSlug === "drug-addiction") return "2026-02-12T00:00:00+00:00";
     return "2026-02-10T00:00:00+00:00";
+  };
+
+  // Article-specific keywords for schema
+  const getArticleKeywords = (articleSlug: string) => {
+    if (articleSlug === "understanding-mental-health") {
+      return "mental health, mental wellness, mental health conditions, depression, anxiety, bipolar disorder, psychiatric care, mental health services Bangladesh";
+    }
+    if (articleSlug === "understanding-schizophrenia") {
+      return "schizophrenia, schizophrenia symptoms, schizophrenia treatment, hallucinations, delusions, schizophrenia management, psychiatric care Bangladesh";
+    }
+    if (articleSlug === "drug-addiction") {
+      return "drug addiction, substance abuse, addiction treatment, drug rehabilitation, addiction recovery, detoxification, addiction therapy, drug addiction treatment Bangladesh";
+    }
+    return "mental health, psychiatric care, mental wellness, Bangladesh";
   };
 
   const articleSchema = article ? {
@@ -105,7 +136,7 @@ export default function ArticlePage() {
       "@id": `${baseUrl}/articles/${slug}`,
     },
     articleSection: article.category,
-    keywords: "mental health, psychiatric care, mental wellness, Bangladesh",
+    keywords: getArticleKeywords(slug),
   } : null;
 
   if (!article) {
@@ -180,7 +211,7 @@ export default function ArticlePage() {
                 <span className="font-medium">{t("articles.by")} <span itemProp="name">{article.author}</span></span>
               </div>
               <div className="flex items-center gap-2">
-                <time dateTime={article.dateValue || (slug === "understanding-mental-health" ? "2026-02-10" : new Date().toISOString().split('T')[0])} itemProp="datePublished">{article.date}</time>
+                <time dateTime={article.dateValue} itemProp="datePublished">{article.date}</time>
               </div>
             </div>
           </div>

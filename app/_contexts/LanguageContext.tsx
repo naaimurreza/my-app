@@ -505,6 +505,7 @@ const translations: Record<Language, Record<string, string>> = {
     "articles.contactUs": "Contact Us",
     "articles.callNow": "Call Now: +880 58150414",
     "articles.category.mentalHealth": "Mental Health",
+    "articles.category.addiction": "Addiction",
     
     // Demo Article
     "article.understandingMentalHealth.title": "Understanding Mental Health: A Comprehensive Guide",
@@ -530,6 +531,19 @@ const translations: Record<Language, Record<string, string>> = {
     "article.schizophrenia.content7": "If you or any of your loved ones are experiencing symptoms of Schizophrenia, consult a specialist as soon as possible. The earlier the issue is addressed, the better it will be. There is a lot of stigma around mental health issues and its treatment in our country. More than 1 out of 300 people in this world suffers from Schizophrenia. The treatment of this condition is fully safe and the symptoms can be mitigated with guidance from a professional.",
     "article.schizophrenia.content8": "There is no single foolproof test to determine Schizophrenia. It is usually diagnosed after being assessed by an expert of the field.",
     "article.schizophrenia.content9": "Treatment: Schizophrenia can be cured with proper care and a combination of medicine and therapy tailored specifically for each individual. At Brain and Life Hospital, we have a dedicated team to help and monitor our patients 24x7 with Doctors available all the time. If you want to book an appointment with the nationally renowned expert psychiatrists, contact us.",
+    
+    // Drug Addiction Article
+    "article.drugAddiction.title": "Understanding Drug Addiction: Causes, Effects, and Recovery",
+    "article.drugAddiction.excerpt": "Drug addiction is a complex mental health condition that affects millions worldwide. Learn about the causes, effects, warning signs, and effective treatment options available for recovery.",
+    "article.drugAddiction.content1": "Drug addiction, also known as substance use disorder, is a chronic mental health condition characterized by compulsive drug seeking and use despite harmful consequences. It affects millions of people worldwide and can have devastating effects on individuals, families, and communities.",
+    "article.drugAddiction.content2": "Addiction is not a moral failing or a lack of willpower—it is a medical condition that affects the brain's reward system, making it difficult for individuals to stop using drugs even when they want to. Understanding the nature of addiction is the first step toward effective treatment and recovery.",
+    "article.drugAddiction.content3": "Common substances that lead to addiction include opioids (such as heroin and prescription painkillers), stimulants (like cocaine and methamphetamine), depressants (including alcohol and benzodiazepines), hallucinogens, and cannabis. Each substance affects the brain differently, but all can lead to dependence and addiction when used repeatedly.",
+    "article.drugAddiction.content4": "Warning signs of drug addiction may include: changes in behavior or personality, neglecting responsibilities at work, school, or home, financial problems or unexplained need for money, changes in physical appearance or hygiene, withdrawal from family and friends, loss of interest in previously enjoyed activities, and continued use despite negative consequences.",
+    "article.drugAddiction.content5": "The effects of drug addiction extend far beyond the individual. It can lead to serious health problems, including heart disease, liver damage, respiratory issues, mental health disorders, and increased risk of infectious diseases. Addiction can also cause relationship problems, legal issues, financial difficulties, and job loss.",
+    "article.drugAddiction.content6": "Note: If you suspect someone you know is struggling with drug addiction, approach them with compassion and understanding. Avoid judgment or blame, as these can push them further away from seeking help. Encourage them to speak with a healthcare professional or addiction specialist.",
+    "article.drugAddiction.content7": "Recovery from drug addiction is possible with the right treatment and support. Treatment typically involves a combination of medical detoxification, behavioral therapy, medication-assisted treatment (when appropriate), support groups, and aftercare planning. The most effective treatment plans are tailored to each individual's unique needs and circumstances.",
+    "article.drugAddiction.content8": "Early intervention is crucial for successful recovery. The sooner someone seeks help, the better their chances of overcoming addiction and rebuilding their life. Family support and involvement in the treatment process can significantly improve outcomes.",
+    "article.drugAddiction.content9": "Treatment: At Brain And Life Hospital, we provide comprehensive addiction treatment services including medical detoxification, individual and group therapy, medication management, family counseling, and long-term recovery support. Our experienced team of psychiatrists, therapists, and medical professionals works together to create personalized treatment plans that address both the physical and psychological aspects of addiction. We offer 24/7 support and monitoring to ensure the safety and well-being of our patients throughout their recovery journey. If you or a loved one is struggling with drug addiction, don't hesitate to reach out—help is available, and recovery is possible.",
   },
   bn: {
     // Navigation
@@ -1023,6 +1037,7 @@ const translations: Record<Language, Record<string, string>> = {
     "articles.contactUs": "যোগাযোগ করুন",
     "articles.callNow": "এখনই কল করুন: +880 ৫৮১৫০৪১৪",
     "articles.category.mentalHealth": "মানসিক স্বাস্থ্য",
+    "articles.category.addiction": "মাদকাসক্তি",
     
     // Demo Article
     "article.understandingMentalHealth.title": "মানসিক স্বাস্থ্য বোঝা: একটি ব্যাপক নির্দেশিকা",
@@ -1048,6 +1063,19 @@ const translations: Record<Language, Record<string, string>> = {
     "article.schizophrenia.content7": "আপনি বা আপনার প্রিয়জনের মধ্যে কেউ যদি স্কিজোফ্রেনিয়ার লক্ষণ অনুভব করেন, যত তাড়াতাড়ি সম্ভব একজন বিশেষজ্ঞের সাথে পরামর্শ করুন। যত আগে সমস্যাটি সমাধান করা হবে, ততই ভাল হবে। আমাদের দেশে মানসিক স্বাস্থ্য সমস্যা এবং এর চিকিৎসা সম্পর্কে অনেক কলঙ্ক রয়েছে। বিশ্বে ৩০০ জনের মধ্যে ১ জনেরও বেশি মানুষ স্কিজোফ্রেনিয়ায় ভোগে। এই অবস্থার চিকিৎসা সম্পূর্ণ নিরাপদ এবং একজন পেশাদারের নির্দেশনার সাথে লক্ষণগুলি প্রশমিত করা যেতে পারে।",
     "article.schizophrenia.content8": "স্কিজোফ্রেনিয়া নির্ধারণ করার জন্য কোন একক নিশ্চিত পরীক্ষা নেই। এটি সাধারণত এই ক্ষেত্রের একজন বিশেষজ্ঞ দ্বারা মূল্যায়নের পরে নির্ণয় করা হয়।",
     "article.schizophrenia.content9": "চিকিৎসা: স্কিজোফ্রেনিয়া সঠিক যত্ন এবং প্রতিটি ব্যক্তির জন্য বিশেষভাবে তৈরি করা ওষুধ এবং থেরাপির সংমিশ্রণ দিয়ে নিরাময় করা যেতে পারে। ব্রেইন অ্যান্ড লাইফ হাসপাতালে, আমাদের একটি নিবেদিত দল রয়েছে যা ২৪x৭ আমাদের রোগীদের সাহায্য এবং পর্যবেক্ষণ করতে, সব সময় ডাক্তার উপলব্ধ। আপনি যদি জাতীয়ভাবে খ্যাতিমান বিশেষজ্ঞ মনোরোগ বিশেষজ্ঞদের সাথে অ্যাপয়েন্টমেন্ট বুক করতে চান, আমাদের সাথে যোগাযোগ করুন।",
+    
+    // Drug Addiction Article
+    "article.drugAddiction.title": "মাদকাসক্তি বোঝা: কারণ, প্রভাব এবং পুনরুদ্ধার",
+    "article.drugAddiction.excerpt": "মাদকাসক্তি একটি জটিল মানসিক স্বাস্থ্য অবস্থা যা বিশ্বব্যাপী লক্ষ লক্ষ মানুষকে প্রভাবিত করে। পুনরুদ্ধারের জন্য উপলব্ধ কারণ, প্রভাব, সতর্কতা লক্ষণ এবং কার্যকর চিকিৎসার বিকল্প সম্পর্কে জানুন।",
+    "article.drugAddiction.content1": "মাদকাসক্তি, যা পদার্থ ব্যবহারের ব্যাধি হিসাবেও পরিচিত, ক্ষতিকারক পরিণতি সত্ত্বেও বাধ্যতামূলক মাদক সন্ধান এবং ব্যবহার দ্বারা চিহ্নিত একটি দীর্ঘস্থায়ী মানসিক স্বাস্থ্য অবস্থা। এটি বিশ্বব্যাপী লক্ষ লক্ষ মানুষকে প্রভাবিত করে এবং ব্যক্তি, পরিবার এবং সম্প্রদায়ের উপর বিধ্বংসী প্রভাব ফেলতে পারে।",
+    "article.drugAddiction.content2": "মাদকাসক্তি একটি নৈতিক ব্যর্থতা বা ইচ্ছাশক্তির অভাব নয়—এটি একটি চিকিৎসা অবস্থা যা মস্তিষ্কের পুরস্কার ব্যবস্থাকে প্রভাবিত করে, যা ব্যক্তিদের জন্য এমনকি যখন তারা চায় তখনও মাদক ব্যবহার বন্ধ করা কঠিন করে তোলে। মাদকাসক্তির প্রকৃতি বোঝা কার্যকর চিকিৎসা এবং পুনরুদ্ধারের প্রথম পদক্ষেপ।",
+    "article.drugAddiction.content3": "মাদকাসক্তির দিকে নিয়ে যায় এমন সাধারণ পদার্থগুলির মধ্যে রয়েছে ওপিওয়েড (যেমন হেরোইন এবং প্রেসক্রিপশন ব্যথানাশক), উদ্দীপক (কোকেন এবং মেথামফেটামিনের মতো), অবসাদক (অ্যালকোহল এবং বেনজোডিয়াজেপাইন সহ), হ্যালুসিনোজেন এবং ক্যানাবিস। প্রতিটি পদার্থ মস্তিষ্ককে আলাদাভাবে প্রভাবিত করে, তবে সবই বারবার ব্যবহার করলে নির্ভরতা এবং মাদকাসক্তির দিকে নিয়ে যেতে পারে।",
+    "article.drugAddiction.content4": "মাদকাসক্তির সতর্কতা লক্ষণগুলির মধ্যে থাকতে পারে: আচরণ বা ব্যক্তিত্বে পরিবর্তন, কাজ, স্কুল বা বাড়িতে দায়িত্ব অবহেলা, আর্থিক সমস্যা বা অর্থের জন্য ব্যাখ্যাতীত প্রয়োজন, শারীরিক উপস্থিতি বা স্বাস্থ্যবিধিতে পরিবর্তন, পরিবার এবং বন্ধুদের থেকে প্রত্যাহার, পূর্বে উপভোগ করা কার্যক্রমে আগ্রহ হারানো, এবং নেতিবাচক পরিণতি সত্ত্বেও অব্যাহত ব্যবহার।",
+    "article.drugAddiction.content5": "মাদকাসক্তির প্রভাব ব্যক্তির সীমানা ছাড়িয়ে যায়। এটি গুরুতর স্বাস্থ্য সমস্যার দিকে নিয়ে যেতে পারে, যার মধ্যে রয়েছে হৃদরোগ, লিভারের ক্ষতি, শ্বাসযন্ত্রের সমস্যা, মানসিক স্বাস্থ্য ব্যাধি এবং সংক্রামক রোগের ঝুঁকি বৃদ্ধি। মাদকাসক্তি সম্পর্কের সমস্যা, আইনি সমস্যা, আর্থিক অসুবিধা এবং চাকরি হারানোর কারণও হতে পারে।",
+    "article.drugAddiction.content6": "দ্রষ্টব্য: আপনি যদি জানেন যে কেউ মাদকাসক্তির সাথে লড়াই করছে বলে সন্দেহ করেন, তাহলে সহানুভূতি এবং বোঝাপড়ার সাথে তাদের কাছে যান। বিচার বা দোষারোপ এড়িয়ে চলুন, কারণ এগুলি সাহায্য চাওয়া থেকে তাদের আরও দূরে ঠেলে দিতে পারে। তাদের একজন স্বাস্থ্যসেবা পেশাদার বা মাদকাসক্তি বিশেষজ্ঞের সাথে কথা বলতে উৎসাহিত করুন।",
+    "article.drugAddiction.content7": "সঠিক চিকিৎসা এবং সহায়তার সাথে মাদকাসক্তি থেকে পুনরুদ্ধার সম্ভব। চিকিৎসা সাধারণত চিকিৎসা বিষমুক্তকরণ, আচরণগত থেরাপি, ওষুধ-সহায়িত চিকিৎসা (যখন উপযুক্ত), সহায়তা গোষ্ঠী এবং পরবর্তী যত্ন পরিকল্পনার সংমিশ্রণ জড়িত। সবচেয়ে কার্যকর চিকিৎসা পরিকল্পনাগুলি প্রতিটি ব্যক্তির অনন্য প্রয়োজন এবং পরিস্থিতির জন্য তৈরি করা হয়।",
+    "article.drugAddiction.content8": "সফল পুনরুদ্ধারের জন্য প্রাথমিক হস্তক্ষেপ অত্যন্ত গুরুত্বপূর্ণ। কেউ যত তাড়াতাড়ি সাহায্য চাইবে, মাদকাসক্তি কাটিয়ে উঠতে এবং তাদের জীবন পুনর্গঠনের সম্ভাবনা তত ভাল হবে। চিকিৎসা প্রক্রিয়ায় পরিবারের সহায়তা এবং অংশগ্রহণ ফলাফলকে উল্লেখযোগ্যভাবে উন্নত করতে পারে।",
+    "article.drugAddiction.content9": "চিকিৎসা: ব্রেইন অ্যান্ড লাইফ হাসপাতালে, আমরা ব্যাপক মাদকাসক্তি চিকিৎসা পরিষেবা প্রদান করি যার মধ্যে রয়েছে চিকিৎসা বিষমুক্তকরণ, ব্যক্তিগত এবং গ্রুপ থেরাপি, ওষুধ ব্যবস্থাপনা, পরিবার পরামর্শ, এবং দীর্ঘমেয়াদী পুনরুদ্ধার সহায়তা। আমাদের অভিজ্ঞ মনোরোগ বিশেষজ্ঞ, থেরাপিস্ট এবং চিকিৎসা পেশাদারদের দল একসাথে কাজ করে ব্যক্তিগতকৃত চিকিৎসা পরিকল্পনা তৈরি করে যা মাদকাসক্তির শারীরিক এবং মানসিক উভয় দিকই সম্বোধন করে। আমরা ২৪/৭ সহায়তা এবং পর্যবেক্ষণ অফার করি যাতে আমাদের রোগীদের পুনরুদ্ধারের যাত্রা জুড়ে তাদের নিরাপত্তা এবং সুস্থতা নিশ্চিত করা যায়। আপনি বা আপনার প্রিয়জন যদি মাদকাসক্তির সাথে লড়াই করছেন, দ্বিধা করবেন না—সাহায্য উপলব্ধ, এবং পুনরুদ্ধার সম্ভব।",
   },
 };
 

@@ -71,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    {
+      path: 'articles/drug-addiction',
+      lastModified: lastWeek,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
     
     // Contact page - High priority for conversions
     {

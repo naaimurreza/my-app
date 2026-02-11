@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { useLanguage } from "../_contexts/LanguageContext";
 
 export default function ArticlesPage() {
@@ -15,26 +15,42 @@ export default function ArticlesPage() {
     });
   };
 
-  const articles = [
-    {
-      slug: "understanding-mental-health",
-      title: t("article.understandingMentalHealth.title") || "Understanding Mental Health: A Comprehensive Guide",
-      excerpt: t("article.understandingMentalHealth.excerpt") || "Mental health is an essential part of our overall well-being. Learn about the importance of mental health, common conditions, and how to seek help when needed.",
-      date: formatDate(new Date("2026-02-10")),
-      dateValue: "2026-02-10",
-      author: "Brain And Life Hospital",
-      category: t("articles.category.mentalHealth") || "Mental Health",
-    },
-    {
-      slug: "understanding-schizophrenia",
-      title: t("article.schizophrenia.title") || "Understanding Schizophrenia: Symptoms, Treatment, and Support",
-      excerpt: t("article.schizophrenia.excerpt") || "Schizophrenia is a chronic mental health condition that affects more than 1 in 300 people worldwide. Learn about its symptoms, treatment options, and how early intervention can help manage this condition effectively.",
-      date: formatDate(new Date()),
-      dateValue: new Date().toISOString().split('T')[0],
-      author: "Brain And Life Hospital",
-      category: t("articles.category.mentalHealth") || "Mental Health",
-    },
-  ];
+  const articles = useMemo(() => {
+    const articlesList = [
+      {
+        slug: "understanding-mental-health",
+        title: t("article.understandingMentalHealth.title") || "Understanding Mental Health: A Comprehensive Guide",
+        excerpt: t("article.understandingMentalHealth.excerpt") || "Mental health is an essential part of our overall well-being. Learn about the importance of mental health, common conditions, and how to seek help when needed.",
+        date: formatDate(new Date("2026-02-10")),
+        dateValue: "2026-02-10",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.mentalHealth") || "Mental Health",
+      },
+      {
+        slug: "understanding-schizophrenia",
+        title: t("article.schizophrenia.title") || "Understanding Schizophrenia: Symptoms, Treatment, and Support",
+        excerpt: t("article.schizophrenia.excerpt") || "Schizophrenia is a chronic mental health condition that affects more than 1 in 300 people worldwide. Learn about its symptoms, treatment options, and how early intervention can help manage this condition effectively.",
+        date: formatDate(new Date("2026-02-11")),
+        dateValue: "2026-02-11",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.mentalHealth") || "Mental Health",
+      },
+      {
+        slug: "drug-addiction",
+        title: t("article.drugAddiction.title") || "Understanding Drug Addiction: Causes, Effects, and Recovery",
+        excerpt: t("article.drugAddiction.excerpt") || "Drug addiction is a complex mental health condition that affects millions worldwide. Learn about the causes, effects, warning signs, and effective treatment options available for recovery.",
+        date: formatDate(new Date("2026-02-12")),
+        dateValue: "2026-02-12",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.addiction") || "Addiction",
+      },
+    ];
+    
+    // Sort by dateValue (latest first) - descending order
+    return articlesList.sort((a, b) => {
+      return b.dateValue.localeCompare(a.dateValue);
+    });
+  }, [t]);
 
   return (
     <main className="relative min-h-screen overflow-hidden pt-20">
