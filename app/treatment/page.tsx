@@ -130,17 +130,17 @@ export default function Home() {
               <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-sky-700 ring-1 ring-sky-200">
                 {t("treatment.badge")}
               </p>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-gray-900 md:text-5xl lg:text-[2.9rem]">
+              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-[2.9rem]">
                 {t("treatment.title")}{" "}
                 <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
                   {t("treatment.titleHighlight")}
                 </span>
               </h1>
-              <p className="mt-4 text-base md:text-lg text-gray-700 leading-relaxed">
+              <p className="mt-4 text-base md:text-lg text-gray-700 dark:text-gray-200 leading-relaxed">
                 {t("treatment.description")}
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700">
+              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700 dark:text-gray-300">
                 <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 ring-1 ring-sky-300">
                   <span className="text-base">🕐</span>
                   <span className="font-medium">{t("treatment.multidisciplinary")}</span>
@@ -162,13 +162,13 @@ export default function Home() {
                   className="h-56 w-full object-cover sm:h-64 lg:h-72"
                 />
               </div>
-              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 dark:bg-gray-800/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 dark:text-gray-300 ring-1 ring-white/30 dark:ring-gray-700/30 shadow-lg">
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
                   ✓
                 </span>
                 <div className="space-y-0.5">
-                  <p className="font-medium text-gray-900">{t("treatment.traumaCare")}</p>
-                  <p className="text-[11px] text-gray-600">{t("treatment.traumaDesc")}</p>
+                  <p className="font-medium text-gray-900 dark:text-white">{t("treatment.traumaCare")}</p>
+                  <p className="text-[11px] text-gray-600 dark:text-gray-400">{t("treatment.traumaDesc")}</p>
                 </div>
               </div>
             </div>
@@ -183,10 +183,10 @@ export default function Home() {
             <p className="mb-3 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200">
               {t("treatment.programs")}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {t("treatment.modalities")} <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">{t("treatment.modalitiesHighlight")}</span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
               {t("treatment.modalitiesDesc")}
             </p>
           </div>
@@ -195,29 +195,29 @@ export default function Home() {
             {treatmentModalities.map((treatment, index) => (
               <div
                 key={index}
-                className="group rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
+                className="group rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30 hover:-translate-y-1 hover:border-white/50 dark:hover:border-gray-600/50 hover:shadow-xl transition-all duration-300"
               >
                 <div className="text-5xl mb-4">{treatment.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                   {treatment.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   {treatment.description}
                 </p>
                 <div className="mb-4">
-                  <p className="text-xs font-medium text-sky-600 mb-3">{t("treatment.keyBenefits")}</p>
+                  <p className="text-xs font-medium text-sky-600 dark:text-sky-400 mb-3">{t("treatment.keyBenefits")}</p>
                   <ul className="space-y-2">
                     {treatment.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start text-sm text-gray-700">
-                        <span className="text-emerald-600 mr-2">✓</span>
+                      <li key={idx} className="flex items-start text-sm text-gray-700 dark:text-gray-300">
+                        <span className="text-emerald-600 dark:text-emerald-400 mr-2">✓</span>
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="pt-4 border-t border-gray-200">
-                  <p className="text-xs text-gray-600">
-                    <span className="font-medium text-gray-900">{t("treatment.duration")}</span> {treatment.duration}
+                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <p className="text-xs text-gray-600 dark:text-gray-400">
+                    <span className="font-medium text-gray-900 dark:text-white">{t("treatment.duration")}</span> {treatment.duration}
                   </p>
                 </div>
               </div>
@@ -233,10 +233,10 @@ export default function Home() {
             <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
               {t("treatment.journey")}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {t("treatment.treatmentJourney")} <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">{t("treatment.journeyHighlight")}</span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
               {t("treatment.journeyDesc")}
             </p>
           </div>
@@ -246,7 +246,7 @@ export default function Home() {
               {treatmentProcess.map((step, index) => (
                 <div
                   key={index}
-                  className="flex flex-col md:flex-row gap-6 rounded-xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30"
+                  className="flex flex-col md:flex-row gap-6 rounded-xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30"
                 >
                   <div className="shrink-0">
                     <div className="w-16 h-16 rounded-full bg-linear-to-br from-sky-500 to-emerald-400 flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-sky-500/30">
@@ -254,10 +254,10 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -276,23 +276,23 @@ export default function Home() {
               <p className="mb-3 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200">
                 {t("treatment.evidence")}
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 {t("treatment.evidenceApproaches")} <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">{t("treatment.evidenceHighlight")}</span>
               </h2>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-700 dark:text-gray-200">
                 {t("treatment.evidenceDesc")}
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-8 lg:p-10 shadow-xl shadow-gray-200/30">
+            <div className="rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-8 lg:p-10 shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {evidenceBasedApproaches.map((approach, index) => (
                   <div
                     key={index}
-                    className="flex items-center p-4 rounded-lg bg-white/20 backdrop-blur-sm ring-1 ring-white/30 hover:ring-white/50 transition-colors"
+                    className="flex items-center p-4 rounded-lg bg-white/20 dark:bg-gray-700/20 backdrop-blur-sm ring-1 ring-white/30 dark:ring-gray-600/30 hover:ring-white/50 dark:hover:ring-gray-500/50 transition-colors"
                   >
                     <div className="w-2 h-2 rounded-full bg-sky-500 mr-3 shrink-0"></div>
-                    <span className="text-gray-900 font-medium">{approach}</span>
+                    <span className="text-gray-900 dark:text-white font-medium">{approach}</span>
                   </div>
                 ))}
               </div>

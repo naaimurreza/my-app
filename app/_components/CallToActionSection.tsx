@@ -9,11 +9,11 @@ export default function CallToActionSection() {
     <section className="relative overflow-hidden py-12 lg:py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.08),transparent_55%)]" />
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 rounded-2xl border border-gray-200 p-8 lg:p-12 text-center shadow-2xl shadow-gray-200/50">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <div className="bg-linear-to-br from-sky-50 dark:from-gray-800 via-blue-50 dark:via-gray-800 to-emerald-50 dark:to-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-8 lg:p-12 text-center shadow-2xl shadow-gray-200/50 dark:shadow-gray-900/50">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {t("cta.title")}
           </h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 dark:text-gray-200 mb-8 max-w-2xl mx-auto">
             {t("cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -38,7 +38,7 @@ export default function CallToActionSection() {
             </a>
             <a
               href="tel:+8801713031449"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-base font-semibold text-gray-700 border-2 border-gray-200 shadow-md shadow-gray-200/50 transition-all duration-300 hover:bg-gray-50 hover:border-sky-300 hover:text-sky-600 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-white"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-white dark:bg-gray-700 px-8 py-3.5 text-base font-semibold text-gray-700 dark:text-gray-200 border-2 border-gray-200 dark:border-gray-600 shadow-md shadow-gray-200/50 dark:shadow-gray-900/50 transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-600 hover:border-sky-300 dark:hover:border-sky-500 hover:text-sky-600 dark:hover:text-sky-400 hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800"
             >
               <svg
                 className="w-5 h-5 transition-transform duration-300 group-hover:scale-110"

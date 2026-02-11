@@ -95,13 +95,13 @@ export default function Home() {
               <p className="mb-4 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-sky-700 ring-1 ring-sky-200">
                 {t("services.badge")}
               </p>
-              <h1 className="mb-6 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl text-gray-900">
+              <h1 className="mb-6 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl text-gray-900 dark:text-white">
                 {t("services.title")}{" "}
                 <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
                   {t("services.titleHighlight")}
                 </span>
               </h1>
-              <p className="text-base md:text-lg text-gray-700">
+              <p className="text-base md:text-lg text-gray-700 dark:text-gray-200">
                 {t("services.description")}
               </p>
 
@@ -117,26 +117,26 @@ export default function Home() {
                     🕐
                   </div>
                   <div className="space-y-0.5">
-                    <p className="font-medium text-gray-900">{t("services.emergencySupport")}</p>
-                    <p className="text-xs text-gray-600">
+                    <p className="font-medium text-gray-900 dark:text-white">{t("services.emergencySupport")}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">
                       {t("services.emergencySupportDesc")}
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 grid grid-cols-3 gap-4 max-w-md text-sm text-gray-700">
-                <div className="border-l border-gray-300 pl-4">
-                  <p className="text-2xl font-semibold text-gray-900">24/7</p>
-                  <p className="text-xs uppercase tracking-wide text-gray-600">{t("services.emergencyCare")}</p>
+              <div className="mt-8 grid grid-cols-3 gap-4 max-w-md text-sm text-gray-700 dark:text-gray-300">
+                <div className="border-l border-gray-300 dark:border-gray-600 pl-4">
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white">24/7</p>
+                  <p className="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400">{t("services.emergencyCare")}</p>
                 </div>
-                <div className="border-l border-gray-300 pl-4">
-                  <p className="text-2xl font-semibold text-gray-900">360°</p>
-                  <p className="text-xs uppercase tracking-wide text-gray-600">{t("services.holisticSupport")}</p>
+                <div className="border-l border-gray-300 dark:border-gray-600 pl-4">
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white">360°</p>
+                  <p className="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400">{t("services.holisticSupport")}</p>
                 </div>
-                <div className="border-l border-gray-300 pl-4">
-                  <p className="text-2xl font-semibold text-gray-900">{t("services.safe") || "Safe"}</p>
-                  <p className="text-xs uppercase tracking-wide text-gray-600">{t("services.safeEnvironment")}</p>
+                <div className="border-l border-gray-300 dark:border-gray-600 pl-4">
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white">{t("services.safe") || "Safe"}</p>
+                  <p className="text-xs uppercase tracking-wide text-gray-600 dark:text-gray-400">{t("services.safeEnvironment")}</p>
                 </div>
               </div>
             </div>
@@ -197,13 +197,13 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+              <div className="absolute -bottom-4 left-1/2 flex -translate-x-1/2 translate-y-1/2 items-center gap-3 rounded-2xl bg-white/40 dark:bg-gray-800/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 dark:text-gray-300 ring-1 ring-white/30 dark:ring-gray-700/30 shadow-lg">
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400">
                   ✓
                 </span>
                 <div className="space-y-0.5">
-                  <p className="font-medium text-gray-900">{t("services.confidentialCare")}</p>
-                  <p className="text-[11px] text-gray-600">{t("services.confidentialDesc")}</p>
+                  <p className="font-medium text-gray-900 dark:text-white">{t("services.confidentialCare")}</p>
+                  <p className="text-[11px] text-gray-600 dark:text-gray-400">{t("services.confidentialDesc")}</p>
                 </div>
               </div>
             </div>
@@ -218,10 +218,10 @@ export default function Home() {
             <p className="mb-3 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200">
               {t("services.programs")}
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               {t("services.our") || "Our"} <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">{t("services.specializedServices")}</span>
             </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
               {t("services.specializedDesc")}
             </p>
           </div>
@@ -230,19 +230,19 @@ export default function Home() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
+                className="group rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30 hover:-translate-y-1 hover:border-white/50 dark:hover:border-gray-600/50 hover:shadow-xl transition-all duration-300"
               >
                 <div className="mb-4 text-5xl drop-shadow">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-700">
-                      <span className="mr-2 text-emerald-600">✓</span>
+                    <li key={idx} className="flex items-start text-sm text-gray-700 dark:text-gray-300">
+                      <span className="mr-2 text-emerald-600 dark:text-emerald-400">✓</span>
                       {feature}
                     </li>
                   ))}
@@ -262,13 +262,13 @@ export default function Home() {
               <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
                 {t("services.transformation.badge")}
               </p>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
                 {t("services.transformation.title")}{" "}
                 <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
                   {t("services.transformation.titleHighlight")}
                 </span>
               </h2>
-              <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-gray-700 dark:text-gray-200 max-w-3xl mx-auto leading-relaxed">
                 {t("services.transformation.description")}
               </p>
             </div>
@@ -339,7 +339,7 @@ export default function Home() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="group relative rounded-2xl border border-white/50 bg-white/60 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    className="group relative rounded-2xl border border-white/50 dark:border-gray-700/50 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="flex items-start gap-4">
                       {/* Step Number & Icon */}
@@ -356,10 +356,10 @@ export default function Home() {
 
                       {/* Content */}
                       <div className="flex-1 pt-1">
-                        <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-2 group-hover:text-sky-600 transition-colors">
+                        <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                           {item.title}
                         </h3>
-                        <p className="text-gray-700 leading-relaxed">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                           {item.description}
                         </p>
                       </div>

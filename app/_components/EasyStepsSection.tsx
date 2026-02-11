@@ -36,7 +36,7 @@ export default function EasyStepsSection() {
           <p className="mb-3 inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 ring-1 ring-emerald-200">
             {t("steps.badge")}
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             {t("steps.title")}
           </h2>
         </div>
@@ -45,9 +45,9 @@ export default function EasyStepsSection() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="group rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 hover:-translate-y-1 hover:border-white/50 hover:shadow-xl transition-all duration-300"
+              className="group rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30 hover:-translate-y-1 hover:border-white/50 dark:hover:border-gray-600/50 hover:shadow-xl transition-all duration-300"
             >
-              <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-xl bg-sky-100 border border-sky-200 group-hover:bg-sky-200 transition-colors">
+              <div className="mb-4 flex items-center justify-center w-16 h-16 rounded-xl bg-sky-100 dark:bg-sky-900/30 border border-sky-200 dark:border-sky-800 group-hover:bg-sky-200 dark:group-hover:bg-sky-800/50 transition-colors">
                 <img
                   src={step.icon}
                   alt={step.title}
@@ -57,13 +57,13 @@ export default function EasyStepsSection() {
                   fetchPriority="low"
                 />
               </div>
-              <div className="text-3xl font-bold text-sky-200 mb-3 group-hover:text-sky-400 transition-colors">
+              <div className="text-3xl font-bold text-sky-200 dark:text-sky-400 mb-3 group-hover:text-sky-400 dark:group-hover:text-sky-300 transition-colors">
                 {String(index + 1).padStart(2, "0")}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 {step.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 {step.description}
               </p>
             </div>

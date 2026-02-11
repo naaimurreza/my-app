@@ -49,10 +49,10 @@ export default function DoctorsCarouselSection() {
             <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200">
               {t("doctors.badge")}
             </p>
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white">
               {t("doctors.title")}
             </h2>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 dark:text-gray-200">
               {t("doctors.description")}
             </p>
           </div>
@@ -68,11 +68,11 @@ export default function DoctorsCarouselSection() {
                 {doctors.map((doctor, index) => (
                   <CarouselItem key={index}>
                     <div className="p-2">
-                      <Card className="border border-white/30 bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 hover:border-white/50 transition-all">
+                      <Card className="border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30 hover:border-white/50 dark:hover:border-gray-600/50 transition-all">
                         <CardContent className="flex flex-col items-center justify-center gap-4 p-8">
                           <div className="relative">
                             <div
-                              className="absolute -inset-3 rounded-full bg-linear-to-r from-sky-100 to-indigo-100 blur-xl"
+                              className="absolute -inset-3 rounded-full bg-linear-to-r from-sky-100 to-indigo-100 dark:from-sky-900/30 dark:to-indigo-900/30 blur-xl"
                               aria-hidden="true"
                             />
                             <Image
@@ -80,20 +80,20 @@ export default function DoctorsCarouselSection() {
                               alt={t(doctor.nameKey)}
                               width={144}
                               height={144}
-                              className="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover shadow-lg border-4 border-gray-200"
+                              className="relative w-32 h-32 md:w-36 md:h-36 rounded-full object-cover shadow-lg border-4 border-gray-200 dark:border-gray-700"
                               loading="lazy"
                               quality={85}
                               sizes="(max-width: 768px) 128px, 144px"
                             />
                           </div>
                           <div className="text-center space-y-2">
-                            <h3 className="text-lg font-semibold text-gray-900">
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                               {t(doctor.nameKey)}
                             </h3>
-                            <p className="text-xs uppercase tracking-wide text-sky-600">
+                            <p className="text-xs uppercase tracking-wide text-sky-600 dark:text-sky-400">
                               {t(doctor.roleKey)}
                             </p>
-                            <p className="mt-2 text-sm text-gray-600">
+                            <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
                               {t(doctor.descriptionKey)}
                             </p>
                           </div>
@@ -103,8 +103,8 @@ export default function DoctorsCarouselSection() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="text-gray-700" />
-              <CarouselNext className="text-gray-700" />
+              <CarouselPrevious className="text-gray-700 dark:text-gray-300" />
+              <CarouselNext className="text-gray-700 dark:text-gray-300" />
             </Carousel>
           </div>
         </div>

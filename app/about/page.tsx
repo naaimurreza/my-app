@@ -41,22 +41,22 @@ export default function Page() {
               <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-sky-700 ring-1 ring-sky-200">
                 {t("about.badge")}
               </p>
-              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl lg:text-[2.7rem]">
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white md:text-4xl lg:text-[2.7rem]">
                 {t("about.title")}{" "}
                 <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
                   {t("about.titleHighlight")}
                 </span>
               </h1>
-              <p className="mt-4 max-w-2xl text-sm md:text-base text-gray-700 leading-relaxed">
+              <p className="mt-4 max-w-2xl text-sm md:text-base text-gray-700 dark:text-gray-200 leading-relaxed">
                 {t("about.description")}
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700">
-                <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 ring-1 ring-sky-300">
+              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700 dark:text-gray-900">
+                <div className="flex items-center gap-2 rounded-full bg-gray-100 dark:bg-white px-3 py-1.5 ring-1 ring-sky-300">
                   <span className="text-base">🕐</span>
                   <span className="font-medium">{t("about.supportReady")}</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 ring-1 ring-emerald-300">
+                <div className="flex items-center gap-2 rounded-full bg-gray-100 dark:bg-white px-3 py-1.5 ring-1 ring-emerald-300">
                   <span className="text-base">🔐</span>
                   <span className="font-medium">{t("about.confidentialCare")}</span>
                 </div>
@@ -71,7 +71,7 @@ export default function Page() {
                 </a>
                 <a
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full bg-gray-100 px-7 py-3 text-sm font-medium text-gray-700 ring-1 ring-gray-300 transition hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-white"
+                  className="inline-flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 px-7 py-3 text-sm font-medium text-gray-700 dark:text-gray-200 ring-1 ring-gray-300 dark:ring-gray-600 transition hover:bg-gray-200 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800"
                 >
                   {t("about.viewServices")}
                 </a>
@@ -88,13 +88,13 @@ export default function Page() {
                   className="h-56 w-full object-cover sm:h-64 lg:h-72"
                 />
               </div>
-              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 dark:bg-white/90 backdrop-blur-md px-4 py-3 text-xs text-gray-700 dark:text-gray-900 ring-1 ring-white/30 dark:ring-gray-300/30 shadow-lg">
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-200 text-emerald-600 dark:text-emerald-800">
                   ✓
                 </span>
                 <div className="space-y-0.5">
-                  <p className="font-medium text-gray-900">{t("about.traumaCare")}</p>
-                  <p className="text-[11px] text-gray-600">{t("about.traumaDesc")}</p>
+                  <p className="font-medium text-gray-900 dark:text-gray-900">{t("about.traumaCare")}</p>
+                  <p className="text-[11px] text-gray-600 dark:text-gray-700">{t("about.traumaDesc")}</p>
                 </div>
               </div>
             </div>
@@ -108,18 +108,18 @@ export default function Page() {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             <div className="lg:col-span-1">
-              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">
                 {t("about.mission")}
               </h2>
-              <p className="mt-4 text-gray-700 leading-relaxed">
+              <p className="mt-4 text-gray-700 dark:text-gray-200 leading-relaxed">
                 {t("about.missionDesc")}
               </p>
 
-              <div className="mt-8 rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-xl shadow-gray-200/30">
-                <p className="text-sm font-semibold text-gray-900 mb-2">
+              <div className="mt-8 rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30">
+                <p className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                   {t("about.expect")}
                 </p>
-                <ul className="space-y-2 text-sm text-gray-700">
+                <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
                   <li className="flex gap-2">
                     <span className="text-emerald-600">✓</span> {t("about.clearAssessment")}
                   </li>
@@ -137,10 +137,10 @@ export default function Page() {
               {values.map((v, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 shadow-xl shadow-gray-200/30 hover:-translate-y-0.5 hover:border-white/50 transition"
+                  className="rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30 hover:-translate-y-0.5 hover:border-white/50 dark:hover:border-gray-600/50 transition"
                 >
-                  <p className="text-sm font-semibold text-sky-600 mb-2">{v.title}</p>
-                  <p className="text-sm text-gray-700 leading-relaxed">{v.description}</p>
+                  <p className="text-sm font-semibold text-sky-600 dark:text-sky-400 mb-2">{v.title}</p>
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{v.description}</p>
                 </div>
               ))}
             </div>
@@ -156,10 +156,10 @@ export default function Page() {
             {stats.map((s) => (
               <div
                 key={s.value}
-                className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 text-center shadow-xl shadow-gray-200/30"
+                className="rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 text-center shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30"
               >
-                <p className="text-xl md:text-2xl font-semibold text-gray-900">{s.label}</p>
-                <p className="mt-1 text-sm text-gray-700">{s.value}</p>
+                <p className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white">{s.label}</p>
+                <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">{s.value}</p>
               </div>
             ))}
           </div>
@@ -187,7 +187,7 @@ export default function Page() {
                 </a>
                 <a
                   href="tel:+8801234567890"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-medium text-gray-700 ring-1 ring-gray-300 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-white"
+                  className="inline-flex items-center justify-center rounded-full bg-white dark:bg-gray-700 px-7 py-3 text-sm font-medium text-gray-700 dark:text-gray-200 ring-1 ring-gray-300 dark:ring-gray-600 transition hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-800"
                 >
                   Call 24/7 helpline
                 </a>

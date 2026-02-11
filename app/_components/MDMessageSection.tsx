@@ -15,14 +15,14 @@ export default function MDMessageSection() {
             <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700 ring-1 ring-sky-200">
               {t("md.badge")}
             </p>
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white">
               {t("md.title")}
             </h2>
-            <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30">
+            <div className="rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-6 lg:p-8 shadow-lg shadow-gray-200/30 dark:shadow-gray-900/30">
               <div className="flex items-start gap-4">
                 <div className="shrink-0">
                   <svg
-                    className="w-8 h-8 text-sky-500"
+                    className="w-8 h-8 text-sky-500 dark:text-sky-400"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -30,10 +30,10 @@ export default function MDMessageSection() {
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <p className="text-base lg:text-lg text-gray-700 leading-relaxed italic">
+                  <p className="text-base lg:text-lg text-gray-700 dark:text-gray-200 leading-relaxed italic">
                     "{t("md.quote")}"
                   </p>
-                  <p className="mt-6 text-sm font-semibold text-gray-900">
+                  <p className="mt-6 text-sm font-semibold text-gray-900 dark:text-white">
                     {t("md.author")}
                   </p>
                 </div>

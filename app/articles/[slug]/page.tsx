@@ -144,8 +144,8 @@ export default function ArticlePage() {
       <main className="relative min-h-screen overflow-hidden pt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-3xl font-semibold text-gray-900 mb-4">{t("articles.articleNotFound")}</h1>
-            <p className="text-gray-600 mb-8">{t("articles.articleNotFoundDesc")}</p>
+            <h1 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">{t("articles.articleNotFound")}</h1>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">{t("articles.articleNotFoundDesc")}</p>
             <a
               href="./articles"
               className="inline-flex items-center justify-center rounded-full bg-sky-500 px-7 py-3 text-sm font-medium text-white shadow-lg shadow-sky-500/30 transition hover:bg-sky-400"
@@ -178,7 +178,7 @@ export default function ArticlePage() {
           <div className="max-w-4xl mx-auto">
             <a
               href="./articles"
-              className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-sky-600 transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors mb-6"
             >
               <svg
                 className="w-4 h-4"
@@ -202,11 +202,11 @@ export default function ArticlePage() {
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6 leading-tight" itemProp="headline">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white mb-6 leading-tight" itemProp="headline">
               {article.title}
             </h1>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-8 pb-8 border-b border-gray-200" itemScope itemType="https://schema.org/Person">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-300 mb-8 pb-8 border-b border-gray-200 dark:border-gray-700" itemScope itemType="https://schema.org/Person">
               <div className="flex items-center gap-2">
                 <span className="font-medium">{t("articles.by")} <span itemProp="name">{article.author}</span></span>
               </div>
@@ -223,13 +223,13 @@ export default function ArticlePage() {
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <article className="prose prose-lg prose-slate max-w-none" itemScope itemType="https://schema.org/Article">
-              <div className="rounded-2xl border border-white/30 bg-white/30 backdrop-blur-md p-8 md:p-12 shadow-xl shadow-gray-200/30" itemProp="articleBody">
+              <div className="rounded-2xl border border-white/30 dark:border-gray-700/30 bg-white/30 dark:bg-gray-800/30 backdrop-blur-md p-8 md:p-12 shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30" itemProp="articleBody">
                 {article.content.map((paragraph, index) => {
                   // Format note section with special styling
                   if (paragraph.includes("Note:") || paragraph.includes("দ্রষ্টব্য:")) {
                     return (
-                      <div key={index} className="mb-6 p-4 rounded-lg bg-amber-50/80 border border-amber-200/50">
-                        <p className="text-gray-800 leading-relaxed text-base md:text-lg font-medium">
+                      <div key={index} className="mb-6 p-4 rounded-lg bg-amber-50/80 dark:bg-amber-900/20 border border-amber-200/50 dark:border-amber-800/50">
+                        <p className="text-gray-800 dark:text-gray-200 leading-relaxed text-base md:text-lg font-medium">
                           {paragraph}
                         </p>
                       </div>
@@ -239,9 +239,9 @@ export default function ArticlePage() {
                   // Format treatment section with emphasis
                   if (paragraph.startsWith("Treatment:") || paragraph.startsWith("চিকিৎসা:")) {
                     return (
-                      <div key={index} className="mb-6 p-4 rounded-lg bg-sky-50/80 border border-sky-200/50">
-                        <p className="text-gray-800 leading-relaxed text-base md:text-lg">
-                          <span className="font-semibold text-sky-900">{paragraph.split(":")[0]}:</span>
+                      <div key={index} className="mb-6 p-4 rounded-lg bg-sky-50/80 dark:bg-sky-900/20 border border-sky-200/50 dark:border-sky-800/50">
+                        <p className="text-gray-800 dark:text-gray-200 leading-relaxed text-base md:text-lg">
+                          <span className="font-semibold text-sky-900 dark:text-sky-300">{paragraph.split(":")[0]}:</span>
                           {paragraph.split(":").slice(1).join(":")}
                         </p>
                       </div>
@@ -252,7 +252,7 @@ export default function ArticlePage() {
                   return (
                     <p
                       key={index}
-                      className="text-gray-700 leading-relaxed mb-6 text-base md:text-lg"
+                      className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-base md:text-lg"
                     >
                       {paragraph}
                     </p>
@@ -268,11 +268,11 @@ export default function ArticlePage() {
       <section className="relative overflow-hidden py-14 lg:py-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.08),transparent_55%)]" />
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-linear-to-br from-sky-50 via-blue-50 to-emerald-50 p-8 md:p-10 text-gray-900 shadow-2xl shadow-gray-200/50 ring-1 ring-gray-200 max-w-3xl mx-auto">
+          <div className="rounded-3xl bg-linear-to-br from-sky-50 dark:from-gray-800 via-blue-50 dark:via-gray-800 to-emerald-50 dark:to-gray-800 p-8 md:p-10 text-gray-900 dark:text-white shadow-2xl shadow-gray-200/50 dark:shadow-gray-900/50 ring-1 ring-gray-200 dark:ring-gray-700 max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-semibold mb-3">
               {t("articles.needSupport")}
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               {t("articles.needSupportDescDetail")}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
@@ -284,7 +284,7 @@ export default function ArticlePage() {
               </a>
               <a
                 href="tel:+88058150414"
-                className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-medium text-gray-700 ring-1 ring-gray-300 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2"
+                className="inline-flex items-center justify-center rounded-full bg-white dark:bg-gray-700 px-7 py-3 text-sm font-medium text-gray-700 dark:text-gray-200 ring-1 ring-gray-300 dark:ring-gray-600 transition hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:ring-offset-2"
               >
                 {t("articles.callNow")}
               </a>

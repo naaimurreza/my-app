@@ -34,22 +34,22 @@ export default function Home() {
               <p className="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-sky-700 ring-1 ring-sky-200">
                 {t("contact.badge")}
               </p>
-              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 md:text-4xl lg:text-[2.7rem]">
+              <h1 className="mt-4 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white md:text-4xl lg:text-[2.7rem]">
                 {t("contact.title")}{" "}
                 <span className="bg-linear-to-r from-sky-500 to-emerald-500 bg-clip-text text-transparent">
                   {t("contact.titleHighlight")}
                 </span>
               </h1>
-              <p className="mt-4 max-w-xl text-sm md:text-base text-gray-700">
+              <p className="mt-4 max-w-xl text-sm md:text-base text-gray-700 dark:text-gray-200">
                 {t("contact.description")}
               </p>
 
-              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700">
-                <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 ring-1 ring-sky-300">
+              <div className="mt-6 flex flex-wrap gap-4 text-xs md:text-sm text-gray-700 dark:text-gray-900">
+                <div className="flex items-center gap-2 rounded-full bg-gray-100 dark:bg-white px-3 py-1.5 ring-1 ring-sky-300">
                   <span className="text-base">🕐</span>
                   <span className="font-medium">{t("contact.emergencyHelpline")}</span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1.5 ring-1 ring-emerald-300">
+                <div className="flex items-center gap-2 rounded-full bg-gray-100 dark:bg-white px-3 py-1.5 ring-1 ring-emerald-300">
                   <span className="text-base">🔐</span>
                   <span className="font-medium">{t("contact.confidential")}</span>
                 </div>
@@ -73,13 +73,13 @@ export default function Home() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 800px"
                 />
               </div>
-              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 backdrop-blur-md px-4 py-3 text-xs text-gray-700 ring-1 ring-white/30 shadow-lg">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+              <div className="absolute -bottom-4 left-6 right-6 flex items-center gap-3 rounded-2xl bg-white/40 dark:bg-white/90 backdrop-blur-md px-4 py-3 text-xs text-gray-700 dark:text-gray-900 ring-1 ring-white/30 dark:ring-gray-300/30 shadow-lg">
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-200 text-emerald-600 dark:text-emerald-800">
                   ✓
                 </span>
                 <div className="space-y-0.5">
-                  <p className="font-medium text-gray-900">{t("contact.kindStaff")}</p>
-                  <p className="text-[11px] text-gray-600">
+                  <p className="font-medium text-gray-900 dark:text-gray-900">{t("contact.kindStaff")}</p>
+                  <p className="text-[11px] text-gray-600 dark:text-gray-700">
                     {t("contact.kindStaffDesc")}
                   </p>
                 </div>
@@ -92,40 +92,40 @@ export default function Home() {
           <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-3">
             {/* Contact details / emergency info */}
             <div className="space-y-8 lg:col-span-1">
-              <div className="rounded-2xl bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 border border-white/30 p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">
+              <div className="rounded-2xl bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30 border border-white/30 dark:border-gray-700/30 p-6">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   {t("contact.emergencySupport")}
                 </h2>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
                   {t("contact.emergencyDesc")}
                 </p>
                 <div className="space-y-3 text-sm">
                   <div>
-                    <p className="text-gray-500">{t("contact.helpline")}</p>
+                    <p className="text-gray-500 dark:text-gray-400">{t("contact.helpline")}</p>
                     <a href="tel:+8801713031449">
-                      <p className="hover:underline font-semibold text-gray-900">+880 1713031449</p>
+                      <p className="hover:underline font-semibold text-gray-900 dark:text-white">+880 1713031449</p>
                     </a>
                     <a href="tel:+8801742544000">
-                      <p className="hover:underline font-semibold text-gray-900">+880 1742544000</p>
+                      <p className="hover:underline font-semibold text-gray-900 dark:text-white">+880 1742544000</p>
                     </a>
 
                   </div>
                   <div>
-                    <p className="text-gray-500">{t("contact.crisisEmail")}</p>
-                    <p className="font-semibold text-gray-900">brainandlifehospital@gmail.com</p>
+                    <p className="text-gray-500 dark:text-gray-400">{t("contact.crisisEmail")}</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">brainandlifehospital@gmail.com</p>
                   </div>
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 border border-white/30 p-6 space-y-4">
-                <h2 className="text-lg font-semibold text-gray-900">
+              <div className="rounded-2xl bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30 border border-white/30 dark:border-gray-700/30 p-6 space-y-4">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {t("contact.hospitalLocation")}
                 </h2>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   Brain And Life Hospital<br />
                   Crescent Plaza, 145/1 Green Road, Dhaka-1205, Bangladesh
                 </p>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   {t("contact.visitingHours")} <span className="font-semibold">9:00 AM – 8:00 PM</span><br />
                   {t("contact.opd")} <span className="font-semibold">Sat – Thu</span>
                 </p>
@@ -134,11 +134,11 @@ export default function Home() {
 
             {/* Contact form */}
             <div className="lg:col-span-2">
-              <div className="rounded-2xl bg-white/30 backdrop-blur-md shadow-xl shadow-gray-200/30 border border-white/30 p-6 md:p-8">
-                <h2 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className="rounded-2xl bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-xl shadow-gray-200/30 dark:shadow-gray-900/30 border border-white/30 dark:border-gray-700/30 p-6 md:p-8">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                   {t("contact.sendMessage")}
                 </h2>
-                <p className="text-sm text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300 mb-6">
                   {t("contact.messageDesc")}
                 </p>
 
@@ -209,7 +209,7 @@ export default function Home() {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="block text-sm font-medium text-gray-900">
+                      <label className="block text-sm font-medium text-gray-900 dark:text-white">
                         {t("contact.fullName")} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -218,11 +218,11 @@ export default function Home() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder={t("contact.namePlaceholder")}
-                        className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
+                        className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="block text-sm font-medium text-gray-900">
+                      <label className="block text-sm font-medium text-gray-900 dark:text-white">
                         {t("contact.phone")}
                       </label>
                       <input
@@ -230,14 +230,14 @@ export default function Home() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder={t("contact.phonePlaceholder")}
-                        className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
+                        className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="block text-sm font-medium text-gray-900">
+                      <label className="block text-sm font-medium text-gray-900 dark:text-white">
                         {t("contact.email")} <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -246,17 +246,17 @@ export default function Home() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder={t("contact.emailPlaceholder")}
-                        className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
+                        className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <label className="block text-sm font-medium text-gray-900">
+                      <label className="block text-sm font-medium text-gray-900 dark:text-white">
                         {t("contact.reason")}
                       </label>
                       <select
                         value={formData.reason}
                         onChange={(e) => setFormData({ ...formData, reason: e.target.value })}
-                        className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
+                        className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 dark:text-white focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                       >
                         <option value="">
                           {t("contact.selectOption")}
@@ -270,7 +270,7 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="block text-sm font-medium text-gray-900">
+                    <label className="block text-sm font-medium text-gray-900 dark:text-white">
                       {t("contact.howCanWeHelp")} <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -279,7 +279,7 @@ export default function Home() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder={t("contact.messagePlaceholder")}
-                      className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 placeholder:text-gray-500 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
+                      className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-3 py-2.5 text-sm shadow-sm outline-none text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:border-sky-500 focus:ring-2 focus:ring-sky-500/30"
                     />
                   </div>
 
@@ -291,9 +291,9 @@ export default function Home() {
                         required
                         checked={formData.consent}
                         onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
-                        className="mt-1 h-4 w-4 rounded border-gray-300 bg-white text-sky-500 focus:ring-sky-500"
+                        className="mt-1 h-4 w-4 rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-sky-500 focus:ring-sky-500"
                       />
-                      <label htmlFor="consent" className="text-xs text-gray-600">
+                      <label htmlFor="consent" className="text-xs text-gray-600 dark:text-gray-300">
                         {t("contact.consent")} <span className="text-red-500">*</span>
                       </label>
                     </div>

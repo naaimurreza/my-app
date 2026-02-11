@@ -5,11 +5,13 @@ import Header from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import StructuredData from "./_components/StructuredData";
 import { LanguageProvider } from "./_contexts/LanguageContext";
+import { ThemeProvider } from "./_contexts/ThemeContext";
 import LanguageWrapper from "./_components/LanguageWrapper";
 import HreflangTags from "./_components/HreflangTags";
 import BengaliSEO from "./_components/BengaliSEO";
 import AnimatedGradientBackground from "./_components/AnimatedGradientBackground";
 import LanguageToggle from "./_components/LanguageToggle";
+import ThemeToggle from "./_components/ThemeToggle";
 import { defaultMetadata } from "./metadata";
 
 const poppins = Poppins({
@@ -56,20 +58,23 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body
-        className={`${poppins.variable} antialiased`}
+        className={`${poppins.variable} antialiased bg-white dark:bg-gray-900 transition-colors duration-300`}
       >
-        <LanguageProvider>
-          <LanguageWrapper>
-            <HreflangTags />
-            <BengaliSEO />
-            <AnimatedGradientBackground />
-            <StructuredData pathname="/" />
-            <Header />
-            {children}
-            <Footer />
-            <LanguageToggle />
-          </LanguageWrapper>
-        </LanguageProvider>
+        <ThemeProvider>
+          <LanguageProvider>
+            <LanguageWrapper>
+              <HreflangTags />
+              <BengaliSEO />
+              <AnimatedGradientBackground />
+              <StructuredData pathname="/" />
+              <Header />
+              {children}
+              <Footer />
+              <LanguageToggle />
+              <ThemeToggle />
+            </LanguageWrapper>
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -30,10 +30,10 @@ export default function Page() {
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 mb-4">
                 {t("mdPage.heroBadge")}
               </p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 leading-tight mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-900 dark:text-white leading-tight mb-6">
                 {t("mdPage.heroTitle")}
               </h1>
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
                 {t("mdPage.heroDescription")}
               </p>
             </div>
@@ -47,10 +47,10 @@ export default function Page() {
           <div className="prose prose-lg prose-slate max-w-none">
             {/* Introduction */}
             <div className="mb-12">
-              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">
+              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white mb-6">
                 {t("mdPage.section1Title")}
               </h2>
-              <div className="space-y-4 text-slate-700 leading-relaxed">
+              <div className="space-y-4 text-slate-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   {t("mdPage.section1Para1")}
                 </p>
@@ -61,11 +61,11 @@ export default function Page() {
             </div>
 
             {/* Treatment Approach */}
-            <div className="mb-12 rounded-2xl bg-white/30 backdrop-blur-md border border-white/30 shadow-sm p-8">
-              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">
+            <div className="mb-12 rounded-2xl bg-white/30 dark:bg-gray-800/30 backdrop-blur-md border border-white/30 dark:border-gray-700/30 shadow-sm p-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white mb-6">
                 {t("mdPage.section2Title")}
               </h2>
-              <div className="space-y-4 text-slate-700 leading-relaxed">
+              <div className="space-y-4 text-slate-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   {t("mdPage.section2Para1")}
                 </p>
@@ -91,8 +91,8 @@ export default function Page() {
             </div>
 
             {/* Recovery & Support */}
-            <div className="rounded-2xl bg-linear-to-br from-blue-50 to-slate-50 border border-blue-100 p-8">
-              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">
+            <div className="rounded-2xl bg-linear-to-br from-blue-50 dark:from-gray-800 to-slate-50 dark:to-gray-800 border border-blue-100 dark:border-gray-700 p-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900 dark:text-white mb-6">
                 {t("mdPage.section4Title")}
               </h2>
               <div className="space-y-4 text-slate-700 leading-relaxed">

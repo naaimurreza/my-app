@@ -20,10 +20,10 @@ export default function HeroSection() {
             <p className="mb-4 inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-sky-700 ring-1 ring-sky-200">
               {t("hero.tagline")}
             </p>
-            <h1 className="mb-6 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl text-gray-900">
+            <h1 className="mb-6 text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl text-gray-900 dark:text-white">
               {t("hero.title")}
             </h1>
-            <p className="text-base md:text-lg text-gray-700">
+            <p className="text-base md:text-lg text-gray-700 dark:text-gray-200">
               {t("hero.description")}
             </p>
 
@@ -36,7 +36,7 @@ export default function HeroSection() {
               </a>
               <a
                 href="/contact"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-gray-700 border-2 border-gray-200 shadow-md shadow-gray-200/50 transition-all duration-300 hover:bg-gray-50 hover:border-sky-300 hover:text-sky-600 hover:shadow-lg hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-white dark:bg-gray-800 px-7 py-3 text-sm font-medium text-gray-700 dark:text-gray-200 border-2 border-gray-200 dark:border-gray-700 shadow-md shadow-gray-200/50 dark:shadow-gray-900/50 transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-sky-300 dark:hover:border-sky-500 hover:text-sky-600 dark:hover:text-sky-400 hover:shadow-lg hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2"
               >
                 <svg
                   className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"
@@ -56,7 +56,7 @@ export default function HeroSection() {
             </div>
 
             <div className="mt-8 flex items-center gap-4">
-              <span className="text-sm font-medium text-gray-600">{t("hero.followUs")}</span>
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">{t("hero.followUs")}</span>
               <div className="flex items-center gap-3">
                 <a
                   href="https://www.facebook.com/share/1DWSRRzXA3/"

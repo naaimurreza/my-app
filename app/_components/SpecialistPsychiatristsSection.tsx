@@ -56,10 +56,10 @@ export default function SpecialistPsychiatristsSection() {
             </p>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-emerald-400"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
             {t("specialists.title")}
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
             {t("specialists.description")}
           </p>
         </div>
@@ -78,10 +78,10 @@ export default function SpecialistPsychiatristsSection() {
                       <div className="relative group">
                         {/* Card background */}
                         <div className="absolute -inset-1 bg-gradient-to-r from-sky-400/20 via-blue-400/20 to-emerald-400/20 rounded-3xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="relative bg-white/60 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/80 shadow-xl shadow-gray-200/50">
+                        <div className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/80 dark:border-gray-700/80 shadow-xl shadow-gray-200/50 dark:shadow-gray-900/50">
                           <div className="space-y-6">
                             <div>
-                              <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.1] mb-4">
+                              <h3 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white leading-[1.1] mb-4">
                                 {t(`specialists.${specialist.key}.name`)}{" "}
                                 <span className="bg-linear-to-r from-sky-500 via-blue-500 to-emerald-500 bg-clip-text text-transparent">
                                   {t(`specialists.${specialist.key}.lastName`)}
@@ -93,7 +93,7 @@ export default function SpecialistPsychiatristsSection() {
                                 <div className="h-1.5 w-2 bg-emerald-400 rounded-full"></div>
                               </div>
                             </div>
-                            <p className="text-base md:text-lg text-gray-600 leading-relaxed font-light">
+                            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-light">
                               {t(`specialists.${specialist.key}.description`)}
                             </p>
                             <a
