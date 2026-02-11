@@ -44,6 +44,15 @@ export default function ArticlesPage() {
         author: "Brain And Life Hospital",
         category: t("articles.category.addiction") || "Addiction",
       },
+      {
+        slug: "early-signs-of-depression",
+        title: t("article.earlyDepressionSigns.title") || "Early Signs of Depression Most People Ignore",
+        excerpt: t("article.earlyDepressionSigns.excerpt") || "Depression often starts with subtle signs that are easy to dismiss. Learn about the early warning signs of depression that many people overlook, and discover when it's time to seek professional help.",
+        date: formatDate(new Date("2026-02-13")),
+        dateValue: "2026-02-13",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.mentalHealth") || "Mental Health",
+      },
     ];
     
     // Sort by dateValue (latest first) - descending order

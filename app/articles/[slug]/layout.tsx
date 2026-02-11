@@ -149,6 +149,60 @@ const articleMetadata: Record<string, {
     publishedTime: "2026-02-12T00:00:00+00:00",
     modifiedTime: "2026-02-12T00:00:00+00:00",
   },
+  "early-signs-of-depression": {
+    title: "Early Signs of Depression Most People Ignore | Brain And Life Hospital",
+    description: "Learn about the early warning signs of depression that many people overlook. Discover subtle symptoms like fatigue, sleep changes, and loss of interest, and when to seek professional help for depression treatment in Bangladesh.",
+    keywords: [
+      // Primary keywords
+      "depression signs",
+      "early depression symptoms",
+      "depression warning signs",
+      "depression symptoms",
+      "depression early signs",
+      // Symptom-specific
+      "depression fatigue",
+      "depression sleep problems",
+      "loss of interest depression",
+      "depression concentration",
+      "depression appetite changes",
+      "depression irritability",
+      // Treatment-related
+      "depression treatment",
+      "depression help",
+      "depression therapy",
+      "depression medication",
+      "depression support",
+      // Location-based
+      "depression treatment Bangladesh",
+      "depression doctor Dhaka",
+      "mental health depression",
+      "depression care Bangladesh",
+      // Long-tail keywords
+      "signs of depression",
+      "early signs of depression",
+      "depression symptoms to watch for",
+      "when to seek help for depression",
+      "depression warning signs",
+      "depression red flags",
+      // Bengali keywords
+      "বিষণ্নতার লক্ষণ",
+      "বিষণ্নতার প্রাথমিক লক্ষণ",
+      "বিষণ্নতার সতর্কতা লক্ষণ",
+      "বিষণ্নতার উপসর্গ",
+      "বিষণ্নতা ক্লান্তি",
+      "বিষণ্নতা ঘুমের সমস্যা",
+      "আগ্রহ হারানো বিষণ্নতা",
+      "বিষণ্নতা চিকিৎসা",
+      "বিষণ্নতা সাহায্য",
+      "বিষণ্নতা থেরাপি",
+      "বিষণ্নতা চিকিৎসা বাংলাদেশ",
+      "বিষণ্নতা ডাক্তার ঢাকা",
+      "বিষণ্নতার লক্ষণ দেখার জন্য",
+      "বিষণ্নতার জন্য কখন সাহায্য চাইতে হয়",
+    ],
+    publishedTime: "2026-02-13T00:00:00+00:00",
+    modifiedTime: "2026-02-13T00:00:00+00:00",
+  },
 };
 
 export async function generateMetadata({

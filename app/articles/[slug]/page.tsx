@@ -83,6 +83,28 @@ export default function ArticlePage() {
         ]
       };
     }
+    if (articleSlug === "early-signs-of-depression") {
+      return {
+        title: t("article.earlyDepressionSigns.title"),
+        excerpt: t("article.earlyDepressionSigns.excerpt"),
+        date: formatDate("2026-02-13"),
+        dateValue: "2026-02-13",
+        author: "Brain And Life Hospital",
+        category: t("articles.category.mentalHealth"),
+        content: [
+          t("article.earlyDepressionSigns.content1"),
+          t("article.earlyDepressionSigns.content2"),
+          t("article.earlyDepressionSigns.content3"),
+          t("article.earlyDepressionSigns.content4"),
+          t("article.earlyDepressionSigns.content5"),
+          t("article.earlyDepressionSigns.content6"),
+          t("article.earlyDepressionSigns.content7"),
+          t("article.earlyDepressionSigns.content8"),
+          t("article.earlyDepressionSigns.content9"),
+          t("article.earlyDepressionSigns.content10"),
+        ]
+      };
+    }
     return null;
   };
 
@@ -93,6 +115,7 @@ export default function ArticlePage() {
     if (articleSlug === "understanding-mental-health") return "2026-02-10T00:00:00+00:00";
     if (articleSlug === "understanding-schizophrenia") return "2026-02-11T00:00:00+00:00";
     if (articleSlug === "drug-addiction") return "2026-02-12T00:00:00+00:00";
+    if (articleSlug === "early-signs-of-depression") return "2026-02-13T00:00:00+00:00";
     return "2026-02-10T00:00:00+00:00";
   };
 
@@ -106,6 +129,9 @@ export default function ArticlePage() {
     }
     if (articleSlug === "drug-addiction") {
       return "drug addiction, substance abuse, addiction treatment, drug rehabilitation, addiction recovery, detoxification, addiction therapy, drug addiction treatment Bangladesh";
+    }
+    if (articleSlug === "early-signs-of-depression") {
+      return "depression signs, early depression symptoms, depression warning signs, depression symptoms, depression treatment, depression help, mental health Bangladesh";
     }
     return "mental health, psychiatric care, mental wellness, Bangladesh";
   };
