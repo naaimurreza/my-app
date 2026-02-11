@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" itemScope itemType="https://schema.org/Hospital">
+    <html lang="en" itemScope itemType="https://schema.org/Hospital" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{

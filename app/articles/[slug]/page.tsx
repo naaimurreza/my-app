@@ -25,8 +25,8 @@ export default function ArticlePage() {
       return {
         title: t("article.understandingMentalHealth.title"),
         excerpt: t("article.understandingMentalHealth.excerpt"),
-        date: formatDate("2026-02-10"),
-        dateValue: "2026-02-10",
+        date: formatDate("2026-01-15"),
+        dateValue: "2026-01-15",
         author: "Brain And Life Hospital",
         category: t("articles.category.mentalHealth"),
         content: [
@@ -45,8 +45,8 @@ export default function ArticlePage() {
       return {
         title: t("article.schizophrenia.title"),
         excerpt: t("article.schizophrenia.excerpt"),
-        date: formatDate("2026-02-11"),
-        dateValue: "2026-02-11",
+        date: formatDate("2026-01-28"),
+        dateValue: "2026-01-28",
         author: "Brain And Life Hospital",
         category: t("articles.category.mentalHealth"),
         content: [
@@ -66,8 +66,8 @@ export default function ArticlePage() {
       return {
         title: t("article.drugAddiction.title"),
         excerpt: t("article.drugAddiction.excerpt"),
-        date: formatDate("2026-02-12"),
-        dateValue: "2026-02-12",
+        date: formatDate("2026-02-05"),
+        dateValue: "2026-02-05",
         author: "Brain And Life Hospital",
         category: t("articles.category.addiction"),
         content: [
@@ -87,8 +87,8 @@ export default function ArticlePage() {
       return {
         title: t("article.earlyDepressionSigns.title"),
         excerpt: t("article.earlyDepressionSigns.excerpt"),
-        date: formatDate("2026-02-13"),
-        dateValue: "2026-02-13",
+        date: formatDate("2026-02-10"),
+        dateValue: "2026-02-10",
         author: "Brain And Life Hospital",
         category: t("articles.category.mentalHealth"),
         content: [
@@ -112,11 +112,11 @@ export default function ArticlePage() {
 
   // Article schema for SEO
   const getPublishedDate = (articleSlug: string) => {
-    if (articleSlug === "understanding-mental-health") return "2026-02-10T00:00:00+00:00";
-    if (articleSlug === "understanding-schizophrenia") return "2026-02-11T00:00:00+00:00";
-    if (articleSlug === "drug-addiction") return "2026-02-12T00:00:00+00:00";
-    if (articleSlug === "early-signs-of-depression") return "2026-02-13T00:00:00+00:00";
-    return "2026-02-10T00:00:00+00:00";
+    if (articleSlug === "understanding-mental-health") return "2026-01-15T00:00:00+00:00";
+    if (articleSlug === "understanding-schizophrenia") return "2026-01-28T00:00:00+00:00";
+    if (articleSlug === "drug-addiction") return "2026-02-05T00:00:00+00:00";
+    if (articleSlug === "early-signs-of-depression") return "2026-02-10T00:00:00+00:00";
+    return "2026-01-15T00:00:00+00:00";
   };
 
   // Article-specific keywords for schema

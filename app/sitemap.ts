@@ -61,25 +61,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Individual articles - Medium-high priority
     {
       path: 'articles/understanding-mental-health',
-      lastModified: lastWeek,
+      lastModified: new Date('2026-01-15'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       path: 'articles/understanding-schizophrenia',
-      lastModified: lastWeek,
+      lastModified: new Date('2026-01-28'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       path: 'articles/drug-addiction',
-      lastModified: lastWeek,
+      lastModified: new Date('2026-02-05'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       path: 'articles/early-signs-of-depression',
-      lastModified: lastWeek,
+      lastModified: new Date('2026-02-10'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },

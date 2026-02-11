@@ -45,8 +45,8 @@ const articleMetadata: Record<string, {
       "মানসিক স্বাস্থ্য চিকিৎসা",
       "মনোরোগবিদ্যা যত্ন",
     ],
-    publishedTime: "2026-02-10T00:00:00+00:00",
-    modifiedTime: "2026-02-10T00:00:00+00:00",
+    publishedTime: "2026-01-15T00:00:00+00:00",
+    modifiedTime: "2026-01-15T00:00:00+00:00",
   },
   "understanding-schizophrenia": {
     title: "Understanding Schizophrenia: Symptoms, Treatment, and Support | Brain And Life Hospital",
@@ -90,8 +90,8 @@ const articleMetadata: Record<string, {
       "স্কিজোফ্রেনিয়া চিকিৎসা বাংলাদেশ",
       "স্কিজোফ্রেনিয়া ডাক্তার ঢাকা",
     ],
-    publishedTime: "2026-02-11T00:00:00+00:00",
-    modifiedTime: "2026-02-11T00:00:00+00:00",
+    publishedTime: "2026-01-28T00:00:00+00:00",
+    modifiedTime: "2026-01-28T00:00:00+00:00",
   },
   "drug-addiction": {
     title: "Understanding Drug Addiction: Causes, Effects, and Recovery | Brain And Life Hospital",
@@ -146,8 +146,8 @@ const articleMetadata: Record<string, {
       "মাদকাসক্তির লক্ষণ",
       "মাদকাসক্তি থেকে মুক্তি",
     ],
-    publishedTime: "2026-02-12T00:00:00+00:00",
-    modifiedTime: "2026-02-12T00:00:00+00:00",
+    publishedTime: "2026-02-05T00:00:00+00:00",
+    modifiedTime: "2026-02-05T00:00:00+00:00",
   },
   "early-signs-of-depression": {
     title: "Early Signs of Depression Most People Ignore | Brain And Life Hospital",
@@ -229,8 +229,8 @@ const articleMetadata: Record<string, {
       "বিষণ্নতার লুকানো লক্ষণ",
       "বিষণ্নতা চিনতে কীভাবে",
     ],
-    publishedTime: "2026-02-13T00:00:00+00:00",
-    modifiedTime: "2026-02-13T00:00:00+00:00",
+    publishedTime: "2026-02-10T00:00:00+00:00",
+    modifiedTime: "2026-02-10T00:00:00+00:00",
   },
 };
 
